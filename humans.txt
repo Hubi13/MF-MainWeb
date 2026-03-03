@@ -1,0 +1,24 @@
+/* _____________________
+  |                     |
+  |  HUMANS.TXT         |
+  |_____________________|
+
+  Site: jankowalski.pl
+  Zaprojektowane i zbudowane przez: Jan Kowalski
+
+  TEAM
+  Designer & Developer: Jan Kowalski
+  Contact: hello@jankowalski.pl
+  Location: Warszawa, Polska
+
+  STACK
+  HTML, CSS, JS
+  Bez frameworkow. Bez zbednych zaleznosci.
+  Fonty: Inter + Playfair Display (Google Fonts)
+  Hosting: Netlify / Vercel
+
+  STANDARDS
+  Respects prefers-reduced-motion
+  WCAG 2.1 AA accessible
+  Performance-first
+*/

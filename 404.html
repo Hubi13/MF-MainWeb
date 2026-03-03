@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona nie istnieje (404) | Jan Kowalski</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="stylesheet" href="/assets/css/design-system.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+</head>
+
+<body>
+    <header class="site-header" role="banner">
+        <div class="container">
+            <a href="/" class="site-logo">Jan<span>.</span>Kowalski</a>
+            <nav class="site-nav" role="navigation" aria-label="Glowna nawigacja">
+                <ul class="site-nav__list" id="main-nav">
+                    <li><a href="/work/" class="site-nav__link">Realizacje</a></li>
+                    <li><a href="/services.html" class="site-nav__link">Oferta</a></li>
+                    <li><a href="/about.html" class="site-nav__link">O mnie</a></li>
+                    <li><a href="/contact.html" class="site-nav__link site-nav__cta btn btn--primary">Umow rozmowe</a>
+                    </li>
+                </ul>
+                <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false"
+                    aria-label="Otworz menu"><span></span><span></span><span></span></button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section
+            style="min-height: calc(100svh - var(--header-height)); display: flex; align-items: center; padding-block: var(--space-xl);">
+            <div class="container" style="text-align: center;">
+                <p style="font-family: var(--font-display); font-size: clamp(6rem, 20vw, 14rem); font-weight: 600; line-height:1; color: var(--color-surface-3); letter-spacing: -0.05em; user-select:none;"
+                    aria-hidden="true">404</p>
+                <h1
+                    style="font-family: var(--font-display); font-size: var(--text-2xl); font-weight:600; margin-top:-2rem; margin-bottom: var(--space-sm); position:relative; z-index:1;">
+                    Tej strony nie ma.
+                </h1>
+                <p
+                    style="font-size: var(--text-md); color: var(--color-text-secondary); max-width: 400px; margin-inline: auto; margin-bottom: var(--space-lg); line-height: var(--lh-base);">
+                    Moze link jest niepoprawny, strona zostala usunieta lub przeniesiona.
+                </p>
+                <div style="display: flex; justify-content: center; gap: var(--space-sm); flex-wrap: wrap;">
+                    <a href="/" class="btn btn--primary">Strona glowna</a>
+                    <a href="/work/" class="btn btn--outline">Realizacje</a>
+                    <a href="/contact.html" class="btn btn--ghost">Kontakt</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script defer src="/assets/js/main.js"></script>
+</body>
+
+</html>

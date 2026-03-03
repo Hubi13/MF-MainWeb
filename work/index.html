@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizacje - Jan Kowalski Website Designer</title>
+    <meta name="description"
+        content="Portfolio realizacji - strony www, systemy UI, e-commerce, redesign. Sprawdz case studies z konkretnymi wynikami.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jankowalski.pl/work/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jankowalski.pl/work/">
+    <meta property="og:title" content="Realizacje - Jan Kowalski Website Designer">
+    <meta property="og:description" content="Portfolio realizacji - strony www, systemy UI, e-commerce, redesign.">
+    <meta property="og:image" content="https://jankowalski.pl/assets/img/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="theme-color" content="#0a0a0b">
+
+    <link rel="stylesheet" href="../assets/css/design-system.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/pages/work.css">
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://jankowalski.pl/work/",
+    "name": "Realizacje - Jan Kowalski",
+    "url": "https://jankowalski.pl/work/",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Strona glowna", "item": "https://jankowalski.pl/" },
+        { "@type": "ListItem", "position": 2, "name": "Realizacje", "item": "https://jankowalski.pl/work/" }
+      ]
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+    <header class="site-header" role="banner">
+        <div class="container">
+            <a href="/" class="site-logo">Jan<span>.</span>Kowalski</a>
+            <nav class="site-nav" role="navigation" aria-label="Glowna nawigacja">
+                <ul class="site-nav__list" id="main-nav">
+                    <li><a href="/work/" class="site-nav__link">Realizacje</a></li>
+                    <li><a href="/services.html" class="site-nav__link">Oferta</a></li>
+                    <li><a href="/about.html" class="site-nav__link">O mnie</a></li>
+                    <li><a href="/contact.html" class="site-nav__link site-nav__cta btn btn--primary"
+                            data-track-cta="nav_header">Umow rozmowe</a></li>
+                </ul>
+                <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Otworz menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumbs" aria-label="Sciezka nawigacji">
+                    <span class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Strona glowna</a></span>
+                    <span class="breadcrumbs__item"><span class="breadcrumbs__current">Realizacje</span></span>
+                </nav>
+                <p class="label page-hero__label">Portfolio</p>
+                <h1 class="page-hero__title reveal">Wybrane realizacje</h1>
+                <p class="page-hero__sub reveal" data-delay="100">
+                    Projekty, ktore mialy cel i go osiagnely.
+                    Kazdy z jasnym briefem, procesem i mierzalnym rezultatem.
+                </p>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO FILTERS + GRID -->
+        <section class="section">
+            <div class="container">
+                <div class="filter-tabs reveal" role="group" aria-label="Filtruj realizacje">
+                    <button class="filter-tab is-active" data-filter="all">Wszystkie</button>
+                    <button class="filter-tab" data-filter="strona">Strony www</button>
+                    <button class="filter-tab" data-filter="ui">Systemy UI</button>
+                    <button class="filter-tab" data-filter="ecommerce">E-commerce</button>
+                    <button class="filter-tab" data-filter="redesign">Redesign</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <!-- Item 1 -->
+                    <div class="portfolio-grid-item reveal" data-category="redesign">
+                        <a href="/work/case-study-1.html" class="cs-card"
+                            aria-label="Case study: Firma uslugowa w Warszawie">
+                            <div class="cs-card__thumb">
+                                <div class="cs-thumb-placeholder"
+                                    style="background: linear-gradient(135deg, #1a1a22 0%, #2c2c3a 50%, #1a1a22 100%)">
+                                    <span style="opacity:0.3;font-size:var(--text-sm)">firma-uslugowa.jpg</span>
+                                </div>
+                                <span class="cs-card__tag">Redesign</span>
+                            </div>
+                            <div class="cs-card__body">
+                                <div class="cs-card__meta">
+                                    <span class="cs-card__category">Redesign & Optymalizacja</span>
+                                    <span class="cs-card__year">2024</span>
+                                </div>
+                                <h2 class="cs-card__title">Firma uslugowa w Warszawie</h2>
+                                <p class="cs-card__desc">Redesign strony z naciskiem na konwersje. Nowa IA, system UI i
+                                    integracja z CRM. Wynik: +39% leadow.</p>
+                                <span class="cs-card__cta">Czytaj case study</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="portfolio-grid-item reveal" data-delay="80" data-category="strona">
+                        <a href="/work/case-study-2.html" class="cs-card" aria-label="Case study: Marka premium">
+                            <div class="cs-card__thumb">
+                                <div class="cs-thumb-placeholder"
+                                    style="background: linear-gradient(135deg, #1e1810 0%, #2e2418 50%, #1e1810 100%)">
+                                    <span style="opacity:0.3;font-size:var(--text-sm)">marka-premium.jpg</span>
+                                </div>
+                                <span class="cs-card__tag">Brand & Web</span>
+                            </div>
+                            <div class="cs-card__body">
+                                <div class="cs-card__meta">
+                                    <span class="cs-card__category">Brand Identity & Web</span>
+                                    <span class="cs-card__year">2025</span>
+                                </div>
+                                <h2 class="cs-card__title">Marka premium</h2>
+                                <p class="cs-card__desc">Identyfikacja wizualna od podstaw i strona wizerunkowa. Projekt
+                                    dla marki z segmentu luxury.</p>
+                                <span class="cs-card__cta">Czytaj case study</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="portfolio-grid-item reveal" data-delay="160" data-category="ui">
+                        <a href="/work/case-study-3.html" class="cs-card" aria-label="Case study: Produkt B2B">
+                            <div class="cs-card__thumb">
+                                <div class="cs-thumb-placeholder"
+                                    style="background: linear-gradient(135deg, #0e1520 0%, #1e2535 50%, #0e1520 100%)">
+                                    <span style="opacity:0.3;font-size:var(--text-sm)">produkt-b2b.jpg</span>
+                                </div>
+                                <span class="cs-card__tag">UI System</span>
+                            </div>
+                            <div class="cs-card__body">
+                                <div class="cs-card__meta">
+                                    <span class="cs-card__category">UI System & Frontend</span>
+                                    <span class="cs-card__year">2024</span>
+                                </div>
+                                <h2 class="cs-card__title">Platforma B2B - SaaS</h2>
+                                <p class="cs-card__desc">Design system i implementacja frontendu dla platformy w
+                                    sektorze B2B. 150+ komponentow.</p>
+                                <span class="cs-card__cta">Czytaj case study</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Locked placeholders - social proof -->
+                    <div class="portfolio-grid-item reveal" data-delay="100" data-category="ecommerce">
+                        <div class="cs-card" style="opacity:0.5;cursor:default;"
+                            aria-label="Projekt niedostepny publicznie">
+                            <div class="cs-card__thumb">
+                                <div class="cs-thumb-placeholder"
+                                    style="background: linear-gradient(135deg, #141820 0%, #1c2230 100%)">
+                                    <span style="opacity:0.4;font-size:var(--text-sm)">NDA</span>
+                                </div>
+                                <span class="cs-card__tag">E-commerce</span>
+                            </div>
+                            <div class="cs-card__body">
+                                <div class="cs-card__meta">
+                                    <span class="cs-card__category">E-commerce</span>
+                                    <span class="cs-card__year">2023</span>
+                                </div>
+                                <h2 class="cs-card__title">Sklep online - NDA</h2>
+                                <p class="cs-card__desc">Projekt objety umowa o poufnosci. Szczegoly dostepne po
+                                    kontakcie.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-grid-item reveal" data-delay="180" data-category="strona">
+                        <div class="cs-card" style="opacity:0.5;cursor:default;"
+                            aria-label="Projekt niedostepny publicznie">
+                            <div class="cs-card__thumb">
+                                <div class="cs-thumb-placeholder"
+                                    style="background: linear-gradient(135deg, #181018 0%, #221828 100%)">
+                                    <span style="opacity:0.4;font-size:var(--text-sm)">NDA</span>
+                                </div>
+                                <span class="cs-card__tag">Landing page</span>
+                            </div>
+                            <div class="cs-card__body">
+                                <div class="cs-card__meta">
+                                    <span class="cs-card__category">Landing Page</span>
+                                    <span class="cs-card__year">2023</span>
+                                </div>
+                                <h2 class="cs-card__title">Landing page - fintech - NDA</h2>
+                                <p class="cs-card__desc">Kampanijny landing z wysokim wskaznikiem konwersji. Szczegoly
+                                    dostepne po kontakcie.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOTTOM CTA -->
+        <section class="cta-closer">
+            <div class="container">
+                <h2 class="cta-closer__title reveal">Twoj projekt moze byc nastepny.</h2>
+                <p class="cta-closer__sub reveal" data-delay="100">
+                    Porozmawiajmy o tym, co chcesz osiagnac.
+                </p>
+                <div class="cta-closer__actions reveal" data-delay="200">
+                    <a href="/contact.html" class="btn btn--primary" data-track-cta="work_bottom">Umow rozmowe</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <p class="footer__brand-name font-display">Jan Kowalski</p>
+                    <p class="footer__tagline">Website designer i frontend engineer. Projektuję i buduję strony, ktore
+                        realizuja cele biznesowe.</p>
+                </div>
+                <div>
+                    <p class="footer__col-title">Nawigacja</p>
+                    <ul class="footer__links" role="list">
+                        <li><a href="/work/" class="footer__link">Realizacje</a></li>
+                        <li><a href="/services.html" class="footer__link">Oferta</a></li>
+                        <li><a href="/about.html" class="footer__link">O mnie</a></li>
+                        <li><a href="/contact.html" class="footer__link">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer__col-title">Kontakt</p>
+                    <ul class="footer__links" role="list">
+                        <li><a href="mailto:hello@jankowalski.pl" class="footer__link"
+                                data-track-contact="email">hello@jankowalski.pl</a></li>
+                        <li><a href="https://linkedin.com/in/jankowalski" class="footer__link" rel="noopener noreferrer"
+                                target="_blank">LinkedIn</a></li>
+                        <li><a href="https://dribbble.com/jankowalski" class="footer__link" rel="noopener noreferrer"
+                                target="_blank">Dribbble</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer__col-title">Prawne</p>
+                    <ul class="footer__links" role="list">
+                        <li><a href="/privacy.html" class="footer__link">Polityka prywatnosci</a></li>
+                        <li><a href="/terms.html" class="footer__link">Warunki wspolpracy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">&copy; <span id="year"></span> Jan Kowalski. Wszelkie prawa zastrzeżone.</p>
+                <p class="footer__micro">Zaprojektowane i zbudowane bez frameworkow.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="consent-banner" role="dialog" aria-label="Zgoda na cookies">
+        <p class="consent-banner__text">
+            Ta strona korzysta z analityki wylacznie po Twojej zgodzie.
+            <a href="/privacy.html">Polityka prywatnosci</a>.
+        </p>
+        <div class="consent-banner__actions">
+            <button class="btn btn--primary" style="font-size:var(--text-xs);padding:0.5rem 1.25rem"
+                data-consent="accept">Akceptuje</button>
+            <button class="btn btn--outline" style="font-size:var(--text-xs);padding:0.5rem 1.25rem"
+                data-consent="deny">Odrzucam</button>
+        </div>
+    </div>
+
+    <script defer src="../assets/js/analytics.js"></script>
+    <script defer src="../assets/js/consent.js"></script>
+    <script defer src="../assets/js/main.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>

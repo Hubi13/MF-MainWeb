@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Platforma B2B - system UI | Jan Kowalski</title>
+    <meta name="description"
+        content="Case study - design system i implementacja frontendu dla platformy SaaS B2B. 150+ komponentow, jasna dokumentacja, 0 regresji.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jankowalski.pl/work/case-study-3.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jankowalski.pl/work/case-study-3.html">
+    <meta property="og:title" content="Case Study: Platforma B2B - system UI">
+    <meta property="og:image" content="https://jankowalski.pl/assets/img/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="manifest" href="/manifest.webmanifest">
+
+    <link rel="stylesheet" href="../assets/css/design-system.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/pages/work.css">
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Case Study: Platforma B2B - system UI",
+    "url": "https://jankowalski.pl/work/case-study-3.html",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Strona glowna", "item": "https://jankowalski.pl/" },
+        { "@type": "ListItem", "position": 2, "name": "Realizacje", "item": "https://jankowalski.pl/work/" },
+        { "@type": "ListItem", "position": 3, "name": "Platforma B2B", "item": "https://jankowalski.pl/work/case-study-3.html" }
+      ]
+    }
+  }
+  </script>
+</head>
+
+<body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header" role="banner">
+        <div class="container">
+            <a href="/" class="site-logo">Jan<span>.</span>Kowalski</a>
+            <nav class="site-nav" role="navigation" aria-label="Glowna nawigacja">
+                <ul class="site-nav__list" id="main-nav">
+                    <li><a href="/work/" class="site-nav__link">Realizacje</a></li>
+                    <li><a href="/services.html" class="site-nav__link">Oferta</a></li>
+                    <li><a href="/about.html" class="site-nav__link">O mnie</a></li>
+                    <li><a href="/contact.html" class="site-nav__link site-nav__cta btn btn--primary"
+                            data-track-cta="nav_header">Umow rozmowe</a></li>
+                </ul>
+                <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Otworz menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <header class="cs-header">
+            <div class="container">
+                <nav class="breadcrumbs" aria-label="Sciezka nawigacji">
+                    <span class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Strona glowna</a></span>
+                    <span class="breadcrumbs__item"><a href="/work/" class="breadcrumbs__link">Realizacje</a></span>
+                    <span class="breadcrumbs__item"><span class="breadcrumbs__current">Platforma B2B</span></span>
+                </nav>
+
+                <p class="label cs-header__label">Case Study - 03</p>
+                <h1 class="cs-header__title reveal">
+                    Design system i frontend dla platformy B2B - od chaosu do 150+ komponentow
+                </h1>
+                <p class="cs-header__intro reveal" data-delay="100">
+                    Rozwijajacy sie startup B2B mial problem typowy dla etapu wzrostu: 4 lata
+                    developmentu bez jednorodnego systemu UI. Kazdy ekran wygladal troche inaczej.
+                    Onboarding trwal 3 tygodnie. Czas na budowe nowej funkcji - 2-4 x dluzej niz
+                    powinnien.
+                </p>
+
+                <div class="cs-meta-grid reveal" data-delay="200">
+                    <div class="cs-meta-item">
+                        <div class="cs-meta-item__label">Klient</div>
+                        <div class="cs-meta-item__value">Produkt B2B, SaaS</div>
+                    </div>
+                    <div class="cs-meta-item">
+                        <div class="cs-meta-item__label">Zakres</div>
+                        <div class="cs-meta-item__value">UI Audit, Design System, Frontend</div>
+                    </div>
+                    <div class="cs-meta-item">
+                        <div class="cs-meta-item__label">Czas realizacji</div>
+                        <div class="cs-meta-item__value">12 tygodni</div>
+                    </div>
+                    <div class="cs-meta-item">
+                        <div class="cs-meta-item__label">Rok</div>
+                        <div class="cs-meta-item__value">2024</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div
+                style="aspect-ratio:16/6; background: linear-gradient(135deg, #0e1520 0%, #1e2535 50%, #0e1520 100%); border-radius: var(--radius-md); margin-block: var(--space-lg); display:flex; align-items:center; justify-content:center; border: 1px solid var(--color-border);">
+                <span
+                    style="color: var(--color-text-muted); font-style:italic; font-family: var(--font-display);">platforma-b2b-ui-system.jpg</span>
+            </div>
+        </div>
+
+        <section class="container">
+            <div class="cs-narrative">
+                <div class="cs-narrative__col">
+                    <h2 class="cs-narrative__title">Problem</h2>
+                    <p class="cs-narrative__text">
+                        Produkt rozwijany przez 2 dev-teams bez wspolnego wzorca. 6 roznych rodzajow
+                        przycisku w jednej aplikacji. 4 rozmiary fontu, ktore nie mialy logiki.
+                        Nowy developer potrzebowal tygodnia, zeby zrozumiec, ktory komponent gdzie
+                        uzywac. Klientow grzebalo sic w interfejsie.
+                    </p>
+                </div>
+                <div class="cs-narrative__col">
+                    <h2 class="cs-narrative__title">Podejscie</h2>
+                    <p class="cs-narrative__text">
+                        Audyt istniejacego UI (pełna inwentaryzacja komponentow), potem projekt
+                        systemu od tokenow, nie od komponentow. Tokens → primitives → semantics →
+                        components → patterns. Kazdy etap zatwierdzany przez lead developer i
+                        produkt owner zanim ruszalem do implementacji.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="cs-body">
+                <article class="cs-content">
+                    <h2>Audyt i inwentaryzacja</h2>
+                    <p>
+                        Tydzien pracy: przejrzalem 40+ ekranow produkcyjnych, skatalogowałem
+                        wszystkie unikalne warianty kazdego komponentu. Raport: 47 wariantow
+                        przycisku, 12 sposobow wyswietlania daty, brak jednorodnego systemu odstepow.
+                        Dopiero po tym audycie moglem zaproponowac, ile z tego utrzymujemy, a ile
+                        wyrzucamy.
+                    </p>
+
+                    <div class="highlight-block">
+                        "Design system nie jest projektem graficznym. To infrastruktura produktu."
+                    </div>
+
+                    <h2>Tokens jako fundament</h2>
+                    <p>
+                        Zamiast projektowac przyciski, zaprojekowalem zmienne. Kolory, przestrzenie,
+                        promienie, cienie, typografia - wszystko jako named tokens z jasna semantyke.
+                        Potem prymitywy zgrupowane w semantyczne aliasy (primary, danger, surface-elevated).
+                        Od tej chwili Developer nie decyduje: "jaki kolor przycisk hover?" - system
+                        decyduje. Zmieniasz token, zmieniaja sie wszystkie wdrozenia.
+                    </p>
+
+                    <h2>Biblioteka komponentow (Figma + kod)</h2>
+                    <p>
+                        150+ komponentow. Kazdy w Figmie z properties i variantami mapujacymi sie
+                        1:1 na props w kodzie. Implementacja jako czysty HTML/CSS/JS (bez frameworka -
+                        wymog klienta), z eksportem do Storybook. Kazdy komponent z dokumentacja,
+                        przykladami uzycia i stated (default, hover, focus, disabled, error).
+                    </p>
+
+                    <h2>Wdrozenie i migracja</h2>
+                    <p>
+                        Migracja rozlozowana na 3 sprinty. Komponenty wprowadzane stopniowo przez
+                        feature flags - bez single big-bang release. Zerow regresji wykrytych
+                        przez klientow na produkcji. Plik README i Storybook z przykladami ulatwily
+                        onboarding nastepnych developerow z 3 tygodni do 3 dni.
+                    </p>
+
+                    <div class="cs-results">
+                        <div class="cs-result-item">
+                            <div class="cs-result-item__value">150+</div>
+                            <div class="cs-result-item__label">Komponentow w systemie</div>
+                        </div>
+                        <div class="cs-result-item">
+                            <div class="cs-result-item__value">-60%</div>
+                            <div class="cs-result-item__label">Czas budowy nowych funkcji</div>
+                        </div>
+                        <div class="cs-result-item">
+                            <div class="cs-result-item__value">3 dni</div>
+                            <div class="cs-result-item__label">Onboarding dev (bylo 3 tyg)</div>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="cs-sidebar">
+                    <div class="cs-sidebar-box">
+                        <h3 class="cs-sidebar-box__title">Stack</h3>
+                        <ul class="cs-sidebar-box__list" role="list">
+                            <li class="cs-sidebar-box__item">Figma (Design system)</li>
+                            <li class="cs-sidebar-box__item">HTML / CSS / JS</li>
+                            <li class="cs-sidebar-box__item">Storybook</li>
+                            <li class="cs-sidebar-box__item">CSS Custom Properties</li>
+                            <li class="cs-sidebar-box__item">Notion (Dokumentacja)</li>
+                        </ul>
+                    </div>
+                    <div class="cs-sidebar-box">
+                        <h3 class="cs-sidebar-box__title">Deliverables</h3>
+                        <ul class="cs-sidebar-box__list" role="list">
+                            <li class="cs-sidebar-box__item">Audyt UI (raport)</li>
+                            <li class="cs-sidebar-box__item">Design tokens (Figma + CSS)</li>
+                            <li class="cs-sidebar-box__item">150+ komponentow (Figma)</li>
+                            <li class="cs-sidebar-box__item">150+ komponentow (kod)</li>
+                            <li class="cs-sidebar-box__item">Storybook</li>
+                            <li class="cs-sidebar-box__item">Dokumentacja techniczna</li>
+                            <li class="cs-sidebar-box__item">Wytyczne dla designerow</li>
+                        </ul>
+                    </div>
+                    <a href="/contact.html" class="btn btn--primary"
+                        style="width:100%;justify-content:center;margin-top:var(--space-sm);"
+                        data-track-cta="cs3_sidebar">
+                        Umow rozmowe
+                    </a>
+                </aside>
+            </div>
+        </section>
+
+        <div class="container">
+            <a href="/work/case-study-1.html" class="cs-next">
+                <div>
+                    <p class="cs-next__label">Wrocic do pierwszego</p>
+                    <p class="cs-next__title">Firma uslugowa - redesign i wzrost konwersji</p>
+                </div>
+                <span class="cs-next__arrow" aria-hidden="true">→</span>
+            </a>
+        </div>
+
+        <section class="cta-closer">
+            <div class="container">
+                <h2 class="cta-closer__title reveal">Potrzebujesz design systemu lub UI?</h2>
+                <div class="cta-closer__actions reveal" data-delay="100">
+                    <a href="/contact.html" class="btn btn--primary" data-track-cta="cs3_cta">Porozmawiajmy</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <p class="footer__brand-name font-display">Jan Kowalski</p>
+                    <p class="footer__tagline">Website designer i frontend engineer.</p>
+                </div>
+                <div>
+                    <p class="footer__col-title">Nawigacja</p>
+                    <ul class="footer__links" role="list">
+                        <li><a href="/work/" class="footer__link">Realizacje</a></li>
+                        <li><a href="/services.html" class="footer__link">Oferta</a></li>
+                        <li><a href="/about.html" class="footer__link">O mnie</a></li>
+                        <li><a href="/contact.html" class="footer__link">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer__col-title">Kontakt</p>
+                    <ul class="footer__links" role="list">
+                        <li><a href="mailto:hello@jankowalski.pl" class="footer__link"
+                                data-track-contact="email">hello@jankowalski.pl</a></li>
+                        <li><a href="https://linkedin.com/in/jankowalski" class="footer__link" rel="noopener noreferrer"
+                                target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer__col-title">Prawne</p>
+                    <ul class="footer__links" role="list">
+                        <li><a href="/privacy.html" class="footer__link">Polityka prywatnosci</a></li>
+                        <li><a href="/terms.html" class="footer__link">Warunki wspolpracy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">&copy; <span id="year"></span> Jan Kowalski.</p>
+                <p class="footer__micro">Zaprojektowane i zbudowane bez frameworkow.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="consent-banner" role="dialog" aria-label="Zgoda na cookies">
+        <p class="consent-banner__text">Analityka wylacznie po Twojej zgodzie. <a href="/privacy.html">Polityka
+                prywatnosci</a>.</p>
+        <div class="consent-banner__actions">
+            <button class="btn btn--primary" style="font-size:var(--text-xs);padding:0.5rem 1.25rem"
+                data-consent="accept">Akceptuje</button>
+            <button class="btn btn--outline" style="font-size:var(--text-xs);padding:0.5rem 1.25rem"
+                data-consent="deny">Odrzucam</button>
+        </div>
+    </div>
+
+    <script defer src="../assets/js/analytics.js"></script>
+    <script defer src="../assets/js/consent.js"></script>
+    <script defer src="../assets/js/main.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>

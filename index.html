@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jan Kowalski - Website Designer | Strony www, ktore sprzedaja</title>
+  <meta name="description" content="Projektuję i buduję strony www oraz systemy UI dla firm, ktore chca rosnac. Jasny proces, przewidywalne terminy, mierzalne rezultaty.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jankowalski.pl/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jankowalski.pl/">
+  <meta property="og:title" content="Jan Kowalski - Website Designer | Strony www, ktore sprzedaja">
+  <meta property="og:description" content="Projektuję i buduję strony www dla firm, ktore chca rosnac. Jasny proces, przewidywalne terminy, mierzalne rezultaty.">
+  <meta property="og:image" content="https://jankowalski.pl/assets/img/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jan Kowalski - Website Designer">
+  <meta name="twitter:description" content="Projektuję i buduję strony www dla firm, ktore chca rosnac.">
+  <meta name="twitter:image" content="https://jankowalski.pl/assets/img/og-image.jpg">
+
+  <!-- Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Manifest -->
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0a0a0b">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/design-system.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/home.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://jankowalski.pl/#person",
+        "name": "Jan Kowalski",
+        "jobTitle": "Website Designer & Frontend Engineer",
+        "url": "https://jankowalski.pl",
+        "email": "hello@jankowalski.pl",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Warszawa",
+          "addressCountry": "PL"
+        },
+        "sameAs": [
+          "https://linkedin.com/in/jankowalski",
+          "https://dribbble.com/jankowalski"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://jankowalski.pl/#website",
+        "url": "https://jankowalski.pl",
+        "name": "Jan Kowalski - Website Designer",
+        "publisher": { "@id": "https://jankowalski.pl/#person" }
+      },
+      {
+        "@type": "ProfessionalService",
+        "name": "Jan Kowalski - Website Design",
+        "url": "https://jankowalski.pl",
+        "description": "Projektowanie i budowa stron www oraz systemow UI dla firm i marek premium.",
+        "areaServed": "PL",
+        "priceRange": "$$"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="/" class="site-logo" aria-label="Jan Kowalski - strona glowna">
+        Jan<span>.</span>Kowalski
+      </a>
+      <nav class="site-nav" role="navigation" aria-label="Glowna nawigacja">
+        <ul class="site-nav__list" id="main-nav">
+          <li><a href="/work/" class="site-nav__link">Realizacje</a></li>
+          <li><a href="/services.html" class="site-nav__link">Oferta</a></li>
+          <li><a href="/about.html" class="site-nav__link">O mnie</a></li>
+          <li><a href="/contact.html" class="site-nav__link site-nav__cta btn btn--primary" data-track-cta="nav_header">Umow rozmowe</a></li>
+        </ul>
+        <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Otworz menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero__content">
+        <div class="hero__eyebrow">
+          <div class="hero__available" role="status" aria-label="Dostepnosc">
+            <span class="hero__available-dot" aria-hidden="true"></span>
+            Dostepny na zlecenia
+          </div>
+        </div>
+
+        <h1 class="hero__title reveal">
+          Projekt,<br>
+          ktory <em>dowozi</em><br>
+          wyniki.
+        </h1>
+
+        <p class="hero__sub reveal" data-delay="120">
+          Projektuje i buduję strony www oraz systemy UI dla firm,
+          ktore chca recznie budowac pozycje rynkowa - nie tylko
+          wyglad.
+        </p>
+
+        <div class="hero__actions reveal" data-delay="240">
+          <a href="/contact.html" class="btn btn--primary" data-track-cta="hero_primary">
+            Umow bezplatna rozmowe
+          </a>
+          <a href="/work/" class="btn btn--ghost" data-track-cta="hero_secondary">
+            Zobacz realizacje
+          </a>
+        </div>
+      </div>
+
+      <!-- PROOF PANEL -->
+      <aside class="hero__panel reveal" data-delay="180" aria-label="Kluczowe metryki">
+        <div>
+          <p class="hero__panel-title">Wyniki</p>
+          <div class="hero__metric-row">
+            <div class="hero__metric">
+              <div class="hero__metric-value"><em>+34</em>%</div>
+              <div class="hero__metric-label">sredni wzrost konwersji</div>
+            </div>
+            <div class="hero__metric">
+              <div class="hero__metric-value"><em>0</em></div>
+              <div class="hero__metric-label">przekroczonych deadlinow</div>
+            </div>
+            <div class="hero__metric">
+              <div class="hero__metric-value"><em>14</em>+</div>
+              <div class="hero__metric-label">projektow w 6 latach</div>
+            </div>
+            <div class="hero__metric">
+              <div class="hero__metric-value"><em>&lt;2s</em></div>
+              <div class="hero__metric-label">Core Web Vitals (LCP)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__recent">
+          <p class="hero__panel-title">Ostatnie projekty</p>
+          <ul class="hero__recent-list" role="list">
+            <li class="hero__recent-item">
+              <span>Marka premium - rebrand i strona</span>
+              <span class="hero__recent-tag">2025</span>
+            </li>
+            <li class="hero__recent-item">
+              <span>Platforma B2B - system UI</span>
+              <span class="hero__recent-tag">2024</span>
+            </li>
+            <li class="hero__recent-item">
+              <span>Firma uslugowa - landing + optymalizacja</span>
+              <span class="hero__recent-tag">2024</span>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <!-- PROOF BAR -->
+    <section class="section--sm" aria-label="Kluczowe statystyki">
+      <div class="container">
+        <div class="proof-bar reveal">
+          <div class="proof-item">
+            <div class="proof-item__value"><em>14</em>+</div>
+            <div class="proof-item__label">Zrealizowane projekty</div>
+          </div>
+          <div class="proof-item">
+            <div class="proof-item__value"><em>6</em> lat</div>
+            <div class="proof-item__label">Doswiadczenia komercyjnego</div>
+          </div>
+          <div class="proof-item">
+            <div class="proof-item__value"><em>+34</em>%</div>
+            <div class="proof-item__label">Sredni wzrost konwersji</div>
+          </div>
+          <div class="proof-item">
+            <div class="proof-item__value"><em>0</em></div>
+            <div class="proof-item__label">Przekroczonych deadlinow</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="label section-head__label">Jak pracuje</p>
+          <h2 class="section-head__title" id="process-heading">Proces bez niespodzianek</h2>
+          <p class="section-head__sub">
+            Kazdy projekt przebiega wedlug tego samego, sprawdzonego schematu.
+            Wiesz, co sie dzieje na kazdym etapie.
+          </p>
+        </div>
+
+        <div class="process-timeline">
+          <div class="process-step reveal">
+            <span class="process-step__num" aria-hidden="true">01</span>
+            <h3 class="process-step__title">Discovery</h3>
+            <p class="process-step__desc">Rozumiem Twoj biznes, uzytkownikow i konkurencje. Bez tego nie ma dobrych decyzji projektowych.</p>
+          </div>
+          <div class="process-step reveal" data-delay="80">
+            <span class="process-step__num" aria-hidden="true">02</span>
+            <h3 class="process-step__title">UX & Architektura</h3>
+            <p class="process-step__desc">Wireframes, user flows, hierarchia informacji. Struktura,ktora sluzy celom, nie estetyce.</p>
+          </div>
+          <div class="process-step reveal" data-delay="160">
+            <span class="process-step__num" aria-hidden="true">03</span>
+            <h3 class="process-step__title">UI Design</h3>
+            <p class="process-step__desc">System projektowy w Figmie. Design tokens, komponenty, stany i responsive layouts.</p>
+          </div>
+          <div class="process-step reveal" data-delay="240">
+            <span class="process-step__num" aria-hidden="true">04</span>
+            <h3 class="process-step__title">Build</h3>
+            <p class="process-step__desc">Czysty kod lub platforma no-code. Performance, dostepnosc, SEO - bez polowicznych rozwiazan.</p>
+          </div>
+          <div class="process-step reveal" data-delay="320">
+            <span class="process-step__num" aria-hidden="true">05</span>
+            <h3 class="process-step__title">Launch</h3>
+            <p class="process-step__desc">Wdrozenie, testy, monitoring. Startujemy wtedy, kiedy jest gotowe.</p>
+          </div>
+          <div class="process-step reveal" data-delay="400">
+            <span class="process-step__num" aria-hidden="true">06</span>
+            <h3 class="process-step__title">Growth</h3>
+            <p class="process-step__desc">Analityka, testy A/B, iteracje. Strona po wdrozeniu pracuje i ewoluuje.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK -->
+    <section class="section" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="label section-head__label">Realizacje</p>
+          <h2 class="section-head__title" id="work-heading">Wybrane projekty</h2>
+        </div>
+
+        <div class="work-grid">
+          <div class="work-grid-item reveal">
+            <a href="/work/case-study-1.html" class="cs-card" aria-label="Case study: Firma uslugowa - redesign i wzrost konwersji">
+              <div class="cs-card__thumb">
+                <div class="cs-thumb-placeholder" style="background: linear-gradient(135deg, #1a1a22 0%, #2c2c3a 50%, #1a1a22 100%);"
+                  aria-label="Miniatura projektu - firma uslugowa">
+                  <span style="opacity:0.3;font-size:var(--text-sm)">firma-uslugowa.jpg</span>
+                </div>
+                <span class="cs-card__tag">Strona www</span>
+              </div>
+              <div class="cs-card__body">
+                <div class="cs-card__meta">
+                  <span class="cs-card__category">Redesign & Optymalizacja</span>
+                  <span class="cs-card__year">2024</span>
+                </div>
+                <h3 class="cs-card__title">Firma uslugowa w Warszawie</h3>
+                <p class="cs-card__desc">Redesign strony z naciskiem na konwersje. Nowa architektura informacji, system UI i integracja z CRM.</p>
+                <span class="cs-card__cta">Czytaj case study</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="work-grid-item reveal" data-delay="120">
+            <a href="/work/case-study-2.html" class="cs-card" aria-label="Case study: Marka premium - brand i strona">
+              <div class="cs-card__thumb">
+                <div class="cs-thumb-placeholder" style="background: linear-gradient(135deg, #1e1810 0%, #2e2418 50%, #1e1810 100%);"
+                  aria-label="Miniatura projektu - marka premium">
+                  <span style="opacity:0.3;font-size:var(--text-sm)">marka-premium.jpg</span>
+                </div>
+                <span class="cs-card__tag">Brand & Web</span>
+              </div>
+              <div class="cs-card__body">
+                <div class="cs-card__meta">
+                  <span class="cs-card__category">Brand Identity & Web</span>
+                  <span class="cs-card__year">2025</span>
+                </div>
+                <h3 class="cs-card__title">Marka premium</h3>
+                <p class="cs-card__desc">System identyfikacji wizualnej od podstaw, strona wizerunkowa i material marketing.</p>
+                <span class="cs-card__cta">Czytaj case study</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="work-grid-item reveal" data-delay="80">
+            <a href="/work/case-study-3.html" class="cs-card" aria-label="Case study: Produkt B2B - system UI">
+              <div class="cs-card__thumb">
+                <div class="cs-thumb-placeholder" style="background: linear-gradient(135deg, #0e1520 0%, #1e2535 50%, #0e1520 100%);"
+                  aria-label="Miniatura projektu - produkt B2B">
+                  <span style="opacity:0.3;font-size:var(--text-sm)">produkt-b2b.jpg</span>
+                </div>
+                <span class="cs-card__tag">UI Design</span>
+              </div>
+              <div class="cs-card__body">
+                <div class="cs-card__meta">
+                  <span class="cs-card__category">UI System & Frontend</span>
+                  <span class="cs-card__year">2024</span>
+                </div>
+                <h3 class="cs-card__title">Produkt B2B - platforma SaaS</h3>
+                <p class="cs-card__desc">Design system i implementacja frontendu dla platformy zarzadzania projektami w sektorze B2B.</p>
+                <span class="cs-card__cta">Czytaj case study</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top: var(--space-lg);">
+          <a href="/work/" class="btn btn--outline reveal">Wszystkie realizacje</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY ME -->
+    <section class="section" style="background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="label section-head__label">Dlaczego ja</p>
+          <h2 class="section-head__title" id="why-heading">Nie ogolniki. Konkrety.</h2>
+          <p class="section-head__sub">
+            Wiem, ze kazdy freelancer pisze "pasja i jakosc". Oto co faktycznie wyroznio moja prace.
+          </p>
+        </div>
+
+        <div class="capabilities-matrix reveal">
+          <div class="capability-item">
+            <div class="capability-item__title">Przewidywalnosc</div>
+            <div class="capability-item__tags">
+              <span class="capability-tag">Jasne etapy</span>
+              <span class="capability-tag">Stały kontakt</span>
+              <span class="capability-tag">Zero niespodzianek</span>
+            </div>
+          </div>
+          <div class="capability-item">
+            <div class="capability-item__title">Orientacja na wyniki</div>
+            <div class="capability-item__tags">
+              <span class="capability-tag">Konwersje</span>
+              <span class="capability-tag">Performance</span>
+              <span class="capability-tag">SEO-ready</span>
+            </div>
+          </div>
+          <div class="capability-item">
+            <div class="capability-item__title">Techniczna precyzja</div>
+            <div class="capability-item__tags">
+              <span class="capability-tag">Czysty kod</span>
+              <span class="capability-tag">Core Web Vitals</span>
+              <span class="capability-tag">Dostepnosc</span>
+            </div>
+          </div>
+          <div class="capability-item">
+            <div class="capability-item__title">Kompletna dostawa</div>
+            <div class="capability-item__tags">
+              <span class="capability-tag">Design + Build</span>
+              <span class="capability-tag">Jeden kontakt</span>
+              <span class="capability-tag">Gotowe do wdrozenia</span>
+            </div>
+          </div>
+          <div class="capability-item">
+            <div class="capability-item__title">Myslenie biznesowe</div>
+            <div class="capability-item__tags">
+              <span class="capability-tag">Cel = konwersja</span>
+              <span class="capability-tag">UX-first</span>
+              <span class="capability-tag">ROI</span>
+            </div>
+          </div>
+          <div class="capability-item">
+            <div class="capability-item__title">Dokumentacja i przekazanie</div>
+            <div class="capability-item__tags">
+              <span class="capability-tag">Design tokens</span>
+              <span class="capability-tag">Dokumentacja</span>
+              <span class="capability-tag">Szkolenie</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="label section-head__label">Opinie</p>
+          <h2 class="section-head__title" id="testimonials-heading">Co mowia partnerzy</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <blockquote class="testimonial reveal">
+            <p class="testimonial__quote">
+              "Wspolpraca z Janem to rzadkie doswiadczenie. Dostajesz kogos, kto rozumie
+              biznes, nie tylko estetykę. Strona po rebrandzie zwiekszyła zapytania
+              ofertowe o ponad 40% w pierwszym kwartalе."
+            </p>
+            <footer class="testimonial__author">
+              Anna Wisniewska, <span class="testimonial__role">Dyrektor Zarzadzajacy, firma uslugowa</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial reveal" data-delay="120">
+            <p class="testimonial__quote">
+              "Deadline dotrzymany, budzet nienaruszony, design ponadprzeciętny.
+              Rzadko się zdarza, zeby wszystkie trzy rzeczy zadzialaly jednoczesnie.
+              Jan to freelancer, ktoremu mozna zaufac."
+            </p>
+            <footer class="testimonial__author">
+              Marek Dlugosz, <span class="testimonial__role">Zalozyciel, startup B2B</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA CLOSER -->
+    <section class="cta-closer" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 class="cta-closer__title reveal" id="cta-heading">
+          Porozmawiajmy<br>o Twoim projekcie.
+        </h2>
+        <p class="cta-closer__sub reveal" data-delay="100">
+          Bezplatna, 30-minutowa rozmowa. Bez zadnych zobowiazan.
+          Sprawdzamy, czy mozemy wspolpracowac.
+        </p>
+        <div class="cta-closer__actions reveal" data-delay="200">
+          <a href="/contact.html" class="btn btn--primary" data-track-cta="footer_cta">
+            Umow bezplatna rozmowe
+          </a>
+          <a href="mailto:hello@jankowalski.pl" class="btn btn--outline" data-track-contact="email">
+            hello@jankowalski.pl
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name font-display">Jan Kowalski</p>
+          <p class="footer__tagline">
+            Website designer i frontend engineer.
+            Projektuję i buduję strony, ktore realizuja cele biznesowe.
+          </p>
+        </div>
+        <div>
+          <p class="footer__col-title">Nawigacja</p>
+          <ul class="footer__links" role="list">
+            <li><a href="/work/" class="footer__link">Realizacje</a></li>
+            <li><a href="/services.html" class="footer__link">Oferta</a></li>
+            <li><a href="/about.html" class="footer__link">O mnie</a></li>
+            <li><a href="/contact.html" class="footer__link">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Kontakt</p>
+          <ul class="footer__links" role="list">
+            <li><a href="mailto:hello@jankowalski.pl" class="footer__link" data-track-contact="email">hello@jankowalski.pl</a></li>
+            <li><a href="https://linkedin.com/in/jankowalski" class="footer__link" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+            <li><a href="https://dribbble.com/jankowalski" class="footer__link" rel="noopener noreferrer" target="_blank">Dribbble</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Prawne</p>
+          <ul class="footer__links" role="list">
+            <li><a href="/privacy.html" class="footer__link">Polityka prywatnosci</a></li>
+            <li><a href="/terms.html" class="footer__link">Warunki wspolpracy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          &copy; <span id="year"></span> Jan Kowalski. Wszelkie prawa zastrzeżone.
+        </p>
+        <p class="footer__micro">
+          Zaprojektowane i zbudowane bez frameworkow.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CONSENT BANNER -->
+  <div class="consent-banner" role="dialog" aria-label="Zgoda na cookies" aria-modal="true">
+    <p class="consent-banner__text">
+      Ta strona korzysta z analityki (Google Analytics) wylacznie po Twojej zgodzie.
+      Wiecej informacji w <a href="/privacy.html">polityce prywatnosci</a>.
+    </p>
+    <div class="consent-banner__actions">
+      <button class="btn btn--primary btn--sm" data-consent="accept" style="font-size:var(--text-xs);padding:0.5rem 1.25rem">
+        Akceptuje
+      </button>
+      <button class="btn btn--outline btn--sm" data-consent="deny" style="font-size:var(--text-xs);padding:0.5rem 1.25rem">
+        Odrzucam
+      </button>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script defer src="assets/js/analytics.js"></script>
+  <script defer src="assets/js/consent.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
