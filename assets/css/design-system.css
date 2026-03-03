@@ -60,9 +60,9 @@
   --transition-base: 300ms ease;
   --transition-slow: 500ms cubic-bezier(0.16, 1, 0.3, 1);
 
-  --container-max: 1300px;
-  --container-text: 800px;
-  --gutter: clamp(1rem, 5vw, 3rem);
+  --container-max: 1440px;
+  --container-text: 900px;
+  --gutter: clamp(1.5rem, 6vw, 4rem);
   --header-height: 80px;
 }
 
