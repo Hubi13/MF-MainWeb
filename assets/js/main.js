@@ -108,16 +108,39 @@
     var legacyBar = document.querySelector('.scroll-progress');
     if (!customBar && !legacyBar) return;
 
-    function updateProgress() {
+    var target = 0;
+    var current = 0;
+    var ticking = false;
+
+    function measureProgress() {
       var scrollTop = window.scrollY;
       var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      return docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    }
 
-      if (customBar) customBar.style.width = progress + '%';
-      if (legacyBar) legacyBar.style.width = progress + '%';
+    function render() {
+      current += (target - current) * 0.18;
+
+      if (customBar) customBar.style.width = current + '%';
+      if (legacyBar) legacyBar.style.width = current + '%';
+
+      if (Math.abs(target - current) > 0.08) {
+        requestAnimationFrame(render);
+      } else {
+        ticking = false;
+      }
+    }
+
+    function updateProgress() {
+      target = measureProgress();
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(render);
+      }
     }
 
     window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
     updateProgress();
   }
 
@@ -183,6 +206,24 @@
       }
     });
 
+    document.addEventListener('mousedown', function () {
+      document.body.classList.add('cursor-press');
+    });
+
+    document.addEventListener('mouseup', function () {
+      document.body.classList.remove('cursor-press');
+    });
+
+    document.addEventListener('mouseleave', function () {
+      document.body.classList.remove('cursor-ready');
+      document.body.classList.remove('cursor-hover');
+      document.body.classList.remove('cursor-press');
+    });
+
+    document.addEventListener('mouseenter', function () {
+      document.body.classList.add('cursor-ready');
+    });
+
     function animate() {
       ringX += (mouseX - ringX) * 0.18;
       ringY += (mouseY - ringY) * 0.18;
@@ -191,6 +232,52 @@
     }
 
     requestAnimationFrame(animate);
+  }
+
+  function initHeroSpotlight() {
+    var hero = document.querySelector('.hero-v3');
+    if (!hero) return;
+
+    var coarse = window.matchMedia('(pointer: coarse)').matches;
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (coarse || reducedMotion) return;
+
+    hero.addEventListener('mousemove', function (event) {
+      var rect = hero.getBoundingClientRect();
+      var x = ((event.clientX - rect.left) / rect.width) * 100;
+      var y = ((event.clientY - rect.top) / rect.height) * 100;
+      hero.style.setProperty('--spot-x', x.toFixed(2) + '%');
+      hero.style.setProperty('--spot-y', y.toFixed(2) + '%');
+    });
+
+    hero.addEventListener('mouseleave', function () {
+      hero.style.removeProperty('--spot-x');
+      hero.style.removeProperty('--spot-y');
+    });
+  }
+
+  function initMagneticButtons() {
+    var buttons = document.querySelectorAll('.btn--magnetic');
+    if (!buttons.length) return;
+
+    var coarse = window.matchMedia('(pointer: coarse)').matches;
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (coarse || reducedMotion) return;
+
+    buttons.forEach(function (button) {
+      button.addEventListener('mousemove', function (event) {
+        var rect = button.getBoundingClientRect();
+        var x = event.clientX - rect.left - rect.width / 2;
+        var y = event.clientY - rect.top - rect.height / 2;
+        var mx = (x / rect.width) * 14;
+        var my = (y / rect.height) * 10;
+        button.style.transform = 'translate(' + mx.toFixed(2) + 'px, ' + my.toFixed(2) + 'px)';
+      });
+
+      button.addEventListener('mouseleave', function () {
+        button.style.transform = '';
+      });
+    });
   }
 
   function initCardParallax() {
@@ -225,5 +312,7 @@
     initPortfolioFilters();
     initCustomCursor();
     initCardParallax();
+    initHeroSpotlight();
+    initMagneticButtons();
   });
 })();
