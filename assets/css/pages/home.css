@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   padding-top: var(--header-height);
+  overflow: hidden;
 }
 
 .hero-v2::before {
@@ -28,6 +29,32 @@
 
 .hero-content {
   max-width: 800px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  margin-bottom: 2rem;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-text-primary);
+}
+
+.hero-pill__dot {
+  width: 8px;
+  height: 8px;
+  background-color: #00d287;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 210, 135, 0.6);
 }
 
 .hero-v2__title {
@@ -56,6 +83,104 @@
 .hero-v2__actions {
   display: flex;
   gap: 1rem;
+}
+
+/* Glassmorphism Section */
+.glass-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .glass-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .glass-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.glass-card {
+  background: linear-gradient(145deg, rgba(20, 20, 20, 0.8), rgba(10, 10, 10, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top left, rgba(255, 90, 31, 0.1), transparent 50%);
+  z-index: 0;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 90, 31, 0.1);
+  border-color: rgba(255, 90, 31, 0.3);
+}
+
+.glass-card__icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.glass-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.glass-card p {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.glass-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  transition: gap 0.3s;
+}
+
+.glass-card__link:hover {
+  color: var(--color-accent);
+  gap: 0.75rem;
 }
 
 /* Section Headings */
@@ -183,7 +308,6 @@
   color: var(--color-text-secondary);
 }
 
-
 /* Maintenance / Hosting Section */
 .models-grid {
   display: grid;
@@ -268,4 +392,60 @@
   content: '✓';
   color: var(--color-accent);
   font-weight: bold;
+}
+
+/* CTA Box */
+.cta-box {
+  background: linear-gradient(180deg, #331206 0%, #170802 100%);
+  border-radius: var(--radius-lg);
+  padding: 4rem 2rem;
+  text-align: center;
+  border: 1px solid var(--color-accent-dim);
+  box-shadow: 0 20px 50px rgba(255, 90, 31, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-box::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: radial-gradient(circle at bottom center, rgba(255, 90, 31, 0.8), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.cta-box__content {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-box h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.btn--cta {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  transition: all 0.3s;
+}
+
+.btn--cta:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  transform: translateY(-2px);
 }
