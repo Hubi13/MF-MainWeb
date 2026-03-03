@@ -1,378 +1,229 @@
 ﻿<!DOCTYPE html>
 <html lang="pl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maciej Figiel - Website Developer | Strony internetowe dla firm</title>
-  <meta name="description" content="Maciej Figiel - Website Developer. Projektuje i wdrazam nowoczesne strony internetowe, ktore przyciagaja uwage i wspieraja sprzedaz.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://jankowalski.pl/">
-
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jankowalski.pl/">
-  <meta property="og:title" content="Maciej Figiel - Website Developer">
-  <meta property="og:description" content="Nowoczesne strony internetowe: strategia, design, wdrozenie i opieka miesieczna lub odsprzedaz na wlasnosc.">
-  <meta property="og:image" content="https://jankowalski.pl/assets/img/og-image.jpg">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Maciej Figiel - Website Developer">
-  <meta name="twitter:description" content="Budowanie stron internetowych od zera: flow, design, animacje i model utrzymania dopasowany do biznesu.">
-  <meta name="twitter:image" content="https://jankowalski.pl/assets/img/og-image.jpg">
-
-  <link rel="manifest" href="/manifest.webmanifest">
-  <meta name="theme-color" content="#0d0b0b">
-
+  <title>Maciej Figiel - Website Developer</title>
+  <meta name="description"
+    content="Projektuję i koduję nowoczesne strony internetowe od zera. Otrzymaj estetyczny i dynamiczny layout dopasowany do Twojego biznesu.">
   <link rel="stylesheet" href="assets/css/design-system.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/pages/home.css">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://jankowalski.pl/#person",
-        "name": "Maciej Figiel",
-        "jobTitle": "Website Developer",
-        "url": "https://jankowalski.pl",
-        "email": "hello@jankowalski.pl"
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://jankowalski.pl/#website",
-        "url": "https://jankowalski.pl",
-        "name": "Maciej Figiel - Projektowanie stron www",
-        "publisher": { "@id": "https://jankowalski.pl/#person" }
-      }
-    ]
-  }
-  </script>
 </head>
-<body>
-  <div class="cursor-ring" aria-hidden="true"></div>
-  <div class="cursor-dot" aria-hidden="true"></div>
-  <div class="scroll-line" aria-hidden="true"><span class="scroll-line__bar"></span></div>
 
-  <header class="site-header" role="banner">
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Header -->
+  <header class="site-header" id="header">
     <div class="container">
-      <a href="/" class="site-logo" aria-label="Maciej Figiel - strona glowna">Maciej<span>.</span>Figiel</a>
-      <nav class="site-nav" role="navigation" aria-label="Glowna nawigacja">
-        <ul class="site-nav__list" id="main-nav">
-          <li><a href="/work/" class="site-nav__link">Realizacje</a></li>
-          <li><a href="/services.html" class="site-nav__link">Oferta</a></li>
-          <li><a href="/about.html" class="site-nav__link">O mnie</a></li>
-          <li><a href="/contact.html" class="site-nav__link site-nav__cta btn btn--primary" data-track-cta="nav_header">Kontakt</a></li>
+      <a href="/" class="site-logo">Maciej<span>.</span>Figiel</a>
+      <nav class="site-nav">
+        <ul class="site-nav__list">
+          <li><a href="#about" class="site-nav__link">O mnie</a></li>
+          <li><a href="#portfolio" class="site-nav__link">Realizacje</a></li>
+          <li><a href="#models" class="site-nav__link">Współpraca</a></li>
+          <li><a href="mailto:hello@jankowalski.pl" class="btn btn--primary"
+              style="padding: 0.5rem 1.5rem;">Rozpocznij</a></li>
         </ul>
-        <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Otworz menu">
-          <span></span><span></span><span></span>
-        </button>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero-v3 container" id="start">
-      <div class="hero-v3__copy hero-v3__panel reveal">
-        <p class="hero-v3__label">Website Developer</p>
-        <h1 class="hero-v3__title">
-          BUDUJE STRONY, KTORE<br>
-          <span>PRZYCIAGAJA UWAGE</span><br>
-          I ZAMIENIAJA RUCH W LEADY.
-        </h1>
-        <p class="hero-v3__sub">
-          Jestem Maciej Figiel. Projektuje i wdrazam nowoczesne strony internetowe dla firm,
-          ktore chca wyraznie pokazac swoja oferte i szybciej domykac zapytania.
-        </p>
-        <div class="hero-v3__actions">
-          <a href="mailto:hello@jankowalski.pl" class="btn btn--primary btn--magnetic">Umow start projektu</a>
-          <a href="#realizacje-v3" class="btn btn--outline btn--magnetic">Zobacz realizacje</a>
-        </div>
-        <ul class="hero-v3__proof" role="list">
-          <li>Strategia + design + wdrozenie w jednym procesie</li>
-          <li>Czytelny przekaz pod konkretna decyzje klienta</li>
-          <li>Animacje i flow, ktore nadaja stronie zycie</li>
-        </ul>
-        <div class="hero-v3__details" role="list" aria-label="Kluczowe detale">
-          <article class="hero-v3__detail" role="listitem"><span>01</span><p>Strategia i przekaz</p></article>
-          <article class="hero-v3__detail" role="listitem"><span>02</span><p>Design i kod</p></article>
-          <article class="hero-v3__detail" role="listitem"><span>03</span><p>Wdrozenie i opieka</p></article>
-        </div>
-      </div>
-
-      <div class="hero-v3__mosaic hero-v3__panel reveal" data-delay="90" aria-label="Prezentacja stylu">
-        <article class="mosaic-card mosaic-card--photo">
-          <div class="mosaic-card__photo">maciej-figiel.jpg</div>
-          <p>Maciej Figiel<br><span>Website Developer</span></p>
-        </article>
-        <article class="mosaic-card mosaic-card--headline"><p>Nowoczesny layout</p></article>
-        <article class="mosaic-card mosaic-card--glass"><p>Glass + outline + motion</p></article>
-        <article class="mosaic-card mosaic-card--metric"><strong>7 dni</strong><span>na pierwszy kierunek strony</span></article>
-        <article class="mosaic-card mosaic-card--service"><p>Landing pages<br>Serwisy firmowe<br>Strony ofertowe</p></article>
-        <article class="mosaic-card mosaic-card--cta"><a href="#model-hosting">Model opieki i hostingu</a></article>
-        <div class="hero-v3__sonar" aria-hidden="true">
-          <span></span><span></span><span></span>
+    <!-- Hero Section -->
+    <section class="hero-v2 container">
+      <div class="hero-content reveal">
+        <h1 class="hero-v2__title">WEB SITE<br><span>DEVELOPER.</span></h1>
+        <p class="hero-v2__sub">Buduję wciągające, szybkie i nowoczesne strony WWW. Przeprowadzam Cię od konceptu, przez
+          unikalny, luksusowy design, po wdrożenie na gotowo. Przyciągnij uwagę nowoczesną formą.</p>
+        <div class="hero-v2__actions">
+          <a href="#portfolio" class="btn btn--primary">Moje realizacje</a>
+          <a href="#about" class="btn btn--outline">Poznaj mnie</a>
         </div>
       </div>
     </section>
 
-    <section class="section band-v3 reveal" aria-hidden="true">
-      <div class="container">
-        <div class="band-v3__track">
-          <span>WEBSITE DEVELOPER</span>
-          <span>STRONY INTERNETOWE</span>
-          <span>FLOW I ANIMACJE</span>
-          <span>JASNY PRZEKAZ</span>
-          <span>GLASSMORPHISM DETAILS</span>
-          <span>WEBSITE DEVELOPER</span>
-          <span>STRONY INTERNETOWE</span>
-          <span>FLOW I ANIMACJE</span>
-          <span>JASNY PRZEKAZ</span>
-          <span>GLASSMORPHISM DETAILS</span>
+    <!-- About Section -->
+    <section id="about" class="section container">
+      <div class="section-head reveal">
+        <p class="section-head__label">Kim jestem</p>
+        <h2>Projektuję przyszłość w sieci</h2>
+      </div>
+      <div class="about-section reveal">
+        <div class="about-image">
+          <!-- Placeholder for user's photo -->
+          <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=1887&auto=format&fit=crop"
+            alt="Maciej Figiel" />
+        </div>
+        <div class="about-content">
+          <h2>Maciej Figiel</h2>
+          <p>Jestem Website Developerem, który nie uznaje kompromisów. Skupiam się na dostarczaniu projektów premium,
+            cechujących się estetyką dark-mode, subtelnymi gradientami i dynamiką ruchu, na wzór najlepszych
+            technologicznych marek (tzw. Apple-like experience).</p>
+          <p>Koduję od lat, starając się połączyć piękno wizualne interfejsu (UI) z potężnym odczuciem przestrzeni (UX),
+            dając Twoim klientom to co najważniejsze &mdash; zachwyt.</p>
+
+          <div class="about-stats">
+            <div>
+              <h3 class="text-accent">100%</h3>
+              <p class="text-muted">Dedykowanych układów, brak gotowców</p>
+            </div>
+            <div>
+              <h3 class="text-accent">24/7</h3>
+              <p class="text-muted">Stały kontakt podczas trwania prac</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section about-v3" id="o-mnie" aria-labelledby="about-heading">
-      <div class="container">
-        <div class="section-head-v3 reveal">
-          <p class="section-head-v3__label">O mnie</p>
-          <h2 class="section-head-v3__title" id="about-heading">Kim jestem i co dostajesz we wspolpracy</h2>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section container">
+      <div class="section-head reveal">
+        <p class="section-head__label">Wybrane Prace</p>
+        <h2>Moje Realizacje</h2>
+      </div>
+
+      <div class="portfolio-grid reveal">
+        <a href="https://example.com" target="_blank" class="portfolio-card">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1964&auto=format&fit=crop"
+            alt="Projekt 1" class="portfolio-card__img">
+          <div class="portfolio-card__content">
+            <h3 class="portfolio-card__title">Agencja Marketingowa</h3>
+            <p class="portfolio-card__desc">Nowy kierunek wizualny UI/UX</p>
+          </div>
+        </a>
+        <a href="https://example.com" target="_blank" class="portfolio-card">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
+            alt="Projekt 2" class="portfolio-card__img">
+          <div class="portfolio-card__content">
+            <h3 class="portfolio-card__title">Strona B2B SaaS</h3>
+            <p class="portfolio-card__desc">Płynne animacje i konwersja</p>
+          </div>
+        </a>
+        <a href="https://example.com" target="_blank" class="portfolio-card">
+          <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=2070&auto=format&fit=crop"
+            alt="Projekt 3" class="portfolio-card__img">
+          <div class="portfolio-card__content">
+            <h3 class="portfolio-card__title">Sklep Premium</h3>
+            <p class="portfolio-card__desc">E-commerce w stylu luksusowym</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Hosting & Maintenance Section -->
+    <section id="models" class="section container">
+      <div class="section-head reveal">
+        <p class="section-head__label">Podejście i modele</p>
+        <h2>Jak dowożę projekty na metę i po niej</h2>
+      </div>
+
+      <div class="models-grid reveal">
+        <div class="model-card">
+          <div class="model-icon">◈</div>
+          <h3>Zarządzanie i Hosting u mnie</h3>
+          <p>Możesz opłacać stronę w modelu miesięcznym. Wtedy to ja trzymam platformę na moich wydajnych serwerach.
+            Pokrywam koszty utrzymania sprzętu, dbam o bezpieczeństwo i backupy.</p>
+          <ul>
+            <li>Tylko jedna stała opłata miesięczna</li>
+            <li>Wdrażam drobne zmiany na Twoje życzenie</li>
+            <li>Optymalizuję ładowanie i monitoruję uptime</li>
+          </ul>
         </div>
 
-        <div class="about-v3__grid">
-          <article class="about-v3__photo reveal">
-            <div class="about-v3__photo-frame">twoje-zdjecie.jpg</div>
-            <p class="about-v3__photo-caption">Twoje zdjecie + krotki podpis ekspercki</p>
-          </article>
-
-          <article class="about-v3__info reveal" data-delay="100">
-            <h3>Tworze strony internetowe jako Website Developer</h3>
-            <p>
-              Prowadze projekt end-to-end: od strategii przekazu, przez layout i animacje,
-              po wdrozenie oraz publikacje. Strona ma przyciagnac uwage i jasno wyjasnic,
-              dlaczego klient powinien odezwac sie wlasnie do Ciebie.
-            </p>
-            <ul role="list">
-              <li>mocny pierwszy ekran i wyrazne prowadzenie odbiorcy</li>
-              <li>sekcje zaprojektowane pod oferte, nie pod przypadkowy szablon</li>
-              <li>lekki, nowoczesny design z outline i detalem glass</li>
-              <li>responsywnosc i szybkie dzialanie na mobile i desktop</li>
-            </ul>
-          </article>
+        <div class="model-card">
+          <div class="model-icon">⟡</div>
+          <h3>Odsprzedaż na własność</h3>
+          <p>Jeśli wolisz zarządzać stroną samemu, w momencie finalizacji kod przechodzi we władanie Twoje - po prostu
+            opłacasz pełną kwotę projektu i strona jest w 100% zmigrowana na Twój hosting i domenę.</p>
+          <ul>
+            <li>Raz płacisz i projekt jest Twój na zawsze</li>
+            <li>Paczka z kodem źródłowym</li>
+            <li>Instrukcja i przekazanie wiedzy technicznej</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="section services-v3" aria-labelledby="services-heading">
-      <div class="container">
-        <div class="section-head-v3 reveal">
-          <p class="section-head-v3__label">Struktura strony, ktora sprzedaje</p>
-          <h2 class="section-head-v3__title" id="services-heading">Co powinna miec skuteczna strona www</h2>
-        </div>
-
-        <div class="services-v3__grid">
-          <article class="service-card service-card--large reveal">
-            <p class="service-card__kicker">01. Przekaz</p>
-            <h3>Hero z jasna obietnica</h3>
-            <p>Pierwsze 5 sekund musi odpowiedziec: co robisz, dla kogo i jaki efekt dostaje klient.</p>
-          </article>
-          <article class="service-card reveal" data-delay="70">
-            <p class="service-card__kicker">02. Oferta</p>
-            <h3>Sekcje argumentow</h3>
-            <p>Pokazujesz przewagi, proces i efekty w logicznej kolejnosci bez chaosu.</p>
-          </article>
-          <article class="service-card reveal" data-delay="140">
-            <p class="service-card__kicker">03. Dowod</p>
-            <h3>Realizacje i opinie</h3>
-            <p>Konkretny proof zamienia zainteresowanie w realne zapytanie.</p>
-          </article>
-          <article class="service-card service-card--accent reveal" data-delay="210">
-            <p class="service-card__kicker">04. Konwersja</p>
-            <h3>CTA i kontakt bez tarcia</h3>
-            <p>Wyrazne wezwanie do akcji i prosty nastepny krok dla odbiorcy.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section portfolio-v3" id="realizacje-v3" aria-labelledby="portfolio-heading">
-      <div class="container">
-        <div class="section-head-v3 reveal">
-          <p class="section-head-v3__label">Realizacje</p>
-          <h2 class="section-head-v3__title" id="portfolio-heading">Klikalne kwadraty projektow</h2>
-        </div>
-
-        <div class="portfolio-v3__grid">
-          <a href="/work/case-study-1.html" class="project-square portfolio-card reveal">
-            <div class="portfolio-card__image">strona-uslugi.jpg</div>
-            <h3>Firma uslugowa</h3>
-            <p>Nowy uklad oferty i krotsza droga do zapytania.</p>
-          </a>
-          <a href="/work/case-study-2.html" class="project-square portfolio-card reveal" data-delay="60">
-            <div class="portfolio-card__image">marka-premium.jpg</div>
-            <h3>Marka premium</h3>
-            <p>Wizerunek premium i czytelny przekaz wartosci.</p>
-          </a>
-          <a href="/work/case-study-3.html" class="project-square portfolio-card reveal" data-delay="120">
-            <div class="portfolio-card__image">produkt-b2b.jpg</div>
-            <h3>Produkt B2B</h3>
-            <p>Strona pod szybkie skanowanie i decyzje zakupowe.</p>
-          </a>
-          <a href="/work/" class="project-square portfolio-card reveal" data-delay="180">
-            <div class="portfolio-card__image">landing-konwersja.jpg</div>
-            <h3>Landing kampanijny</h3>
-            <p>Silny first screen i klarowne CTA pod leady.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section hosting-v3" id="model-hosting" aria-labelledby="hosting-heading">
-      <div class="container">
-        <div class="section-head-v3 reveal">
-          <p class="section-head-v3__label">Model wspolpracy po wdrozeniu</p>
-          <h2 class="section-head-v3__title" id="hosting-heading">Ty wybierasz: opieka miesieczna albo odsprzedaz na wlasnosc</h2>
-        </div>
-
-        <div class="hosting-v3__grid">
-          <article class="hosting-card hosting-card--managed reveal">
-            <p class="hosting-card__label">Opcja 01</p>
-            <h3>Ja trzymam strone i opiekuje sie nia co miesiac</h3>
-            <p>
-              Strona siedzi u mnie. Ja oplacam i hostuje infrastrukture, pilnuje aktualizacji,
-              backupow i bezpieczenstwa. Ty masz jedna miesieczna oplate i spokoj.
-            </p>
-            <ul role="list">
-              <li>hosting i domena po mojej stronie</li>
-              <li>opieka techniczna i monitoring</li>
-              <li>szybkie poprawki i wsparcie</li>
-            </ul>
-          </article>
-
-          <article class="hosting-card hosting-card--ownership reveal" data-delay="100">
-            <p class="hosting-card__label">Opcja 02</p>
-            <h3>Odsprzedaz strony na Twoja wlasnosc</h3>
-            <p>
-              Po zakonczeniu projektu przekazuje Ci strone na wlasnosc razem z plikami
-              i instrukcja. Mozesz utrzymywac ja samodzielnie lub z zespolowym supportem.
-            </p>
-            <ul role="list">
-              <li>pelne przekazanie plikow i dostepow</li>
-              <li>instrukcja dalszego utrzymania</li>
-              <li>mozliwosc dodatkowego supportu</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section process-v3" aria-labelledby="process-heading">
-      <div class="container">
-        <div class="section-head-v3 reveal">
-          <p class="section-head-v3__label">Flow wspolpracy</p>
-          <h2 class="section-head-v3__title" id="process-heading">Jasny proces od briefu do publikacji</h2>
-        </div>
-
-        <div class="process-v3__grid">
-          <article class="process-v3__step reveal"><span>01</span><h3>Brief i cel strony</h3><p>Ustalamy cel biznesowy, odbiorce i priorytet konwersji.</p></article>
-          <article class="process-v3__step reveal" data-delay="70"><span>02</span><h3>Wireflow i przekaz</h3><p>Buduje strukture sekcji i tresc, ktora prowadzi odbiorce.</p></article>
-          <article class="process-v3__step reveal" data-delay="140"><span>03</span><h3>Design i animacje</h3><p>Nadaje stronie charakter, rytm i nowoczesny wyglad.</p></article>
-          <article class="process-v3__step reveal" data-delay="210"><span>04</span><h3>Wdrozenie i launch</h3><p>Publikacja, testy, optymalizacja i dalsza opieka.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section testimonial-v3" aria-labelledby="opinia-heading">
-      <div class="container">
-        <div class="section-head-v3 reveal">
-          <p class="section-head-v3__label">Opinie</p>
-          <h2 class="section-head-v3__title" id="opinia-heading">Efekt, ktory widza klienci</h2>
-        </div>
-        <div class="testimonial-v3__grid">
-          <blockquote class="testimonial-v3__card reveal">
-            <p>"Strona od Macieja od razu ustawila jasny przekaz. Klienci szybciej wiedza, co oferujemy i czesciej pisza."</p>
-            <footer class="testimonial-v3__author">
-              <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=160&q=80" alt="Wlasciciel firmy uslugowej" loading="lazy" width="56" height="56">
-              <span>Wlasciciel firmy uslugowej</span>
-            </footer>
-          </blockquote>
-          <blockquote class="testimonial-v3__card reveal" data-delay="90">
-            <p>"Najwiekszy plus: design + wdrozenie w jednej osobie. Flow strony i jakosc wykonania sa na bardzo dobrym poziomie."</p>
-            <footer class="testimonial-v3__author">
-              <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=160&q=80" alt="Founder marki B2B" loading="lazy" width="56" height="56">
-              <span>Founder marki B2B</span>
-            </footer>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-v3" aria-labelledby="cta-heading">
-      <div class="container cta-v3__inner">
-        <p class="cta-v3__label reveal">Nowa strona od zera</p>
-        <h2 class="cta-v3__title reveal" id="cta-heading">Chcesz strony, ktora zatrzyma odbiorce i poprowadzi go do kontaktu?</h2>
-        <p class="cta-v3__sub reveal">Napisz do mnie. Dostaniesz konkretna propozycje struktury, stylistyki i sposobu wdrozenia Twojej strony.</p>
-        <div class="cta-v3__actions reveal">
-          <a href="mailto:hello@jankowalski.pl" class="btn btn--primary btn--magnetic">hello@jankowalski.pl</a>
-          <a href="/services.html" class="btn btn--outline btn--magnetic">Sprawdz oferte</a>
-        </div>
-      </div>
+    <!-- CTA Section -->
+    <section class="section container reveal" style="text-align:center; padding-top: 4rem; padding-bottom:8rem;">
+      <h2 style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 2rem;">Gotów na wejście na wyższy poziom?</h2>
+      <a href="mailto:hello@jankowalski.pl" class="btn btn--primary">Rozpocznij projekt</a>
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="container">
       <div class="footer__grid">
         <div>
-          <p class="footer__brand-name font-display">Maciej Figiel</p>
-          <p class="footer__tagline">Website Developer - budowa nowoczesnych stron internetowych dla firm.</p>
+          <p class="footer__brand-name">Maciej Figiel</p>
+          <p class="footer__tagline">Ekskluzywny Website Development. Buduję, a nie składam.</p>
         </div>
         <div>
-          <p class="footer__col-title">Nawigacja</p>
-          <ul class="footer__links" role="list">
-            <li><a href="/work/" class="footer__link">Realizacje</a></li>
-            <li><a href="/services.html" class="footer__link">Oferta</a></li>
-            <li><a href="/about.html" class="footer__link">O mnie</a></li>
-            <li><a href="/contact.html" class="footer__link">Kontakt</a></li>
+          <p class="footer__col-title">Oferta & Realizacje</p>
+          <ul class="footer__links">
+            <li><a href="#portfolio" class="footer__link">Portfolio projektów</a></li>
+            <li><a href="#models" class="footer__link">Modele współpracy</a></li>
           </ul>
         </div>
         <div>
           <p class="footer__col-title">Kontakt</p>
-          <ul class="footer__links" role="list">
-            <li><a href="mailto:hello@jankowalski.pl" class="footer__link" data-track-contact="email">hello@jankowalski.pl</a></li>
-            <li><a href="https://linkedin.com/in/jankowalski" class="footer__link" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="footer__col-title">Prawne</p>
-          <ul class="footer__links" role="list">
-            <li><a href="/privacy.html" class="footer__link">Polityka prywatnosci</a></li>
-            <li><a href="/terms.html" class="footer__link">Warunki wspolpracy</a></li>
+          <ul class="footer__links">
+            <li><a href="mailto:hello@jankowalski.pl" class="footer__link">hello@jankowalski.pl</a></li>
           </ul>
         </div>
       </div>
-
       <div class="footer__bottom">
-        <p class="footer__copy">&copy; <span id="year"></span> Maciej Figiel. Wszelkie prawa zastrzezone.</p>
-        <p class="footer__micro">Website Developer: strategia, design, wdrozenie i opieka.</p>
+        <p>&copy; <span id="year">2026</span> Maciej Figiel. Wszelkie prawa zastrzeżone.</p>
+        <p>Premium Web Experience</p>
       </div>
     </div>
   </footer>
 
-  <div class="consent-banner" role="dialog" aria-label="Zgoda na cookies" aria-modal="true">
-    <p class="consent-banner__text">Ta strona korzysta z analityki po Twojej zgodzie. Wiecej informacji w <a href="/privacy.html">polityce prywatnosci</a>.</p>
-    <div class="consent-banner__actions">
-      <button class="btn btn--primary btn--sm" data-consent="accept" style="font-size:var(--text-xs);padding:0.5rem 1.25rem">Akceptuje</button>
-      <button class="btn btn--outline btn--sm" data-consent="deny" style="font-size:var(--text-xs);padding:0.5rem 1.25rem">Odrzucam</button>
-    </div>
-  </div>
-
-  <script defer src="assets/js/analytics.js"></script>
-  <script defer src="assets/js/consent.js"></script>
-  <script defer src="assets/js/main.js"></script>
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Reveal Animations on Scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Custom Cursor
+    const cursorDot = document.getElementById('cursor-dot');
+    const cursorRing = document.getElementById('cursor-ring');
+
+    document.addEventListener('mousemove', (e) => {
+      cursorDot.style.left = e.clientX + 'px';
+      cursorDot.style.top = e.clientY + 'px';
+
+      // Delay ring slightly
+      cursorRing.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
+    });
+
+    // Hover effect for <a> and <button>
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    });
+
+    // Header Blur
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) header.classList.add('is-scrolled');
+      else header.classList.remove('is-scrolled');
+    });
+
+    document.getElementById('year').innerText = new Date().getFullYear();
   </script>
 </body>
+
 </html>
