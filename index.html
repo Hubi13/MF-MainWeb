@@ -1,28 +1,26 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maciej Figiel - Strony www, ktore sprzedaja</title>
-  <meta name="description" content="Projektuje i buduje nowoczesne strony www, ktore realnie wspieraja sprzedaz. Jasny proces, mocny design i opieka po wdrozeniu.">
+  <title>Maciej Figiel - Projektowanie stron www</title>
+  <meta name="description" content="Nowa generacja stron www dla firm: mocny layout, szybka realizacja, jasne warunki i realny efekt sprzedazowy.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://jankowalski.pl/">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jankowalski.pl/">
-  <meta property="og:title" content="Maciej Figiel - Strony www, ktore sprzedaja">
-  <meta property="og:description" content="Nowoczesne strony www z naciskiem na wyniki, szybkosc i opieke po wdrozeniu.">
+  <meta property="og:title" content="Maciej Figiel - Projektowanie stron www">
+  <meta property="og:description" content="Swiezy layout od zera, grafitowy styl i strony, ktore wspieraja sprzedaz.">
   <meta property="og:image" content="https://jankowalski.pl/assets/img/og-image.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Maciej Figiel - Strony www">
-  <meta name="twitter:description" content="Nowoczesne strony www z naciskiem na wyniki i opieke po wdrozeniu.">
+  <meta name="twitter:title" content="Maciej Figiel - Strony WWW">
+  <meta name="twitter:description" content="Nowoczesna strona od zera: strategia, design, wdrozenie i opieka.">
   <meta name="twitter:image" content="https://jankowalski.pl/assets/img/og-image.jpg">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="manifest" href="/manifest.webmanifest">
-  <meta name="theme-color" content="#f3f4f6">
+  <meta name="theme-color" content="#f1f1f1">
 
   <link rel="stylesheet" href="assets/css/design-system.css">
   <link rel="stylesheet" href="assets/css/components.css">
@@ -38,16 +36,13 @@
         "name": "Maciej Figiel",
         "jobTitle": "Website Designer & Frontend Engineer",
         "url": "https://jankowalski.pl",
-        "email": "hello@jankowalski.pl",
-        "sameAs": [
-          "https://linkedin.com/in/jankowalski"
-        ]
+        "email": "hello@jankowalski.pl"
       },
       {
         "@type": "WebSite",
         "@id": "https://jankowalski.pl/#website",
         "url": "https://jankowalski.pl",
-        "name": "Maciej Figiel - Strony WWW",
+        "name": "Maciej Figiel - Projektowanie stron www",
         "publisher": { "@id": "https://jankowalski.pl/#person" }
       }
     ]
@@ -61,9 +56,7 @@
 
   <header class="site-header" role="banner">
     <div class="container">
-      <a href="/" class="site-logo" aria-label="Maciej Figiel - strona glowna">
-        Maciej<span>.</span>Figiel
-      </a>
+      <a href="/" class="site-logo" aria-label="Maciej Figiel - strona glowna">Maciej<span>.</span>Figiel</a>
       <nav class="site-nav" role="navigation" aria-label="Glowna nawigacja">
         <ul class="site-nav__list" id="main-nav">
           <li><a href="/work/" class="site-nav__link">Realizacje</a></li>
@@ -79,206 +72,173 @@
   </header>
 
   <main>
-    <section class="hero container">
-      <div class="hero__content">
-        <div class="hero__eyebrow reveal">
-          <div class="hero__available" role="status" aria-label="Dostepnosc">
-            <span class="hero__available-dot" aria-hidden="true"></span>
-            Wolne terminy na nowe wdrozenia
-          </div>
-        </div>
-
-        <h1 class="hero__title reveal" data-delay="40">
-          Strona, ktora
-          <em>sprzedaje</em><br>
-          i wyglada premium.
+    <section class="hero-v2 container">
+      <div class="hero-v2__left reveal">
+        <p class="hero-v2__label">Nowy layout strony</p>
+        <h1 class="hero-v2__title">
+          DESIGN <span>OD ZERA</span><br>
+          W STYLU GRAFIT.
         </h1>
-
-        <p class="hero__sub reveal" data-delay="120">
-          Jestem Maciej Figiel. Projektuje i buduje strony www, ktore sa szybkie,
-          nowoczesne i tworzone pod wynik biznesowy.
+        <p class="hero-v2__sub">
+          Projektuje strony, ktore sa czytelne, szybkie i zaprojektowane pod cel biznesowy.
+          Zero przypadkowych sekcji. Zero chaosu w tresci.
         </p>
-
-        <div class="hero__actions reveal" data-delay="220">
-          <a href="/contact.html" class="btn btn--primary" data-track-cta="hero_primary">Napisz do mnie</a>
-          <a href="#realizacje" class="btn btn--ghost" data-track-cta="hero_secondary">Zobacz realizacje</a>
+        <div class="hero-v2__actions">
+          <a href="mailto:hello@jankowalski.pl" class="btn btn--primary">Zacznij projekt</a>
+          <a href="#realizacje-v2" class="btn btn--outline">Zobacz realizacje</a>
         </div>
       </div>
 
-      <aside class="hero__panel reveal" data-delay="180" aria-label="Podsumowanie oferty">
-        <p class="hero__panel-title">Co dostajesz</p>
-        <div class="hero__metric-row">
-          <div class="hero__metric">
-            <div class="hero__metric-value"><em>Nowy</em> flow</div>
-            <div class="hero__metric-label">UX pod konwersje</div>
-          </div>
-          <div class="hero__metric">
-            <div class="hero__metric-value"><em>Szybka</em> strona</div>
-            <div class="hero__metric-label">SEO + Core Web Vitals</div>
-          </div>
-          <div class="hero__metric">
-            <div class="hero__metric-value"><em>Opieka</em> 1:1</div>
-            <div class="hero__metric-label">jeden kontakt, bez posrednikow</div>
-          </div>
-          <div class="hero__metric">
-            <div class="hero__metric-value"><em>2 modele</em></div>
-            <div class="hero__metric-label">utrzymanie lub odsprzedaz</div>
-          </div>
-        </div>
+      <aside class="hero-v2__panel reveal" data-delay="100" aria-label="Podsumowanie">
+        <p class="hero-v2__panel-label">Szybkie podsumowanie</p>
+        <ul class="hero-v2__metrics" role="list">
+          <li><strong>01</strong><span>Kompletna architektura tresci i flow</span></li>
+          <li><strong>02</strong><span>Nowy styl wizualny i typografia</span></li>
+          <li><strong>03</strong><span>Wdrozenie + opieka lub odsprzedaz</span></li>
+        </ul>
+        <div class="hero-v2__photo">twoje-zdjecie.jpg</div>
       </aside>
     </section>
 
-    <section class="section section-about" aria-labelledby="about-heading">
-      <div class="container about-layout">
-        <div class="about-photo reveal">
-          <div class="about-photo__placeholder">twoje-zdjecie.jpg</div>
-        </div>
-        <div class="about-copy reveal" data-delay="80">
-          <p class="label">O mnie</p>
-          <h2 class="section-head__title" id="about-heading">Maciej Figiel</h2>
-          <p class="about-copy__lead">
-            Tworze strony dla firm, ktore chca wygladac profesjonalnie i zamieniac ruch w zapytania.
-          </p>
-          <div class="about-points">
-            <p>Projekt i kod po mojej stronie.</p>
-            <p>Jasny proces i szybka komunikacja.</p>
-            <p>Bez szablonowych rozwiazan i bez agencji posredniczacej.</p>
-          </div>
+    <section class="section trust-strip reveal">
+      <div class="container">
+        <div class="trust-strip__grid">
+          <p>STRATEGIA</p>
+          <p>DESIGN SYSTEM</p>
+          <p>WDROZENIE</p>
+          <p>OPIEKA 1:1</p>
+          <p>KONWERSJA</p>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="process-heading">
+    <section class="section" aria-labelledby="sekcje-heading">
       <div class="container">
-        <div class="section-head reveal">
-          <p class="label section-head__label">Proces</p>
-          <h2 class="section-head__title" id="process-heading">Flow, ktory trzyma tempo</h2>
-          <p class="section-head__sub">Od strategii do uruchomienia. Kazdy etap ma cel i konkretne efekty.</p>
+        <div class="section-head-v2 reveal">
+          <p class="section-head-v2__label">Nowe sekcje</p>
+          <h2 class="section-head-v2__title" id="sekcje-heading">Struktura zrobiona pod sprzedaz</h2>
         </div>
 
-        <div class="process-timeline">
-          <div class="process-step reveal">
-            <span class="process-step__num" aria-hidden="true">01</span>
-            <h3 class="process-step__title">Analiza</h3>
-            <p class="process-step__desc">Cel strony, grupa docelowa, oferta i przewaga.</p>
-          </div>
-          <div class="process-step reveal" data-delay="80">
-            <span class="process-step__num" aria-hidden="true">02</span>
-            <h3 class="process-step__title">Makieta i UI</h3>
-            <p class="process-step__desc">Nowoczesny uklad, priorytet tresci i mocny kierunek wizualny.</p>
-          </div>
-          <div class="process-step reveal" data-delay="160">
-            <span class="process-step__num" aria-hidden="true">03</span>
-            <h3 class="process-step__title">Budowa</h3>
-            <p class="process-step__desc">Czysty frontend, szybkie ladowanie i pelna responsywnosc.</p>
-          </div>
-          <div class="process-step reveal" data-delay="240">
-            <span class="process-step__num" aria-hidden="true">04</span>
-            <h3 class="process-step__title">Start i wsparcie</h3>
-            <p class="process-step__desc">Uruchomienie, monitoring i dalszy rozwoj strony.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="realizacje" aria-labelledby="work-heading">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="label section-head__label">Realizacje</p>
-          <h2 class="section-head__title" id="work-heading">Wybrane wdrozenia</h2>
-          <p class="section-head__sub">Kwadratowe podglady stron. Kliknij, aby przejsc do projektu.</p>
-        </div>
-
-        <div class="project-grid">
-          <a href="/work/case-study-1.html" class="project-square reveal" aria-label="Przejdz do projektu: Firma uslugowa">
-            <div class="project-square__thumb" style="background: linear-gradient(140deg, #eef2f8 0%, #dfe6f2 100%);">
-              <span>firma-uslugowa.jpg</span>
-            </div>
-            <div class="project-square__body">
-              <h3>Firma uslugowa</h3>
-              <p>Nowy layout i mocniejsze CTA.</p>
-            </div>
-          </a>
-
-          <a href="/work/case-study-2.html" class="project-square reveal" data-delay="80" aria-label="Przejdz do projektu: Marka premium">
-            <div class="project-square__thumb" style="background: linear-gradient(140deg, #eff3f9 0%, #e1e8f3 100%);">
-              <span>marka-premium.jpg</span>
-            </div>
-            <div class="project-square__body">
-              <h3>Marka premium</h3>
-              <p>Strona premium z naciskiem na wizerunek.</p>
-            </div>
-          </a>
-
-          <a href="/work/case-study-3.html" class="project-square reveal" data-delay="160" aria-label="Przejdz do projektu: Produkt B2B">
-            <div class="project-square__thumb" style="background: linear-gradient(140deg, #f1f4fa 0%, #e0e7f2 100%);">
-              <span>produkt-b2b.jpg</span>
-            </div>
-            <div class="project-square__body">
-              <h3>Produkt B2B</h3>
-              <p>Przejrzysty interfejs i szybkie dzialanie.</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-model" aria-labelledby="model-heading">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="label section-head__label">Model wspolpracy</p>
-          <h2 class="section-head__title" id="model-heading">Dwie opcje utrzymania strony</h2>
-          <p class="section-head__sub">Wybierasz model, ktory najlepiej pasuje do Twojego biznesu.</p>
-        </div>
-
-        <div class="model-grid">
-          <article class="model-card reveal">
-            <h3>1) Miesieczna opieka po mojej stronie</h3>
-            <p>Ja trzymam strone u siebie: hosting, oplaty, aktualizacje, backup i opieka techniczna.</p>
-            <p class="model-card__tag">Stala oplata miesieczna</p>
+        <div class="feature-wall">
+          <article class="feature-tile reveal">
+            <h3>Pozycjonowanie oferty</h3>
+            <p>Od razu na stronie glowej pokazujemy przewage i dla kogo jest Twoja usluga.</p>
           </article>
-
-          <article class="model-card reveal" data-delay="100">
-            <h3>2) Odsprzedaz na wlasnosc</h3>
-            <p>Po wdrozeniu przekazuje cala strone na Twoja wlasnosc. Ty decydujesz gdzie i jak jest utrzymywana.</p>
-            <p class="model-card__tag">Jednorazowa oplata + przekazanie</p>
+          <article class="feature-tile reveal" data-delay="70">
+            <h3>Mocna hierarchia liter</h3>
+            <p>Wieksze naglowki i czytelny kontrast, zeby klient skanowal tresc bez wysilku.</p>
+          </article>
+          <article class="feature-tile reveal" data-delay="140">
+            <h3>Sekcje pod decyzje</h3>
+            <p>Argumenty, realizacje, model wspolpracy i CTA ulozone w logicznej kolejnosci.</p>
+          </article>
+          <article class="feature-tile reveal" data-delay="40">
+            <h3>Wydajnosc</h3>
+            <p>Szablon przygotowany pod szybkie ladowanie i dobra czytelnosc na mobile.</p>
+          </article>
+          <article class="feature-tile reveal" data-delay="110">
+            <h3>Styl grafitowy</h3>
+            <p>Bez granatu. Nowoczesny, neutralny kierunek premium oparty o grafit i jasne tla.</p>
+          </article>
+          <article class="feature-tile reveal" data-delay="180">
+            <h3>Gotowe pod rozwijanie</h3>
+            <p>Kazda sekcja ma sens i moze byc dalej rozbudowywana bez przebudowy calej strony.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="testimonials-heading">
+    <section class="section section-flow" aria-labelledby="flow-heading">
       <div class="container">
-        <div class="section-head reveal">
-          <p class="label section-head__label">Opinie</p>
-          <h2 class="section-head__title" id="testimonials-heading">Co mowia klienci</h2>
+        <div class="section-head-v2 reveal">
+          <p class="section-head-v2__label">Proces</p>
+          <h2 class="section-head-v2__title" id="flow-heading">Nowy flow realizacji</h2>
         </div>
 
-        <div class="testimonials-grid">
-          <blockquote class="testimonial reveal">
-            <p class="testimonial__quote">
-              "Wspolpraca byla konkretna i szybka. Strona wyglada nowoczenie i ma lepszy ruch z SEO."
-            </p>
-            <footer class="testimonial__author">Wlasciciel firmy uslugowej</footer>
-          </blockquote>
+        <div class="flow-list">
+          <article class="flow-step reveal"><span>01</span><h3>Warsztat celu</h3><p>Ukladamy priorytety i definiujemy co ma dowozic strona.</p></article>
+          <article class="flow-step reveal" data-delay="70"><span>02</span><h3>Wireflow + copy</h3><p>Najpierw struktura i tresc, dopiero potem warstwa wizualna.</p></article>
+          <article class="flow-step reveal" data-delay="140"><span>03</span><h3>Design grafitowy</h3><p>Nowa stylistyka, wieksze litery i nowoczesna kompozycja.</p></article>
+          <article class="flow-step reveal" data-delay="210"><span>04</span><h3>Build i testy</h3><p>Wdrozenie, optymalizacja i finalne poprawki przed publikacja.</p></article>
+        </div>
+      </div>
+    </section>
 
-          <blockquote class="testimonial reveal" data-delay="120">
-            <p class="testimonial__quote">
-              "Dostalismy mocny design i jasny proces. Wszystko bez opoznien i bez chaosu."
-            </p>
-            <footer class="testimonial__author">Founder produktu B2B</footer>
+    <section class="section" id="realizacje-v2" aria-labelledby="realizacje-heading">
+      <div class="container">
+        <div class="section-head-v2 reveal">
+          <p class="section-head-v2__label">Realizacje</p>
+          <h2 class="section-head-v2__title" id="realizacje-heading">Klikalne case cards</h2>
+        </div>
+
+        <div class="work-v2-grid">
+          <a href="/work/case-study-1.html" class="project-square work-v2-card reveal">
+            <div class="work-v2-card__thumb">firma-uslugowa.jpg</div>
+            <h3>Firma uslugowa</h3>
+            <p>Nowy layout strony i czytelniejsza sciezka zapytania.</p>
+          </a>
+          <a href="/work/case-study-2.html" class="project-square work-v2-card reveal" data-delay="80">
+            <div class="work-v2-card__thumb">marka-premium.jpg</div>
+            <h3>Marka premium</h3>
+            <p>Minimalistyczny kierunek premium i lepsza ekspozycja oferty.</p>
+          </a>
+          <a href="/work/case-study-3.html" class="project-square work-v2-card reveal" data-delay="160">
+            <div class="work-v2-card__thumb">produkt-b2b.jpg</div>
+            <h3>Produkt B2B</h3>
+            <p>Struktura pod szybkie skanowanie i prezentacje kluczowych funkcji.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-model-v2" aria-labelledby="model-heading">
+      <div class="container">
+        <div class="section-head-v2 reveal">
+          <p class="section-head-v2__label">Utrzymanie strony</p>
+          <h2 class="section-head-v2__title" id="model-heading">Dwa tryby wspolpracy po wdrozeniu</h2>
+        </div>
+
+        <div class="model-v2-grid">
+          <article class="model-v2-card reveal">
+            <h3>Abonament miesieczny</h3>
+            <p>Hosting, backupy, aktualizacje i opieka po mojej stronie. Ty masz spokoj i jedna stala oplate.</p>
+          </article>
+          <article class="model-v2-card reveal" data-delay="100">
+            <h3>Odsprzedaz na wlasnosc</h3>
+            <p>Po zakonczeniu projektu przekazuje Ci strone na wlasnosc z kompletem plikow i instrukcja.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quote-v2" aria-labelledby="opinia-heading">
+      <div class="container">
+        <div class="section-head-v2 reveal">
+          <p class="section-head-v2__label">Opinie</p>
+          <h2 class="section-head-v2__title" id="opinia-heading">Krotko i konkretnie</h2>
+        </div>
+
+        <div class="quote-v2__grid">
+          <blockquote class="quote-card reveal">
+            <p>"Nowy layout jest czytelny, nowoczesny i od razu prowadzi klienta do kontaktu."</p>
+            <footer>Wlasciciel firmy uslugowej</footer>
+          </blockquote>
+          <blockquote class="quote-card reveal" data-delay="100">
+            <p>"Wreszcie strona wyglada premium i ma sensowny przeplyw sekcji."</p>
+            <footer>Founder marki produktowej</footer>
           </blockquote>
         </div>
       </div>
     </section>
 
-    <section class="cta-closer" aria-labelledby="cta-heading">
-      <div class="container">
-        <h2 class="cta-closer__title reveal" id="cta-heading">Masz projekt? Zrobmy to dobrze.</h2>
-        <p class="cta-closer__sub reveal" data-delay="80">Napisz i dostaniesz konkretna odpowiedz z propozycja dalszych krokow.</p>
-        <div class="cta-closer__actions reveal" data-delay="160">
-          <a href="mailto:hello@jankowalski.pl" class="btn btn--primary" data-track-contact="email">hello@jankowalski.pl</a>
-          <a href="/services.html" class="btn btn--outline" data-track-cta="footer_cta">Zobacz oferte</a>
+    <section class="cta-v2" aria-labelledby="cta-heading">
+      <div class="container cta-v2__inner">
+        <p class="cta-v2__label reveal">Nowa strona od zera</p>
+        <h2 class="cta-v2__title reveal" id="cta-heading">Chcesz przebudowac serwis na nowo?</h2>
+        <p class="cta-v2__sub reveal">Napisz, a dostaniesz propozycje nowej struktury i estetyki dopasowanej do Twojej oferty.</p>
+        <div class="cta-v2__actions reveal">
+          <a href="mailto:hello@jankowalski.pl" class="btn btn--primary">hello@jankowalski.pl</a>
+          <a href="/services.html" class="btn btn--outline">Sprawdz oferte</a>
         </div>
       </div>
     </section>
@@ -289,7 +249,7 @@
       <div class="footer__grid">
         <div>
           <p class="footer__brand-name font-display">Maciej Figiel</p>
-          <p class="footer__tagline">Website designer i frontend engineer. Strony, ktore wspieraja sprzedaz.</p>
+          <p class="footer__tagline">Projektowanie i wdrazanie stron www pod cele sprzedazowe.</p>
         </div>
         <div>
           <p class="footer__col-title">Nawigacja</p>
@@ -318,15 +278,13 @@
 
       <div class="footer__bottom">
         <p class="footer__copy">&copy; <span id="year"></span> Maciej Figiel. Wszelkie prawa zastrzezone.</p>
-        <p class="footer__micro">Zaprojektowane i zbudowane bez frameworkow.</p>
+        <p class="footer__micro">Nowy layout i styl grafitowy.</p>
       </div>
     </div>
   </footer>
 
   <div class="consent-banner" role="dialog" aria-label="Zgoda na cookies" aria-modal="true">
-    <p class="consent-banner__text">
-      Ta strona korzysta z analityki po Twojej zgodzie. Wiecej informacji w <a href="/privacy.html">polityce prywatnosci</a>.
-    </p>
+    <p class="consent-banner__text">Ta strona korzysta z analityki po Twojej zgodzie. Wiecej informacji w <a href="/privacy.html">polityce prywatnosci</a>.</p>
     <div class="consent-banner__actions">
       <button class="btn btn--primary btn--sm" data-consent="accept" style="font-size:var(--text-xs);padding:0.5rem 1.25rem">Akceptuje</button>
       <button class="btn btn--outline btn--sm" data-consent="deny" style="font-size:var(--text-xs);padding:0.5rem 1.25rem">Odrzucam</button>
