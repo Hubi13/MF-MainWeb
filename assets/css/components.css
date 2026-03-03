@@ -1046,7 +1046,7 @@
 
 
 /* ============================================================
-   APPLE-LIGHT GLASS + NEUMORPHISM
+   CLASSIC SURFACES (no neumorphism)
    ============================================================ */
 .cs-card,
 .pricing-card,
@@ -1056,11 +1056,9 @@
 .model-card,
 .project-square,
 .consent-banner {
-  background: rgba(255, 255, 255, 0.72);
-  border-color: rgba(196,196,196,0.90);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 10px 10px 26px rgba(55,55,55,0.14), -8px -8px 20px rgba(255, 255, 255, 0.78);
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  box-shadow: 0 14px 30px rgba(38, 32, 26, 0.13);
 }
 
 .cs-card:hover,
@@ -1068,5 +1066,5 @@
 .capability-item:hover,
 .process-step:hover,
 .project-square:hover {
-  box-shadow: 14px 14px 28px rgba(60,60,60,0.16), -10px -10px 22px rgba(255, 255, 255, 0.84);
+  box-shadow: 0 20px 36px rgba(38, 32, 26, 0.17);
 }
