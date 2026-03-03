@@ -377,3 +377,55 @@ em { font-style: italic; }
 @media (min-width: 769px) {
   .hide-desktop { display: none !important; }
 }
+
+
+/* ============================================================
+   VISUAL POLISH - global gradients, outlines, scrollbars
+   ============================================================ */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(1000px 420px at 14% -10%, rgba(200, 184, 138, 0.09), transparent 60%),
+    radial-gradient(900px 360px at 92% 14%, rgba(130, 158, 210, 0.08), transparent 58%);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  border: 2px solid var(--color-bg);
+  background: linear-gradient(180deg, #3a3a45 0%, #6c6150 100%);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #4b4b59 0%, #8b7a5f 100%);
+}
+
+.section,
+.section--sm,
+.page-hero,
+.cta-closer,
+.site-footer {
+  position: relative;
+}
+
+.section::before,
+.page-hero::before,
+.cta-closer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+}

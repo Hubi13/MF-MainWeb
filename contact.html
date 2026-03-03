@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - Umow rozmowe | Jan Kowalski Website Designer</title>
+    <title>Kontakt - Umow rozmowe | Maciej Figiel Website Designer</title>
     <meta name="description"
         content="Umow bezplatna konsultacje lub napisz o projekcie. Odpowiadam w ciagu 24 godzin w dni robocze.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://jankowalski.pl/contact.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jankowalski.pl/contact.html">
-    <meta property="og:title" content="Kontakt - Jan Kowalski Website Designer">
+    <meta property="og:title" content="Kontakt - Maciej Figiel Website Designer">
     <meta property="og:image" content="https://jankowalski.pl/assets/img/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -27,7 +27,7 @@
   {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Kontakt - Jan Kowalski",
+    "name": "Kontakt - Maciej Figiel",
     "url": "https://jankowalski.pl/contact.html"
   }
   </script>
@@ -37,7 +37,7 @@
 
     <header class="site-header" role="banner">
         <div class="container">
-            <a href="/" class="site-logo">Jan<span>.</span>Kowalski</a>
+            <a href="/" class="site-logo">Maciej<span>.</span>Figiel</a>
             <nav class="site-nav" role="navigation" aria-label="Glowna nawigacja">
                 <ul class="site-nav__list" id="main-nav">
                     <li><a href="/work/" class="site-nav__link">Realizacje</a></li>
@@ -153,97 +153,16 @@
                         </div>
                     </div>
 
-                    <!-- RIGHT: form -->
+                    <!-- RIGHT: contact options -->
                     <div class="reveal" data-delay="200">
-                        <form name="contact" class="contact-form" method="POST" action="/contact.html"
-                            data-netlify="true" netlify-honeypot="bot-field" novalidate
-                            aria-label="Formularz kontaktowy">
-                            <!-- Netlify hidden field -->
-                            <input type="hidden" name="form-name" value="contact">
-
-                            <!-- Honeypot -->
-                            <div class="form-honeypot" aria-hidden="true">
-                                <input name="bot-field" tabindex="-1" autocomplete="off">
-                            </div>
-
-                            <div
-                                style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); margin-bottom: var(--space-sm);">
-                                <div class="form-group">
-                                    <label class="form-label" for="name">Imie i nazwisko <span
-                                            aria-hidden="true">*</span></label>
-                                    <input class="form-input" type="text" id="name" name="name" autocomplete="name"
-                                        required placeholder="Anna Kowalska">
-                                    <p class="form-error" role="alert"></p>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="email">Adres e-mail <span
-                                            aria-hidden="true">*</span></label>
-                                    <input class="form-input" type="email" id="email" name="email" autocomplete="email"
-                                        required placeholder="anna@firma.pl">
-                                    <p class="form-error" role="alert"></p>
-                                </div>
-                            </div>
-
-                            <div
-                                style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); margin-bottom: var(--space-sm);">
-                                <div class="form-group">
-                                    <label class="form-label" for="project-type">Rodzaj projektu</label>
-                                    <select class="form-select" id="project-type" name="project_type">
-                                        <option value="">Wybierz...</option>
-                                        <option value="strona">Strona wizerunkowa</option>
-                                        <option value="landing">Landing page</option>
-                                        <option value="redesign">Redesign</option>
-                                        <option value="design-system">Design System</option>
-                                        <option value="ui">UI Design (Figma)</option>
-                                        <option value="ecommerce">E-commerce</option>
-                                        <option value="inne">Inne</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="budget">Orientacyjny budzet</label>
-                                    <select class="form-select" id="budget" name="budget">
-                                        <option value="">Wybierz...</option>
-                                        <option value="do-5k">Do 5 000 PLN</option>
-                                        <option value="5k-10k">5 000 - 10 000 PLN</option>
-                                        <option value="10k-20k">10 000 - 20 000 PLN</option>
-                                        <option value="20k+">Powyzej 20 000 PLN</option>
-                                        <option value="do-ustalenia">Do ustalenia</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group" style="margin-bottom: var(--space-md);">
-                                <label class="form-label" for="message">Opisz projekt <span
-                                        aria-hidden="true">*</span></label>
-                                <textarea class="form-textarea" id="message" name="message" required
-                                    placeholder="Co chcesz osiagnac, co juz masz, co jest problemem, kiedy chcesz startowac..."></textarea>
-                                <p class="form-error" role="alert"></p>
-                            </div>
-
-                            <div style="margin-bottom: var(--space-md);">
-                                <p
-                                    style="font-size: var(--text-xs); color: var(--color-text-muted); line-height: var(--lh-base);">
-                                    Wyslanie formularza jest rownoczesne z akceptacja <a href="/privacy.html"
-                                        style="color: var(--color-accent);">polityki prywatnosci</a>.
-                                    Dane beda uzyte wylacznie do kontaktu w sprawie projektu.
-                                </p>
-                            </div>
-
-                            <button type="submit" class="btn btn--primary"
-                                style="width:100%; justify-content:center; font-size: var(--text-base); padding: 1rem 2rem;">
-                                Wyslij wiadomosc
-                            </button>
-                        </form>
-
-                        <!-- Success / error messages -->
-                        <div class="form-success alert alert--success"
-                            style="display:none; margin-top: var(--space-md);">
-                            Wiadomosc wysłana. Odpowiem w ciagu 24 godzin w dni robocze.
-                        </div>
-                        <div class="form-submit-error alert alert--error"
-                            style="display:none; margin-top: var(--space-md);">
-                            Cos poszlo nie tak. Napisz bezposrednio: <a href="mailto:hello@jankowalski.pl"
-                                style="color:inherit; text-decoration:underline;">hello@jankowalski.pl</a>
+                        <div style="padding: var(--space-md); background: var(--color-surface); border: 1px solid var(--color-border-strong); border-radius: var(--radius-md); display: grid; gap: var(--space-sm);">
+                            <p class="label" style="margin-bottom: 0;">Bez formularza</p>
+                            <h2 style="font-family: var(--font-display); font-size: var(--text-2xl); line-height: var(--lh-tight);">Napisz bezposrednio</h2>
+                            <p style="font-size: var(--text-sm); color: var(--color-text-secondary); line-height: var(--lh-base);">
+                                Zamiast formularza kontaktowego korzystamy z bezposredniej komunikacji. Napisz maila albo odezwij sie na LinkedIn.
+                            </p>
+                            <a href="mailto:hello@jankowalski.pl" class="btn btn--primary" style="justify-content:center;">hello@jankowalski.pl</a>
+                            <a href="https://linkedin.com/in/jankowalski" class="btn btn--outline" target="_blank" rel="noopener noreferrer" style="justify-content:center;">LinkedIn</a>
                         </div>
                     </div>
                 </div>
@@ -255,7 +174,7 @@
         <div class="container">
             <div class="footer__grid">
                 <div>
-                    <p class="footer__brand-name font-display">Jan Kowalski</p>
+                    <p class="footer__brand-name font-display">Maciej Figiel</p>
                     <p class="footer__tagline">Website designer i frontend engineer.</p>
                 </div>
                 <div>
@@ -285,7 +204,7 @@
                 </div>
             </div>
             <div class="footer__bottom">
-                <p class="footer__copy">&copy; <span id="year"></span> Jan Kowalski. Wszelkie prawa zastrzeżone.</p>
+                <p class="footer__copy">&copy; <span id="year"></span> Maciej Figiel. Wszelkie prawa zastrzeżone.</p>
                 <p class="footer__micro">Zaprojektowane i zbudowane bez frameworkow.</p>
             </div>
         </div>
@@ -305,7 +224,6 @@
     <script defer src="assets/js/analytics.js"></script>
     <script defer src="assets/js/consent.js"></script>
     <script defer src="assets/js/main.js"></script>
-    <script defer src="assets/js/form.js"></script>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 

@@ -4,10 +4,10 @@
   |_____________________|
 
   Site: jankowalski.pl
-  Zaprojektowane i zbudowane przez: Jan Kowalski
+  Zaprojektowane i zbudowane przez: Maciej Figiel
 
   TEAM
-  Designer & Developer: Jan Kowalski
+  Designer & Developer: Maciej Figiel
   Contact: hello@jankowalski.pl
   Location: Warszawa, Polska
 

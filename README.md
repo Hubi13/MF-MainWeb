@@ -1,4 +1,4 @@
-# Jan Kowalski — Website Designer
+# Maciej Figiel — Website Designer
 
 Statyczna strona-portfolio dla freelancera / website designera. Zaprojektowana i zbudowana bez frameworków — czysty HTML, CSS i minimalny JS.
 
@@ -71,7 +71,7 @@ Wyszukaj i zamien we wszystkich plikach `.html`:
 
 | Placeholder | Zamien na |
 |---|---|
-| `Jan Kowalski` | Twoje imie i nazwisko |
+| `Maciej Figiel` | Twoje imie i nazwisko |
 | `jankowalski.pl` | Twoja domena |
 | `hello@jankowalski.pl` | Twoj e-mail |
 | `linkedin.com/in/jankowalski` | Twoj profil LinkedIn |
@@ -94,7 +94,7 @@ Wstaw swoje obrazy do `assets/img/`:
 
 | Plik | Opis | Wymiary |
 |---|---|---|
-| `jan-kowalski.jpg` | Twoje zdjecie (about.html) | min. 600×800px |
+| `maciej-figiel.jpg` | Twoje zdjecie (about.html) | min. 600×800px |
 | `og-image.jpg` | Obraz dla social share | 1200×630px |
 | `icon-192.png` | PWA icon | 192×192px |
 | `icon-512.png` | PWA icon | 512×512px |
