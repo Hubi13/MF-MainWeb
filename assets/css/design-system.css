@@ -22,12 +22,12 @@
 
   /* Color â€” Text */
   --color-text-primary:   #1f2226;
-  --color-text-secondary: #555a61;
-  --color-text-muted:     #81858c;
+  --color-text-secondary: #5b5856;
+  --color-text-muted:     #85807b;
 
   /* Color â€” Accent (cool silver, modern) */
   --color-accent:       #2f3338;
-  --color-accent-dim:   #5d626a;
+  --color-accent-dim:   #66615c;
   --color-accent-subtle: rgba(47,51,56,0.08);
 
   /* Typography â€” Families */
@@ -67,9 +67,9 @@
   --space-2xl: 12rem;
 
   /* Border radius */
-  --radius-sm: 2px;
-  --radius-md: 5px;
-  --radius-lg: 10px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
 
   /* Shadows */
   --shadow-sm:   0 2px 8px rgba(54,54,54,0.12);
@@ -251,7 +251,7 @@ em { font-style: italic; }
 /* Selection */
 ::selection {
   background: #2b2f34;
-  color: #f8fafc;
+  color: #f5f5f5;
 }
 
 /* Horizontal rule */
@@ -290,7 +290,7 @@ em { font-style: italic; }
 
 .btn--primary {
   background: linear-gradient(180deg, #3a3d42 0%, #2b2f34 100%);
-  color: #f8fafc;
+  color: #f5f5f5;
   border-color: #2b2f34;
 }
 
