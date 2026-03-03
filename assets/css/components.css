@@ -20,10 +20,10 @@
 }
 
 .site-header.is-scrolled {
-    background: rgba(10, 10, 11, 0.92);
+    background: rgba(255, 255, 255, 0.76);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-bottom-color: var(--color-border);
+    border-bottom-color: var(--color-border-strong);
 }
 
 .site-header .container {
@@ -309,7 +309,7 @@
 .cs-card:hover {
     border-color: var(--color-border-strong);
     transform: translateY(-4px);
-    box-shadow: var(--shadow-lift);
+    box-shadow: 0 20px 36px rgba(148,163,184,0.22), 0 6px 12px rgba(15,23,42,0.08);
 }
 
 .cs-card__thumb {
@@ -335,7 +335,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-surface-2);
+    background: rgba(255, 255, 255, 0.86);
     font-size: var(--text-sm);
     color: var(--color-text-muted);
     font-family: var(--font-display);
@@ -346,8 +346,8 @@
     position: absolute;
     top: var(--space-sm);
     left: var(--space-sm);
-    background: rgba(10, 10, 11, 0.85);
-    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(14px);
     border: 1px solid var(--color-border-strong);
     border-radius: var(--radius-sm);
     padding: 0.2rem 0.6rem;
@@ -651,7 +651,7 @@
 }
 
 .capability-item:hover {
-    background: var(--color-surface-2);
+    background: rgba(255, 255, 255, 0.86);
 }
 
 .capability-item__title {
@@ -701,11 +701,11 @@
 }
 
 .pricing-card:hover {
-    background: var(--color-surface-2);
+    background: rgba(255, 255, 255, 0.86);
 }
 
 .pricing-card--featured {
-    background: var(--color-surface-2);
+    background: rgba(255, 255, 255, 0.86);
 }
 
 .pricing-card--featured::before {
@@ -716,7 +716,7 @@
     text-align: center;
     padding: 0.3rem;
     background: var(--color-accent);
-    color: var(--color-bg);
+    color: #f8fafc;
     font-size: var(--text-xs);
     font-weight: 600;
     letter-spacing: var(--ls-wide);
@@ -884,12 +884,12 @@
     left: var(--space-md);
     right: var(--space-md);
     max-width: 600px;
-    background: var(--color-surface-2);
+    background: rgba(255, 255, 255, 0.86);
     border: 1px solid var(--color-border-strong);
     border-radius: var(--radius-md);
     padding: var(--space-md);
     z-index: 200;
-    box-shadow: var(--shadow-lift);
+    box-shadow: 0 20px 36px rgba(148,163,184,0.22), 0 6px 12px rgba(15,23,42,0.08);
     display: none;
 }
 
@@ -948,7 +948,7 @@
 .filter-tab.is-active {
     background: var(--color-accent);
     border-color: var(--color-accent);
-    color: var(--color-bg);
+    color: #f8fafc;
 }
 
 /* ============================================================
@@ -991,9 +991,9 @@
    VISUAL POLISH OVERRIDES
    ============================================================ */
 .site-header.is-scrolled {
-  background: rgba(10, 10, 11, 0.78);
+  background: rgba(255, 255, 255, 0.82);
   border-bottom-color: var(--color-border-strong);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.38);
+  box-shadow: 0 12px 32px rgba(148,163,184,0.24);
 }
 
 .btn {
@@ -1041,5 +1041,32 @@
   border: 1px solid var(--color-border);
   border-left: 1px solid var(--color-accent-dim);
   border-radius: var(--radius-md);
-  background: rgba(17, 17, 19, 0.46);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+
+/* ============================================================
+   APPLE-LIGHT GLASS + NEUMORPHISM
+   ============================================================ */
+.cs-card,
+.pricing-card,
+.capability-item,
+.proof-item,
+.process-step,
+.model-card,
+.project-square,
+.consent-banner {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(214, 221, 232, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 10px 10px 26px rgba(148, 163, 184, 0.20), -8px -8px 20px rgba(255, 255, 255, 0.78);
+}
+
+.cs-card:hover,
+.pricing-card:hover,
+.capability-item:hover,
+.process-step:hover,
+.project-square:hover {
+  box-shadow: 14px 14px 28px rgba(148, 163, 184, 0.24), -10px -10px 22px rgba(255, 255, 255, 0.84);
 }
