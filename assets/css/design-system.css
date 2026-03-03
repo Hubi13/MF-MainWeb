@@ -1,40 +1,40 @@
-/* ============================================================
-   DESIGN SYSTEM — design-system.css
+﻿/* ============================================================
+   DESIGN SYSTEM â€” design-system.css
    Premium Freelancer Website
    ============================================================ */
 
 /* --- Google Fonts Import --- */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 /* ============================================================
    CUSTOM PROPERTIES
    ============================================================ */
 :root {
-  /* Color — Background layers */
+  /* Color â€” Background layers */
   --color-bg:          #0a0a0b;
   --color-surface:     #111113;
   --color-surface-2:   #18181c;
   --color-surface-3:   #1f1f25;
 
-  /* Color — Borders */
+  /* Color â€” Borders */
   --color-border:        #1e1e24;
   --color-border-strong: #2c2c34;
 
-  /* Color — Text */
+  /* Color â€” Text */
   --color-text-primary:   #edeef2;
   --color-text-secondary: #999aaa;
   --color-text-muted:     #56566a;
 
-  /* Color — Accent (warm gold, executive grade) */
-  --color-accent:       #c8b88a;
-  --color-accent-dim:   #9a8866;
-  --color-accent-subtle: rgba(200,184,138,0.08);
+  /* Color â€” Accent (cool silver, modern) */
+  --color-accent:       #c7d0df;
+  --color-accent-dim:   #8f9ab0;
+  --color-accent-subtle: rgba(199,208,223,0.12);
 
-  /* Typography — Families */
-  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Typography â€” Families */
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body:    'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  /* Typography — Scale (fluid with clamp) */
+  /* Typography â€” Scale (fluid with clamp) */
   --text-xs:   clamp(0.7rem,  0.65rem + 0.25vw, 0.75rem);
   --text-sm:   clamp(0.8rem,  0.75rem + 0.25vw, 0.875rem);
   --text-base: clamp(0.9rem,  0.85rem + 0.25vw, 1rem);
@@ -45,13 +45,13 @@
   --text-3xl:  clamp(2rem,    1rem + 4vw,       4rem);
   --text-4xl:  clamp(2.75rem, 1rem + 6vw,       6rem);
 
-  /* Typography — Line heights */
+  /* Typography â€” Line heights */
   --lh-tight:  1.15;
   --lh-snug:   1.4;
   --lh-base:   1.7;
   --lh-loose:  1.85;
 
-  /* Typography — Letter spacings */
+  /* Typography â€” Letter spacings */
   --ls-tight:  -0.02em;
   --ls-base:   0;
   --ls-wide:   0.06em;
@@ -295,10 +295,10 @@ em { font-style: italic; }
 }
 
 .btn--primary:hover {
-  background: #d4c49a;
-  border-color: #d4c49a;
+  background: #d8deea;
+  border-color: #d8deea;
   transform: translateY(-1px);
-  box-shadow: 0 6px 24px rgba(200,184,138,0.25);
+  box-shadow: 0 6px 24px rgba(199,208,223,0.32);
 }
 
 .btn--primary:active {
@@ -326,7 +326,7 @@ em { font-style: italic; }
 }
 
 .btn--ghost::after {
-  content: '→';
+  content: 'â†’';
   transition: transform var(--transition-base);
 }
 
@@ -389,8 +389,8 @@ body::after {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(1000px 420px at 14% -10%, rgba(200, 184, 138, 0.09), transparent 60%),
-    radial-gradient(900px 360px at 92% 14%, rgba(130, 158, 210, 0.08), transparent 58%);
+    radial-gradient(1000px 420px at 14% -10%, rgba(199, 208, 223, 0.14), transparent 60%),
+    radial-gradient(900px 360px at 92% 14%, rgba(146, 167, 208, 0.12), transparent 58%);
 }
 
 *::-webkit-scrollbar {
@@ -405,11 +405,11 @@ body::after {
 *::-webkit-scrollbar-thumb {
   border-radius: 999px;
   border: 2px solid var(--color-bg);
-  background: linear-gradient(180deg, #3a3a45 0%, #6c6150 100%);
+  background: linear-gradient(180deg, #3d4556 0%, #9ca8c2 100%);
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #4b4b59 0%, #8b7a5f 100%);
+  background: linear-gradient(180deg, #4a556c 0%, #b3bfd8 100%);
 }
 
 .section,
@@ -429,3 +429,4 @@ body::after {
   pointer-events: none;
   border-top: 1px solid rgba(255, 255, 255, 0.02);
 }
+

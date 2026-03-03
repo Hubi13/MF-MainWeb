@@ -828,7 +828,7 @@
 .form-textarea:focus {
     outline: none;
     border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px rgba(200, 184, 138, 0.1);
+    box-shadow: 0 0 0 3px rgba(199, 208, 223, 0.16);
 }
 
 .form-input::placeholder,
@@ -1002,7 +1002,7 @@
 }
 
 .btn:hover {
-  outline-color: rgba(200, 184, 138, 0.3);
+  outline-color: rgba(199, 208, 223, 0.42);
 }
 
 .cs-card,
@@ -1034,7 +1034,7 @@
 .pricing-card:hover::after,
 .capability-item:hover::after,
 .process-step:hover::after {
-  border-color: rgba(200, 184, 138, 0.25);
+  border-color: rgba(199, 208, 223, 0.34);
 }
 
 .testimonial {
