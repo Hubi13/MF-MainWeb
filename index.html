@@ -73,7 +73,7 @@
 
   <main>
     <section class="hero-v3 container" id="start">
-      <div class="hero-v3__copy reveal">
+      <div class="hero-v3__copy hero-v3__panel reveal">
         <p class="hero-v3__label">Website Developer</p>
         <h1 class="hero-v3__title">
           BUDUJE STRONY, KTORE<br>
@@ -93,9 +93,14 @@
           <li>Czytelny przekaz pod konkretna decyzje klienta</li>
           <li>Animacje i flow, ktore nadaja stronie zycie</li>
         </ul>
+        <div class="hero-v3__details" role="list" aria-label="Kluczowe detale">
+          <article class="hero-v3__detail" role="listitem"><span>01</span><p>Strategia i przekaz</p></article>
+          <article class="hero-v3__detail" role="listitem"><span>02</span><p>Design i kod</p></article>
+          <article class="hero-v3__detail" role="listitem"><span>03</span><p>Wdrozenie i opieka</p></article>
+        </div>
       </div>
 
-      <div class="hero-v3__mosaic reveal" data-delay="90" aria-label="Prezentacja stylu">
+      <div class="hero-v3__mosaic hero-v3__panel reveal" data-delay="90" aria-label="Prezentacja stylu">
         <article class="mosaic-card mosaic-card--photo">
           <div class="mosaic-card__photo">maciej-figiel.jpg</div>
           <p>Maciej Figiel<br><span>Website Developer</span></p>
@@ -105,6 +110,9 @@
         <article class="mosaic-card mosaic-card--metric"><strong>7 dni</strong><span>na pierwszy kierunek strony</span></article>
         <article class="mosaic-card mosaic-card--service"><p>Landing pages<br>Serwisy firmowe<br>Strony ofertowe</p></article>
         <article class="mosaic-card mosaic-card--cta"><a href="#model-hosting">Model opieki i hostingu</a></article>
+        <div class="hero-v3__sonar" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
       </div>
     </section>
 
@@ -284,11 +292,17 @@
         <div class="testimonial-v3__grid">
           <blockquote class="testimonial-v3__card reveal">
             <p>"Strona od Macieja od razu ustawila jasny przekaz. Klienci szybciej wiedza, co oferujemy i czesciej pisza."</p>
-            <footer>Wlasciciel firmy uslugowej</footer>
+            <footer class="testimonial-v3__author">
+              <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=160&q=80" alt="Wlasciciel firmy uslugowej" loading="lazy" width="56" height="56">
+              <span>Wlasciciel firmy uslugowej</span>
+            </footer>
           </blockquote>
           <blockquote class="testimonial-v3__card reveal" data-delay="90">
             <p>"Najwiekszy plus: design + wdrozenie w jednej osobie. Flow strony i jakosc wykonania sa na bardzo dobrym poziomie."</p>
-            <footer>Founder marki B2B</footer>
+            <footer class="testimonial-v3__author">
+              <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=160&q=80" alt="Founder marki B2B" loading="lazy" width="56" height="56">
+              <span>Founder marki B2B</span>
+            </footer>
           </blockquote>
         </div>
       </div>
