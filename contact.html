@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - Umow rozmowe | Maciej Figiel Website Designer</title>
+    <title>Kontakt | Maciej Figiel Website Designer</title>
     <meta name="description"
-        content="Umow bezplatna konsultacje lub napisz o projekcie. Odpowiadam w ciagu 24 godzin w dni robocze.">
+        content="Napisz o projekcie. Odpowiadam w ciagu 24 godzin w dni robocze.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://jankowalski.pl/contact.html">
     <meta property="og:type" content="website">
@@ -22,6 +22,67 @@
 
     <link rel="stylesheet" href="assets/css/design-system.css">
     <link rel="stylesheet" href="assets/css/components.css">
+    <style>
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.35fr;
+            gap: var(--space-xl);
+            align-items: start;
+        }
+
+        .contact-right {
+            display: grid;
+            gap: var(--space-md);
+        }
+
+        .contact-photo-box {
+            min-height: clamp(320px, 56vh, 560px);
+            border-radius: 24px;
+            border: 1px solid var(--color-border-strong);
+            background: linear-gradient(160deg, #1f232a 0%, #12161c 56%, #0b0d11 100%);
+            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.48);
+            display: grid;
+            place-items: center;
+            color: var(--color-text-muted);
+            font-size: var(--text-sm);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            overflow: hidden;
+        }
+
+        .contact-photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contact-linkedin-box {
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--color-border-strong);
+            background: var(--color-surface);
+            display: grid;
+            gap: var(--space-xs);
+        }
+
+        .contact-linkedin-box p {
+            font-size: var(--text-xs);
+            letter-spacing: var(--ls-widest);
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            margin: 0;
+        }
+
+        @media (max-width: 980px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-photo-box {
+                min-height: 360px;
+            }
+        }
+    </style>
 
     <script type="application/ld+json">
   {
@@ -57,7 +118,7 @@
         <section
             style="padding-top: calc(var(--header-height) + clamp(3rem, 8vw, 6rem)); padding-bottom: clamp(4rem, 10vw, 8rem);">
             <div class="container">
-                <div style="display: grid; grid-template-columns: 1fr 1.4fr; gap: var(--space-xl); align-items: start;">
+                <div class="contact-layout">
 
                     <!-- LEFT: info -->
                     <div>
@@ -68,8 +129,8 @@
                         </h1>
                         <p class="reveal" data-delay="100"
                             style="font-size: var(--text-md); color: var(--color-text-secondary); line-height: var(--lh-base); margin-bottom: var(--space-lg);">
-                            Bezplatna 30-minutowa rozmowa. Omawiamy projekt, sprawdzamy dopasowanie.
-                            Bez zobowiazan, bez presji sprzedazowej.
+                            Napisz o projekcie i potrzebach Twojej marki. Odpowiadam konkretnie, bez automatycznych
+                            odpowiedzi i bez posrednikow.
                         </p>
 
                         <div class="reveal" data-delay="150"
@@ -92,28 +153,6 @@
                                     <a href="mailto:hello@jankowalski.pl"
                                         style="font-size: var(--text-sm); color: var(--color-text-primary); transition: color var(--transition-base);"
                                         data-track-contact="email">hello@jankowalski.pl</a>
-                                </div>
-                            </div>
-
-                            <!-- CALENDLY PLACEHOLDER -->
-                            <div
-                                style="display: flex; align-items: center; gap: var(--space-sm); padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-border);">
-                                <div
-                                    style="width: 40px; height: 40px; background: var(--color-accent-subtle); border: 1px solid var(--color-border-strong); border-radius: var(--radius-md); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                                        <rect x="1" y="2" width="14" height="13" rx="1" stroke="var(--color-accent)"
-                                            stroke-width="1.2" />
-                                        <path d="M1 6h14M5 1v2M11 1v2" stroke="var(--color-accent)"
-                                            stroke-width="1.2" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p
-                                        style="font-size: var(--text-xs); letter-spacing: var(--ls-widest); text-transform: uppercase; color: var(--color-text-muted);">
-                                        Umow rozmowe</p>
-                                    <a href="https://calendly.com/jankowalski" target="_blank" rel="noopener noreferrer"
-                                        style="font-size: var(--text-sm); color: var(--color-text-primary); transition: color var(--transition-base);"
-                                        data-track-cta="calendly">Calendly - wybierz termin</a>
                                 </div>
                             </div>
 
@@ -153,16 +192,15 @@
                         </div>
                     </div>
 
-                    <!-- RIGHT: contact options -->
-                    <div class="reveal" data-delay="200">
-                        <div style="padding: var(--space-md); background: var(--color-surface); border: 1px solid var(--color-border-strong); border-radius: var(--radius-md); display: grid; gap: var(--space-sm);">
-                            <p class="label" style="margin-bottom: 0;">Bez formularza</p>
-                            <h2 style="font-family: var(--font-display); font-size: var(--text-2xl); line-height: var(--lh-tight);">Napisz bezposrednio</h2>
-                            <p style="font-size: var(--text-sm); color: var(--color-text-secondary); line-height: var(--lh-base);">
-                                Zamiast formularza kontaktowego korzystamy z bezposredniej komunikacji. Napisz maila albo odezwij sie na LinkedIn.
-                            </p>
-                            <a href="mailto:hello@jankowalski.pl" class="btn btn--primary" style="justify-content:center;">hello@jankowalski.pl</a>
-                            <a href="https://linkedin.com/in/jankowalski" class="btn btn--outline" target="_blank" rel="noopener noreferrer" style="justify-content:center;">LinkedIn</a>
+                    <!-- RIGHT: photo + linkedin -->
+                    <div class="reveal contact-right" data-delay="200">
+                        <div class="contact-photo-box">
+                            Miejsce na Twoje zdjecie
+                        </div>
+                        <div class="contact-linkedin-box">
+                            <p>LinkedIn</p>
+                            <a href="https://linkedin.com/in/jankowalski" class="btn btn--outline" target="_blank"
+                                rel="noopener noreferrer" style="justify-content:center;">linkedin.com/in/jankowalski</a>
                         </div>
                     </div>
                 </div>
