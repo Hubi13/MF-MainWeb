@@ -276,15 +276,8 @@
 }
 
 .glass-card p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
   color: var(--color-text-secondary);
-}
-
-.glass-card__link {
-  color: #fff;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
 /* Section head */
@@ -375,7 +368,7 @@
 
 .portfolio-card {
   display: block;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 16 / 10;
   border-radius: var(--radius-md);
   border: 1px solid rgba(178, 186, 198, 0.28);
   overflow: hidden;
