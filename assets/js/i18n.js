@@ -155,37 +155,56 @@
 
   async function translateText(text, targetLang) {
     if (!text || !text.trim()) return text;
-    var chunks = splitText(text, 380);
-    var out = [];
+    var chunks = splitText(text, 1000);
+    var promises = [];
     for (var i = 0; i < chunks.length; i += 1) {
-      // Sequential to avoid API throttling
-      out.push(await translateChunk(chunks[i], targetLang));
+      promises.push(translateChunk(chunks[i], targetLang));
     }
-    return out.join(' ');
+    var results = await Promise.all(promises);
+    return results.join(' ');
   }
 
   async function translatePageContent(targetLang, seq) {
     collectTranslatableNodes();
-    var unique = [];
-    var seen = {};
+
+    // Group nodes by their core text to avoid redundant translations
+    var textToNodes = {};
     NODE_CACHE.forEach(function (item) {
-      if (!seen[item.core]) {
-        seen[item.core] = true;
-        unique.push(item.core);
-      }
+      if (!textToNodes[item.core]) textToNodes[item.core] = [];
+      textToNodes[item.core].push(item);
     });
 
-    var translatedMap = {};
-    for (var i = 0; i < unique.length; i += 1) {
-      if (seq !== APPLY_SEQ) return;
-      translatedMap[unique[i]] = await translateText(unique[i], targetLang);
+    var uniqueTexts = Object.keys(textToNodes);
+    var concurrencyLimit = 12; // Slightly higher for better saturation
+    var currentIndex = 0;
+
+    async function processNext() {
+      if (currentIndex >= uniqueTexts.length || seq !== APPLY_SEQ) return;
+      var rawText = uniqueTexts[currentIndex++];
+
+      try {
+        var translated = await translateText(rawText, targetLang);
+        if (seq !== APPLY_SEQ) return;
+
+        // Immediate update for all nodes with this text
+        textToNodes[rawText].forEach(function (item) {
+          item.node.nodeValue = item.lead + translated + item.trail;
+        });
+      } catch (e) {
+        console.error('Translation error for:', rawText, e);
+      }
+
+      await processNext(); // tail recursion to keep worker busy
     }
 
-    if (seq !== APPLY_SEQ) return;
-    NODE_CACHE.forEach(function (item) {
-      var value = translatedMap[item.core] || item.core;
-      item.node.nodeValue = item.lead + value + item.trail;
-    });
+    var workers = [];
+    for (var i = 0; i < Math.min(concurrencyLimit, uniqueTexts.length); i++) {
+      workers.push(processNext());
+    }
+
+    // We don't necessarily need to wait for all if we want it to feel fast, 
+    // but we wait to ensure saveCache happens at the end.
+    await Promise.all(workers);
   }
 
   function setSwitchState(lang) {
@@ -216,13 +235,18 @@
     document.documentElement.lang = resolved;
     setSwitchState(resolved);
 
-    await translatePageContent(resolved, seq);
-    if (seq !== APPLY_SEQ) return;
-
+    // Apply UI dictionary first (instant)
     applyUiDictionary(resolved);
 
+    // Translate page title earlier
     if (!ORIGINAL_TITLE) ORIGINAL_TITLE = document.title;
-    document.title = await translateText(ORIGINAL_TITLE, resolved);
+    translateText(ORIGINAL_TITLE, resolved).then(function (t) {
+      if (seq === APPLY_SEQ) document.title = t;
+    });
+
+    // Translate content in background/parallel
+    await translatePageContent(resolved, seq);
+    if (seq !== APPLY_SEQ) return;
 
     saveCache();
     try {
