@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelna oferta | Maciej Figiel</title>
+    <meta name="description"
+        content="Pelna oferta: pelna strona WWW i landing page. Benefity, plusy i zakres realizacji.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jankowalski.pl/oferta-pelna.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jankowalski.pl/oferta-pelna.html">
+    <meta property="og:title" content="Pelna oferta - Maciej Figiel">
+    <meta property="og:description" content="Pelna strona WWW i landing page - benefity, plusy i zakres.">
+    <meta property="og:image" content="https://jankowalski.pl/assets/img/og-image.jpg">
+
+    <link rel="stylesheet" href="assets/css/design-system.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <style>
+        .offer-hero {
+            padding-top: calc(var(--header-height) + 4rem);
+            padding-bottom: clamp(2.5rem, 5vw, 4rem);
+        }
+
+        .offer-hero h1 {
+            font-size: clamp(2.2rem, 6vw, 4.3rem);
+            margin-bottom: var(--space-sm);
+        }
+
+        .offer-hero p {
+            max-width: 66ch;
+            color: var(--color-text-secondary);
+        }
+
+        .offer-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 980px) {
+            .offer-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .offer-card {
+            background: linear-gradient(160deg, rgba(42, 47, 54, 0.6), rgba(11, 13, 17, 0.95));
+            border: 1px solid rgba(188, 197, 210, 0.25);
+            border-radius: var(--radius-md);
+            padding: clamp(1.3rem, 2.3vw, 2rem);
+            display: grid;
+            gap: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .offer-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(145deg, rgba(232, 236, 243, 0.15), rgba(194, 201, 212, 0.03) 50%, transparent 75%);
+            pointer-events: none;
+        }
+
+        .offer-card>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .offer-card h2 {
+            font-size: clamp(1.5rem, 2.3vw, 2rem);
+            margin-bottom: 0.25rem;
+        }
+
+        .offer-card p {
+            color: var(--color-text-secondary);
+        }
+
+        .offer-list,
+        .offer-plus {
+            display: grid;
+            gap: 0.55rem;
+        }
+
+        .offer-list li,
+        .offer-plus li {
+            color: var(--color-text-secondary);
+            display: flex;
+            gap: 0.55rem;
+            align-items: flex-start;
+            line-height: 1.5;
+        }
+
+        .offer-list li::before {
+            content: '\2713';
+            color: var(--color-accent);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .offer-plus li::before {
+            content: '+';
+            color: #d7dee8;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .offer-note {
+            margin-top: var(--space-lg);
+            padding: var(--space-md);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            background: var(--color-surface);
+            display: grid;
+            gap: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header" role="banner">
+        <div class="container">
+            <a href="/" class="site-logo">Maciej<span>.</span>Figiel</a>
+            <nav class="site-nav" role="navigation" aria-label="Main navigation" data-i18n-aria-label="nav.aria">
+                <ul class="site-nav__list" id="main-nav">
+                    <li><a href="/#portfolio" class="site-nav__link" data-i18n="nav.work">Work</a></li>
+                    <li><a href="/#models" class="site-nav__link" data-i18n="nav.services">Services</a></li>
+                    <li><a href="/#about" class="site-nav__link" data-i18n="nav.about">About</a></li>
+                    <li><a href="/contact.html" class="site-nav__link" data-i18n="nav.contact">Contact</a></li>
+                    <li class="site-nav__lang" role="group" aria-label="Language switcher"
+                        data-i18n-aria-label="nav.lang_aria">
+                        <button type="button" class="lang-switch" data-lang-switch="en" aria-pressed="false">EN</button>
+                        <button type="button" class="lang-switch" data-lang-switch="pl" aria-pressed="false">PL</button>
+                    </li>
+                </ul>
+                <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu"
+                    data-i18n-aria-label="nav.menu_open">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="offer-hero">
+            <div class="container">
+                <p class="label">Oferta</p>
+                <h1>Zobacz pelna oferte wspolpracy</h1>
+                <p>
+                    Dwie najczesciej wybierane opcje realizacji: pelna strona WWW oraz landing page pod konkretny cel.
+                    Ponizej masz czytelne benefity i plusy kazdej z nich.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="offer-grid">
+                    <article class="offer-card">
+                        <div>
+                            <p class="label" style="margin-bottom: 0.45rem;">Opcja 01</p>
+                            <h2>Pelna strona WWW</h2>
+                            <p>Rozbudowana strona firmowa lub produktowa, ktora buduje wiarygodnosc i prowadzi klienta od
+                                pierwszego wejscia do kontaktu.</p>
+                        </div>
+                        <div>
+                            <h3 style="font-size: var(--text-md); margin-bottom: 0.6rem;">Benefity</h3>
+                            <ul class="offer-list">
+                                <li>Spójny przekaz marki na wielu podstronach.</li>
+                                <li>Lepsze SEO dzieki rozbudowanej strukturze tresci.</li>
+                                <li>Wieksza kontrola nad lejkiem konwersji.</li>
+                                <li>Gotowosc do rozwoju oferty w czasie.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 style="font-size: var(--text-md); margin-bottom: 0.6rem;">Plusy</h3>
+                            <ul class="offer-plus">
+                                <li>Idealna dla firm, ktore chca byc postrzegane premium.</li>
+                                <li>Dobry fundament pod reklamę i pozyskiwanie leadow.</li>
+                                <li>Skalowalna architektura na kolejne etapy biznesu.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="offer-card">
+                        <div>
+                            <p class="label" style="margin-bottom: 0.45rem;">Opcja 02</p>
+                            <h2>Landing page</h2>
+                            <p>Jedna, mocno skupiona strona zaprojektowana pod konkretną kampanie, produkt lub usluge.</p>
+                        </div>
+                        <div>
+                            <h3 style="font-size: var(--text-md); margin-bottom: 0.6rem;">Benefity</h3>
+                            <ul class="offer-list">
+                                <li>Szybsze wdrozenie i start kampanii.</li>
+                                <li>Jeden jasny cel: zapis, kontakt lub zakup.</li>
+                                <li>Latwiejsze testowanie przekazu (A/B).</li>
+                                <li>Silne wsparcie dla reklam performance.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 style="font-size: var(--text-md); margin-bottom: 0.6rem;">Plusy</h3>
+                            <ul class="offer-plus">
+                                <li>Najlepsza opcja na szybki launch nowej oferty.</li>
+                                <li>Niski próg wejscia przy wysokiej skutecznosci.</li>
+                                <li>Prosty model dalszej rozbudowy do pelnej strony.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="offer-note">
+                    <p style="color: var(--color-text-secondary);">
+                        Nie wiesz, ktora opcja jest lepsza dla Twojego przypadku? Podczas krótkiej rozmowy dopasujemy
+                        model realizacji do etapu Twojego biznesu.
+                    </p>
+                    <div>
+                        <a href="/contact.html" class="btn btn--primary">Skontaktuj sie</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <p class="footer__brand-name font-display">Maciej Figiel</p>
+                    <p class="footer__tagline">Website designer i frontend engineer.</p>
+                </div>
+                <div>
+                    <p class="footer__col-title">Nawigacja</p>
+                    <ul class="footer__links" role="list">
+                        <li><a href="/#portfolio" class="footer__link">Realizacje</a></li>
+                        <li><a href="/#models" class="footer__link">Oferta</a></li>
+                        <li><a href="/#about" class="footer__link">O mnie</a></li>
+                        <li><a href="/contact.html" class="footer__link">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer__col-title">Kontakt</p>
+                    <ul class="footer__links" role="list">
+                        <li><a href="mailto:hello@jankowalski.pl" class="footer__link">hello@jankowalski.pl</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">&copy; <span id="year"></span> Maciej Figiel. Wszelkie prawa zastrzezone.</p>
+                <p class="footer__micro">Zaprojektowane i zbudowane bez frameworkow.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="assets/js/analytics.js"></script>
+    <script defer src="assets/js/consent.js"></script>
+    <script defer src="assets/js/main.js"></script>
+    <script defer src="/assets/js/i18n.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>

@@ -503,6 +503,16 @@
   font-weight: bold;
 }
 
+.models-more {
+  margin-top: 1.6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.models-more .btn {
+  min-width: 220px;
+}
+
 /* Testimonials */
 .testimonials-grid {
   display: grid;
