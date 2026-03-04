@@ -123,7 +123,7 @@
             (messageInput ? messageInput.value.trim() : '')
         );
 
-        window.location.href = 'mailto:hello@jankowalski.pl?subject=' + subject + '&body=' + body;
+        window.location.href = 'mailto:mafi14@proton.me?subject=' + subject + '&body=' + body;
         setFormState(form, 'success');
     }
 

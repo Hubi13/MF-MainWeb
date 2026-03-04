@@ -8,7 +8,7 @@
 
   TEAM
   Designer & Developer: Maciej Figiel
-  Contact: hello@jankowalski.pl
+  Contact: mafi14@proton.me
   Location: Warszawa, Polska
 
   STACK

@@ -73,7 +73,7 @@ Wyszukaj i zamien we wszystkich plikach `.html`:
 |---|---|
 | `Maciej Figiel` | Twoje imie i nazwisko |
 | `jankowalski.pl` | Twoja domena |
-| `hello@jankowalski.pl` | Twoj e-mail |
+| `mafi14@proton.me` | Twoj e-mail |
 | `linkedin.com/in/jankowalski` | Twoj profil LinkedIn |
 | `calendly.com/jankowalski` | Twoj link Calendly |
 | `[Nazwa firmy]`, `[NIP]` | Dane firmy (privacy.html) |
