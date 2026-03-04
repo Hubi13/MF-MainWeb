@@ -22,20 +22,21 @@
     <div class="container">
       <a href="/" class="site-logo">Maciej<span>.</span>Figiel</a>
       <nav class="site-nav" role="navigation" aria-label="Main navigation" data-i18n-aria-label="nav.aria">
-                <ul class="site-nav__list" id="main-nav">
-                    <li><a href="/#portfolio" class="site-nav__link" data-i18n="nav.work">Work</a></li>
-                    <li><a href="/#models" class="site-nav__link" data-i18n="nav.services">Services</a></li>
-                    <li><a href="/#about" class="site-nav__link" data-i18n="nav.about">About</a></li>
-                    <li><a href="/contact.html" class="site-nav__link" data-i18n="nav.contact">Contact</a></li>
-                    <li class="site-nav__lang" role="group" aria-label="Language switcher" data-i18n-aria-label="nav.lang_aria">
-                        <button type="button" class="lang-switch" data-lang-switch="en" aria-pressed="false">EN</button>
-                        <button type="button" class="lang-switch" data-lang-switch="pl" aria-pressed="false">PL</button>
-                    </li>
-                </ul>
-                <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" data-i18n-aria-label="nav.menu_open">
-                    <span></span><span></span><span></span>
-                </button>
-            </nav>
+        <ul class="site-nav__list" id="main-nav">
+          <li><a href="/#portfolio" class="site-nav__link" data-i18n="nav.work">Work</a></li>
+          <li><a href="/#models" class="site-nav__link" data-i18n="nav.services">Services</a></li>
+          <li><a href="/#about" class="site-nav__link" data-i18n="nav.about">About</a></li>
+          <li><a href="/contact.html" class="site-nav__link" data-i18n="nav.contact">Contact</a></li>
+          <li class="site-nav__lang" role="group" aria-label="Language switcher" data-i18n-aria-label="nav.lang_aria">
+            <button type="button" class="lang-switch" data-lang-switch="en" aria-pressed="false">EN</button>
+            <button type="button" class="lang-switch" data-lang-switch="pl" aria-pressed="false">PL</button>
+          </li>
+        </ul>
+        <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu"
+          data-i18n-aria-label="nav.menu_open">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
     </div>
   </header>
 
@@ -139,7 +140,7 @@
       </div>
 
       <div class="portfolio-grid reveal">
-        <a href="work/case-study-1.html" class="portfolio-card">
+        <a href="work/case-study-1.html" target="_blank" rel="noopener noreferrer" class="portfolio-card">
           <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1964&auto=format&fit=crop"
             alt="Projekt 1" class="portfolio-card__img">
           <div class="portfolio-card__content">
@@ -147,7 +148,7 @@
             <p class="portfolio-card__desc">Nowy kierunek wizualny UI/UX</p>
           </div>
         </a>
-        <a href="work/case-study-2.html" class="portfolio-card">
+        <a href="work/case-study-2.html" target="_blank" rel="noopener noreferrer" class="portfolio-card">
           <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
             alt="Projekt 2" class="portfolio-card__img">
           <div class="portfolio-card__content">
@@ -155,12 +156,20 @@
             <p class="portfolio-card__desc">Płynne animacje i konwersja</p>
           </div>
         </a>
-        <a href="work/case-study-3.html" class="portfolio-card">
+        <a href="work/case-study-3.html" target="_blank" rel="noopener noreferrer" class="portfolio-card">
           <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=2070&auto=format&fit=crop"
             alt="Projekt 3" class="portfolio-card__img">
           <div class="portfolio-card__content">
             <h3 class="portfolio-card__title">Sklep Premium</h3>
             <p class="portfolio-card__desc">E-commerce w stylu luksusowym</p>
+          </div>
+        </a>
+        <a href="work/case-study-4.html" target="_blank" rel="noopener noreferrer" class="portfolio-card">
+          <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=2070&auto=format&fit=crop"
+            alt="Projekt 4" class="portfolio-card__img">
+          <div class="portfolio-card__content">
+            <h3 class="portfolio-card__title">Aplikacja FinTech</h3>
+            <p class="portfolio-card__desc">Prosty i nowoczesny interfejs</p>
           </div>
         </a>
       </div>
@@ -199,7 +208,7 @@
         </div>
       </div>
       <div class="models-more reveal" data-delay="120">
-        <a href="/oferta-pelna.html" class="btn btn--outline">Zobacz pełną ofertę</a>
+        <a href="/oferta-pelna.html" class="btn btn--models-offer">Zobacz pełną ofertę</a>
       </div>
     </section>
 
@@ -209,29 +218,98 @@
         <p class="section-head__label">Opinie</p>
         <h2>Co mówią moi klienci</h2>
       </div>
-      <div class="testimonials-grid reveal">
-        <article class="testimonial-card">
-          <p class="testimonial-card__quote">
-            „Po wdrożeniu nowego layoutu klienci dużo szybciej rozumieją naszą ofertę, a liczba zapytań wzrosła.”
-          </p>
-          <div class="testimonial-card__author">
-            <div>
-              <strong>Adam Nowak</strong>
-              <span>Właściciel firmy usługowej</span>
+      <div class="testimonials-marquee-wrapper reveal">
+        <div class="testimonials-marquee">
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">
+              „Po wdrożeniu nowego layoutu klienci dużo szybciej rozumieją naszą ofertę, a liczba zapytań wzrosła.”
+            </p>
+            <div class="testimonial-card__author">
+              <div>
+                <strong>Adam Nowak</strong>
+                <span>Właściciel firmy usługowej</span>
+              </div>
             </div>
-          </div>
-        </article>
-        <article class="testimonial-card">
-          <p class="testimonial-card__quote">
-            „Największa różnica to spójność: design, kod i flow strony są dopracowane i bardzo nowoczesne.”
-          </p>
-          <div class="testimonial-card__author">
-            <div>
-              <strong>Marta Zielińska</strong>
-              <span>Founder marki B2B</span>
+          </article>
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">
+              „Największa różnica to spójność: design, kod i flow strony są dopracowane i bardzo nowoczesne.”
+            </p>
+            <div class="testimonial-card__author">
+              <div>
+                <strong>Marta Zielińska</strong>
+                <span>Founder marki B2B</span>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">
+              „Szybkość i jakość wdrożenia przeszły nasze najśmielsze oczekiwania. Zdecydowanie polecam współpracę.”
+            </p>
+            <div class="testimonial-card__author">
+              <div>
+                <strong>Tomasz Kruk</strong>
+                <span>Dyrektor E-commerce</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">
+              „Efekt wow, na który czekaliśmy. Klienci są zachwyceni estetyką i prostotą nawigacji na nowej stronie.”
+            </p>
+            <div class="testimonial-card__author">
+              <div>
+                <strong>Piotr Wiśniewski</strong>
+                <span>CEO Startup B2C</span>
+              </div>
+            </div>
+          </article>
+          <!-- Duplicate for seamless looping -->
+          <article class="testimonial-card" aria-hidden="true">
+            <p class="testimonial-card__quote">
+              „Po wdrożeniu nowego layoutu klienci dużo szybciej rozumieją naszą ofertę, a liczba zapytań wzrosła.”
+            </p>
+            <div class="testimonial-card__author">
+              <div>
+                <strong>Adam Nowak</strong>
+                <span>Właściciel firmy usługowej</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card" aria-hidden="true">
+            <p class="testimonial-card__quote">
+              „Największa różnica to spójność: design, kod i flow strony są dopracowane i bardzo nowoczesne.”
+            </p>
+            <div class="testimonial-card__author">
+              <div>
+                <strong>Marta Zielińska</strong>
+                <span>Founder marki B2B</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card" aria-hidden="true">
+            <p class="testimonial-card__quote">
+              „Szybkość i jakość wdrożenia przeszły nasze najśmielsze oczekiwania. Zdecydowanie polecam współpracę.”
+            </p>
+            <div class="testimonial-card__author">
+              <div>
+                <strong>Tomasz Kruk</strong>
+                <span>Dyrektor E-commerce</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card" aria-hidden="true">
+            <p class="testimonial-card__quote">
+              „Efekt wow, na który czekaliśmy. Klienci są zachwyceni estetyką i prostotą nawigacji na nowej stronie.”
+            </p>
+            <div class="testimonial-card__author">
+              <div>
+                <strong>Piotr Wiśniewski</strong>
+                <span>CEO Startup B2C</span>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -254,10 +332,19 @@
           <p class="footer__tagline">Ekskluzywny Website Development. Buduję, a nie składam.</p>
         </div>
         <div>
-          <p class="footer__col-title">Oferta & Realizacje</p>
+          <p class="footer__col-title">Nawigacja</p>
           <ul class="footer__links">
-            <li><a href="#portfolio" class="footer__link">Portfolio projektów</a></li>
-            <li><a href="#models" class="footer__link">Modele współpracy</a></li>
+            <li><a href="/#portfolio" class="footer__link" data-i18n="nav.work">Work</a></li>
+            <li><a href="/#models" class="footer__link" data-i18n="nav.services">Services</a></li>
+            <li><a href="/#about" class="footer__link" data-i18n="nav.about">About</a></li>
+            <li><a href="/contact.html" class="footer__link" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Prywatność i Regulamin</p>
+          <ul class="footer__links">
+            <li><a href="/privacy.html" class="footer__link">Polityka prywatności</a></li>
+            <li><a href="/terms.html" class="footer__link">Regulamin</a></li>
           </ul>
         </div>
         <div>
@@ -313,12 +400,7 @@
 
     document.getElementById('year').innerText = new Date().getFullYear();
   </script>
-    <script defer src="/assets/js/i18n.js"></script>
+  <script defer src="/assets/js/i18n.js"></script>
 </body>
 
 </html>
-
-
-
-
-

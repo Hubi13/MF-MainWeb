@@ -162,7 +162,7 @@
   height: 32px;
   border-radius: 50%;
   background: #fff;
-  color: #ff7b2f;
+  color: #ee7028f3;
   display: grid;
   place-items: center;
   font-size: 1.1rem;
@@ -344,7 +344,7 @@
 }
 
 .about-content h2 {
-  margin-bottom: 1.7rem;
+  margin-bottom: 0.8rem;
 }
 
 .about-content p {
@@ -375,7 +375,7 @@
 
 .portfolio-card {
   display: block;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 1 / 1;
   border-radius: var(--radius-md);
   border: 1px solid rgba(178, 186, 198, 0.28);
   overflow: hidden;
@@ -513,20 +513,66 @@
   min-width: 220px;
 }
 
-/* Testimonials */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+.btn--models-offer {
+  background: linear-gradient(135deg, rgba(40, 44, 52, 0.95), rgba(20, 22, 26, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  text-transform: none;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+  transition: all var(--transition-base);
 }
 
-@media (min-width: 900px) {
-  .testimonials-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+.btn--models-offer::after {
+  content: '→';
+  margin-left: 0.45rem;
+  font-size: 1rem;
+}
+
+.btn--models-offer:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.2);
+  border-color: rgba(255, 126, 58, 0.6);
+  box-shadow: 0 14px 32px rgba(255, 126, 58, 0.15), 0 8px 18px rgba(0, 0, 0, 0.42);
+}
+
+/* Testimonials */
+.testimonials-marquee-wrapper {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 1.5rem 0;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.testimonials-marquee {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: marquee-scroll 35s linear infinite;
+}
+
+.testimonials-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 0.75rem));
   }
 }
 
 .testimonial-card {
+  width: min(85vw, 400px);
+  flex-shrink: 0;
   border-radius: var(--radius-md);
   border: 1px solid rgba(182, 191, 203, 0.26);
   background: linear-gradient(160deg, rgba(45, 49, 56, 0.62), rgba(13, 15, 19, 0.93) 60%, rgba(7, 8, 11, 0.99));
@@ -657,10 +703,12 @@
     opacity: 1;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.5;
     transform: scale(0.8);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
