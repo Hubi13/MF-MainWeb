@@ -74,7 +74,7 @@ Wyszukaj i zamien we wszystkich plikach `.html`:
 | `Maciej Figiel` | Twoje imie i nazwisko |
 | `jankowalski.pl` | Twoja domena |
 | `mafi14@proton.me` | Twoj e-mail |
-| `linkedin.com/in/jankowalski` | Twoj profil LinkedIn |
+| `www.linkedin.com/in/maciej-figiel-6a03643b5/` | Twoj profil LinkedIn |
 | `calendly.com/jankowalski` | Twoj link Calendly |
 | `[Nazwa firmy]`, `[NIP]` | Dane firmy (privacy.html) |
 
