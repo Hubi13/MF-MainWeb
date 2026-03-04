@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -151,17 +151,42 @@
         </section>
     </main>
 
-    <footer class="site-footer" role="contentinfo">
-        <div class="container">
-            <div class="footer__bottom" style="padding-top:0; border-top: none;">
-                <p class="footer__copy">&copy; <span id="year"></span> Maciej Figiel.</p>
-                <div style="display:flex; gap: var(--space-md);">
-                    <a href="/" class="footer__link">Strona glowna</a>
-                    <a href="/privacy.html" class="footer__link">Polityka prywatnosci</a>
-                </div>
-            </div>
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">Maciej Figiel</p>
+          <p class="footer__tagline">Brand & UI/UX Designer</p>
         </div>
-    </footer>
+        <div>
+          <p class="footer__col-title">Nawigacja</p>
+          <ul class="footer__links">
+            <li><a href="/#portfolio" class="footer__link" data-i18n="nav.work">Work</a></li>
+            <li><a href="/#models" class="footer__link" data-i18n="nav.services">Services</a></li>
+            <li><a href="/#about" class="footer__link" data-i18n="nav.about">About</a></li>
+            <li><a href="/contact.html" class="footer__link" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Prywatność i Regulamin</p>
+          <ul class="footer__links">
+            <li><a href="/privacy.html" class="footer__link">Polityka prywatności</a></li>
+            <li><a href="/terms.html" class="footer__link">Regulamin</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Kontakt</p>
+          <ul class="footer__links">
+            <li><a href="mailto:hello@jankowalski.pl" class="footer__link">hello@jankowalski.pl</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="year">2026</span> Maciej Figiel. Wszelkie prawa zastrzeżone.</p>
+        <p>Premium Web Experience</p>
+      </div>
+    </div>
+  </footer>
 
     <script defer src="assets/js/main.js"></script>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
