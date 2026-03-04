@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -21,14 +21,21 @@
   <header class="site-header" id="header">
     <div class="container">
       <a href="/" class="site-logo">Maciej<span>.</span>Figiel</a>
-      <nav class="site-nav">
-        <ul class="site-nav__list">
-          <li><a href="#about" class="site-nav__link">O mnie</a></li>
-          <li><a href="#portfolio" class="site-nav__link">Realizacje</a></li>
-          <li><a href="#models" class="site-nav__link">Współpraca</a></li>
-          <li><a href="contact.html" class="site-nav__link">Kontakt</a></li>
-        </ul>
-      </nav>
+      <nav class="site-nav" role="navigation" aria-label="Main navigation" data-i18n-aria-label="nav.aria">
+                <ul class="site-nav__list" id="main-nav">
+                    <li><a href="/work/" class="site-nav__link" data-i18n="nav.work">Work</a></li>
+                    <li><a href="/services.html" class="site-nav__link" data-i18n="nav.services">Services</a></li>
+                    <li><a href="/about.html" class="site-nav__link" data-i18n="nav.about">About</a></li>
+                    <li><a href="/contact.html" class="site-nav__link" data-i18n="nav.contact">Contact</a></li>
+                    <li class="site-nav__lang" role="group" aria-label="Language switcher" data-i18n-aria-label="nav.lang_aria">
+                        <button type="button" class="lang-switch" data-lang-switch="en" aria-pressed="false">EN</button>
+                        <button type="button" class="lang-switch" data-lang-switch="pl" aria-pressed="false">PL</button>
+                    </li>
+                </ul>
+                <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" data-i18n-aria-label="nav.menu_open">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
     </div>
   </header>
 
@@ -48,7 +55,8 @@
 
           <div class="hero-side">
             <p class="hero-sub">
-              Hi, I&apos;m Maciej Figiel - a UI/UX and web designer building seamless digital experiences that connect and
+              Hi, I&apos;m Maciej Figiel - a UI/UX and web designer building seamless digital experiences that connect
+              and
               convert.
             </p>
             <a href="#portfolio" class="btn hero-cta">See my works</a>
@@ -162,7 +170,7 @@
     <section id="models" class="section container">
       <div class="section-head reveal">
         <p class="section-head__label">Podejście i modele</p>
-        <h2>Jak dowożę projekty na metę i po niej</h2>
+        <h2>Jak dowożę projekty na metę</h2>
       </div>
 
       <div class="models-grid reveal">
@@ -204,8 +212,6 @@
             „Po wdrożeniu nowego layoutu klienci dużo szybciej rozumieją naszą ofertę, a liczba zapytań wzrosła.”
           </p>
           <div class="testimonial-card__author">
-            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=240&auto=format&fit=crop"
-              alt="Właściciel firmy usługowej" loading="lazy" width="56" height="56">
             <div>
               <strong>Adam Nowak</strong>
               <span>Właściciel firmy usługowej</span>
@@ -217,8 +223,6 @@
             „Największa różnica to spójność: design, kod i flow strony są dopracowane i bardzo nowoczesne.”
           </p>
           <div class="testimonial-card__author">
-            <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=240&auto=format&fit=crop"
-              alt="Founder marki B2B" loading="lazy" width="56" height="56">
             <div>
               <strong>Marta Zielińska</strong>
               <span>Founder marki B2B</span>
@@ -233,7 +237,6 @@
       <div class="cta-box">
         <div class="cta-box__content">
           <h2>Zbudujmy stronę, która realnie sprzedaje</h2>
-          <p class="cta-box__lead">Dostajesz kompletny proces: strategię, design, development i wdrożenie bez chaosu.</p>
           <a href="mailto:hello@jankowalski.pl" class="btn btn--cta">Umów bezpłatną konsultację &rarr;</a>
         </div>
       </div>
@@ -307,6 +310,11 @@
 
     document.getElementById('year').innerText = new Date().getFullYear();
   </script>
+    <script defer src="/assets/js/i18n.js"></script>
 </body>
 
 </html>
+
+
+
+

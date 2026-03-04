@@ -27,6 +27,9 @@
     var toggle = document.querySelector('.nav-toggle');
     var navList = document.querySelector('.site-nav__list');
     if (!toggle || !navList) return;
+    if (toggle.dataset.mobileNavInitialized === 'true') return;
+
+    toggle.dataset.mobileNavInitialized = 'true';
 
     function openMenu() {
       navList.classList.add('is-open');

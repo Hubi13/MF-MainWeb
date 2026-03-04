@@ -71,6 +71,10 @@
     align-items: center;
 }
 
+.site-nav {
+    position: relative;
+}
+
 .site-logo {
     font-family: var(--font-display);
     font-weight: 700;
@@ -98,6 +102,104 @@
 
 .site-nav__link:hover {
     color: #fff;
+}
+
+.site-nav__link.is-active {
+    color: #fff;
+}
+
+.site-nav__lang {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding-left: 0.5rem;
+    border-left: 1px solid var(--color-border);
+}
+
+.lang-switch {
+    border: 1px solid var(--color-border-strong);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--color-text-secondary);
+    font-size: 0.7rem;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    padding: 0.35rem 0.48rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.lang-switch:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.42);
+}
+
+.lang-switch.is-active {
+    color: #fff;
+    border-color: rgba(255, 90, 31, 0.45);
+    background: rgba(255, 90, 31, 0.14);
+}
+
+.nav-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-border-strong);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nav-toggle span {
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--color-text-primary);
+}
+
+@media (max-width: 900px) {
+    .site-nav__list {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: calc(100% + 10px);
+        width: min(300px, calc(100vw - 2rem));
+        padding: 0.9rem;
+        border-radius: 12px;
+        border: 1px solid var(--color-border-strong);
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(16px);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.45rem;
+        z-index: 120;
+    }
+
+    .site-nav__list.is-open {
+        display: flex;
+    }
+
+    .site-nav__list .site-nav__link {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0.25rem;
+    }
+
+    .site-nav__lang {
+        margin-top: 0.35rem;
+        padding-top: 0.45rem;
+        padding-left: 0;
+        border-left: 0;
+        border-top: 1px solid var(--color-border);
+        justify-content: flex-start;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+    }
 }
 
 /* Grid Layouts shared */

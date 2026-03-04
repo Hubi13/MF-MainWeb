@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="pl">
+﻿<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -44,10 +44,20 @@
     <header class="site-header is-scrolled" id="header" style="background: rgba(10, 10, 10, 0.85);">
         <div class="container">
             <a href="/" class="site-logo">Maciej<span>.</span>Figiel</a>
-            <nav class="site-nav">
-                <ul class="site-nav__list">
-                    <li><a href="/#portfolio" class="site-nav__link">Wróć do realizacji</a></li>
+            <nav class="site-nav" role="navigation" aria-label="Main navigation" data-i18n-aria-label="nav.aria">
+                <ul class="site-nav__list" id="main-nav">
+                    <li><a href="/work/" class="site-nav__link" data-i18n="nav.work">Work</a></li>
+                    <li><a href="/services.html" class="site-nav__link" data-i18n="nav.services">Services</a></li>
+                    <li><a href="/about.html" class="site-nav__link" data-i18n="nav.about">About</a></li>
+                    <li><a href="/contact.html" class="site-nav__link" data-i18n="nav.contact">Contact</a></li>
+                    <li class="site-nav__lang" role="group" aria-label="Language switcher" data-i18n-aria-label="nav.lang_aria">
+                        <button type="button" class="lang-switch" data-lang-switch="en" aria-pressed="false">EN</button>
+                        <button type="button" class="lang-switch" data-lang-switch="pl" aria-pressed="false">PL</button>
+                    </li>
                 </ul>
+                <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" data-i18n-aria-label="nav.menu_open">
+                    <span></span><span></span><span></span>
+                </button>
             </nav>
         </div>
     </header>
@@ -63,16 +73,16 @@
 
         <section class="case-content container reveal">
             <h2>Zadanie</h2>
-            <p>Klienta celem było wyniesienie wizerunku produktów premium do interfejsu kupującego. Potrzebny był
-                dedykowany, bezbłędnie przemyślany sklep internetowy.</p>
+            <p>Klienta celem byĹ‚o wyniesienie wizerunku produktĂłw premium do interfejsu kupujÄ…cego. Potrzebny byĹ‚
+                dedykowany, bezbĹ‚Ä™dnie przemyĹ›lany sklep internetowy.</p>
 
             <h2>Wynik</h2>
-            <p>Uzyskaliśmy design przypominający gablotkę ekskluzywnej biżuterii. Duże przestrzenie z pustym marginesem,
-                nieskomplikowana typografia, customowy pre-loader, a nade wszystko idealnie oddziałujący klimat
+            <p>UzyskaliĹ›my design przypominajÄ…cy gablotkÄ™ ekskluzywnej biĹĽuterii. DuĹĽe przestrzenie z pustym marginesem,
+                nieskomplikowana typografia, customowy pre-loader, a nade wszystko idealnie oddziaĹ‚ujÄ…cy klimat
                 dark-mode dopasowany do stylistyki premium marki.</p>
 
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="/index.html" class="btn btn--outline">Wróć na główną</a>
+                <a href="/index.html" class="btn btn--outline">WrĂłÄ‡ na gĹ‚ĂłwnÄ…</a>
             </div>
         </section>
     </main>
@@ -80,10 +90,14 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer__bottom">
-                <p>&copy; 2026 Maciej Figiel. Wszelkie prawa zastrzeżone.</p>
+                <p>&copy; 2026 Maciej Figiel. Wszelkie prawa zastrzeĹĽone.</p>
             </div>
         </div>
     </footer>
+    <script defer src="/assets/js/i18n.js"></script>
 </body>
 
 </html>
+
+
+

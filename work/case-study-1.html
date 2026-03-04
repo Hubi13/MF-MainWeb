@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="pl">
+﻿<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -48,15 +48,18 @@
     <header class="site-header" role="banner">
         <div class="container">
             <a href="/" class="site-logo">Maciej<span>.</span>Figiel</a>
-            <nav class="site-nav" role="navigation" aria-label="Glowna nawigacja">
+            <nav class="site-nav" role="navigation" aria-label="Main navigation" data-i18n-aria-label="nav.aria">
                 <ul class="site-nav__list" id="main-nav">
-                    <li><a href="/work/" class="site-nav__link">Realizacje</a></li>
-                    <li><a href="/services.html" class="site-nav__link">Oferta</a></li>
-                    <li><a href="/about.html" class="site-nav__link">O mnie</a></li>
-                    <li><a href="/contact.html" class="site-nav__link site-nav__cta btn btn--primary"
-                            data-track-cta="nav_header">Umow rozmowe</a></li>
+                    <li><a href="/work/" class="site-nav__link" data-i18n="nav.work">Work</a></li>
+                    <li><a href="/services.html" class="site-nav__link" data-i18n="nav.services">Services</a></li>
+                    <li><a href="/about.html" class="site-nav__link" data-i18n="nav.about">About</a></li>
+                    <li><a href="/contact.html" class="site-nav__link" data-i18n="nav.contact">Contact</a></li>
+                    <li class="site-nav__lang" role="group" aria-label="Language switcher" data-i18n-aria-label="nav.lang_aria">
+                        <button type="button" class="lang-switch" data-lang-switch="en" aria-pressed="false">EN</button>
+                        <button type="button" class="lang-switch" data-lang-switch="pl" aria-pressed="false">PL</button>
+                    </li>
                 </ul>
-                <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Otworz menu">
+                <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" data-i18n-aria-label="nav.menu_open">
                     <span></span><span></span><span></span>
                 </button>
             </nav>
@@ -75,7 +78,7 @@
 
                 <p class="label cs-header__label">Case Study - 01</p>
                 <h1 class="cs-header__title reveal">
-                    Jak redesign strony zwiększył liczbe leadow<br>o 39% w 90 dni
+                    Jak redesign strony zwiÄ™kszyĹ‚ liczbe leadow<br>o 39% w 90 dni
                 </h1>
                 <p class="cs-header__intro reveal" data-delay="100">
                     Firma uslugowa dzialajaca w Warszawie od 10 lat. Solidny produkt,
@@ -143,7 +146,7 @@
 
                     <h2>Discovery i audyt</h2>
                     <p>
-                        Zanim dotknałem projektu UI, spędził 2 tygodnie na rozmowach - z wlascicielami,
+                        Zanim dotknaĹ‚em projektu UI, spÄ™dziĹ‚ 2 tygodnie na rozmowach - z wlascicielami,
                         handlowcami i trzema klientami. Chcialem wiedziec: co przekonuje do zakupu,
                         co budzi watpliwosci i co klienci mowia na pierwszym spotkaniu.
                     </p>
@@ -160,7 +163,7 @@
 
                     <h2>Architektura informacji</h2>
                     <p>
-                        Przeprojektowalem hierarchię informacji od nowa. Zamiast "O nas - Uslugi -
+                        Przeprojektowalem hierarchiÄ™ informacji od nowa. Zamiast "O nas - Uslugi -
                         Kontakt", strona teraz prowadzi: Problem - Rozwiazanie - Dowod - Dzialanie.
                         Kazda sekcja odpowiada na konkretne pytanie, ktore zadaje potencjalny klient
                         w danym momencie procesu decyzyjnego.
@@ -248,7 +251,7 @@
                     <p class="cs-next__label">Nastepny projekt</p>
                     <p class="cs-next__title">Marka premium - brand i strona</p>
                 </div>
-                <span class="cs-next__arrow" aria-hidden="true">→</span>
+                <span class="cs-next__arrow" aria-hidden="true">â†’</span>
             </a>
         </div>
 
@@ -268,7 +271,7 @@
             <div class="footer__grid">
                 <div>
                     <p class="footer__brand-name font-display">Maciej Figiel</p>
-                    <p class="footer__tagline">Website designer i frontend engineer. Projektuję strony, ktore dowoza
+                    <p class="footer__tagline">Website designer i frontend engineer. ProjektujÄ™ strony, ktore dowoza
                         wyniki.</p>
                 </div>
                 <div>
@@ -298,7 +301,7 @@
                 </div>
             </div>
             <div class="footer__bottom">
-                <p class="footer__copy">&copy; <span id="year"></span> Maciej Figiel. Wszelkie prawa zastrzeżone.</p>
+                <p class="footer__copy">&copy; <span id="year"></span> Maciej Figiel. Wszelkie prawa zastrzeĹĽone.</p>
                 <p class="footer__micro">Zaprojektowane i zbudowane bez frameworkow.</p>
             </div>
         </div>
@@ -319,6 +322,10 @@
     <script defer src="../assets/js/consent.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script defer src="/assets/js/i18n.js"></script>
 </body>
 
 </html>
+
+
+

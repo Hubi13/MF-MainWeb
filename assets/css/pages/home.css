@@ -343,6 +343,10 @@
   transform: scale(1.05);
 }
 
+.about-content h2 {
+  margin-bottom: 1.7rem;
+}
+
 .about-content p {
   margin-bottom: 1.5rem;
 }
