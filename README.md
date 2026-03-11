@@ -13,7 +13,6 @@ d:\WEBISTES\
 ├── services.html             # Oferta i pakiety
 ├── contact.html              # Formularz kontaktowy
 ├── privacy.html              # Polityka prywatnosci
-├── terms.html                # Warunki wspolpracy
 ├── 404.html                  # Strona bledu 404
 ├── sitemap.xml               # Mapa strony dla SEO
 ├── robots.txt                # Dyrektywy dla botow
