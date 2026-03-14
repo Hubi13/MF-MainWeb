@@ -6,52 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Realizacje - Maciej Figiel Website Designer</title>
     <meta name="description"
-        content="Portfolio realizacji - strony www, systemy UI, e-commerce, redesign. Sprawdz case studies z konkretnymi wynikami.">
+        content="Portfolio realizacji - strony www, systemy UI, e-commerce i redesign. Sprawdz case studies z konkretnym zakresem prac i rezultatem.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://jankowalski.pl/work/">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jankowalski.pl/work/">
-    <meta property="og:title" content="Realizacje - Maciej Figiel Website Designer">
-    <meta property="og:description" content="Portfolio realizacji - strony www, systemy UI, e-commerce, redesign.">
-    <meta property="og:image" content="https://jankowalski.pl/assets/img/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="manifest" href="/manifest.webmanifest">
-    <meta name="theme-color" content="#f3f4f6">
-
     <link rel="stylesheet" href="../assets/css/design-system.css">
     <link rel="stylesheet" href="../assets/css/components.css">
     <link rel="stylesheet" href="../assets/css/pages/work.css">
-
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": "https://jankowalski.pl/work/",
-    "name": "Realizacje - Maciej Figiel",
-    "url": "https://jankowalski.pl/work/",
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Strona glowna", "item": "https://jankowalski.pl/" },
-        { "@type": "ListItem", "position": 2, "name": "Realizacje", "item": "https://jankowalski.pl/work/" }
-      ]
-    }
-  }
-  </script>
 </head>
 
 <body>
-
     <header class="site-header" role="banner">
         <div class="container">
             <a href="/" class="site-logo">Maciej<span>.</span>Figiel</a>
             <nav class="site-nav" role="navigation" aria-label="Main navigation" data-i18n-aria-label="nav.aria">
                 <ul class="site-nav__list" id="main-nav">
-                    <li><a href="/#portfolio" class="site-nav__link" data-i18n="nav.work">Work</a></li>
+                    <li><a href="/work/" class="site-nav__link" data-i18n="nav.work">Work</a></li>
                     <li><a href="/#models" class="site-nav__link" data-i18n="nav.services">Services</a></li>
                     <li><a href="/#about" class="site-nav__link" data-i18n="nav.about">About</a></li>
                     <li><a href="/contact.html" class="site-nav__link" data-i18n="nav.contact">Contact</a></li>
@@ -68,7 +37,6 @@
     </header>
 
     <main>
-        <!-- PAGE HERO -->
         <section class="page-hero">
             <div class="container">
                 <nav class="breadcrumbs" aria-label="Sciezka nawigacji">
@@ -78,13 +46,38 @@
                 <p class="label page-hero__label">Portfolio</p>
                 <h1 class="page-hero__title reveal">Wybrane realizacje</h1>
                 <p class="page-hero__sub reveal" data-delay="100">
-                    Projekty, ktore mialy cel i go osiagnely.
-                    Kazdy z jasnym briefem, procesem i mierzalnym rezultatem.
+                    Projekty, ktore mialy cel i go osiagnely. Kazdy z jasnym briefem, przemyslana struktura i
+                    finalnym rezultatem, ktory dobrze pracuje dla marki.
                 </p>
             </div>
         </section>
 
-        <!-- PORTFOLIO FILTERS + GRID -->
+        <section class="section section--accent-divider">
+            <div class="container work-intro">
+                <div class="work-intro__lead reveal">
+                    <p class="section-head__label">Jak czytac moje realizacje</p>
+                    <h2>Pokazuje nie tylko finalny wyglad, ale tez decyzje, ktore buduja wynik.</h2>
+                    <p>Na tej stronie zbieram projekty, w ktorych liczyla sie czytelnosc oferty, sila pierwszego
+                        wrazenia i dobrze zaplanowany ruch uzytkownika. Kazda realizacja jest inna, ale wszystkie
+                        laczy ten sam standard: przemyslana struktura, mocny layout i wdrozenie bez chaosu.</p>
+                </div>
+                <div class="work-intro__stats">
+                    <article class="work-stat reveal" data-delay="60">
+                        <span class="work-stat__label">Zakres</span>
+                        <strong>Landing pages, strony firmowe, redesigny i e-commerce</strong>
+                    </article>
+                    <article class="work-stat reveal" data-delay="140">
+                        <span class="work-stat__label">Podejscie</span>
+                        <strong>Brief, architektura tresci, UI direction i wdrozenie</strong>
+                    </article>
+                    <article class="work-stat reveal" data-delay="220">
+                        <span class="work-stat__label">Efekt</span>
+                        <strong>Spokojny odbior marki, lepsza czytelnosc i wyzsza konwersja</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section class="section">
             <div class="container">
                 <div class="filter-tabs reveal" role="group" aria-label="Filtruj realizacje">
@@ -96,10 +89,8 @@
                 </div>
 
                 <div class="portfolio-grid">
-                    <!-- Item 1 -->
                     <div class="portfolio-grid-item reveal" data-category="redesign">
-                        <a href="/work/case-study-1.html" class="cs-card"
-                            aria-label="Case study: Firma uslugowa w Warszawie">
+                        <a href="/work/case-study-1.html" class="cs-card" aria-label="Case study: Firma uslugowa w Warszawie">
                             <div class="cs-card__thumb">
                                 <div class="cs-thumb-placeholder"
                                     style="background: linear-gradient(135deg, #1a1a22 0%, #2c2c3a 50%, #1a1a22 100%)">
@@ -109,18 +100,17 @@
                             </div>
                             <div class="cs-card__body">
                                 <div class="cs-card__meta">
-                                    <span class="cs-card__category">Redesign & Optymalizacja</span>
+                                    <span class="cs-card__category">Redesign &amp; Optymalizacja</span>
                                     <span class="cs-card__year">2024</span>
                                 </div>
                                 <h2 class="cs-card__title">Firma uslugowa w Warszawie</h2>
-                                <p class="cs-card__desc">Redesign strony z naciskiem na konwersje. Nowa IA, system UI i
-                                    integracja z CRM. Wynik: +39% leadow.</p>
+                                <p class="cs-card__desc">Redesign strony z naciskiem na konwersje. Nowa architektura
+                                    tresci, mocniejszy kierunek wizualny i integracja z CRM.</p>
                                 <span class="cs-card__cta">Czytaj case study</span>
                             </div>
                         </a>
                     </div>
 
-                    <!-- Item 2 -->
                     <div class="portfolio-grid-item reveal" data-delay="80" data-category="strona">
                         <a href="/work/case-study-2.html" class="cs-card" aria-label="Case study: Marka premium">
                             <div class="cs-card__thumb">
@@ -128,22 +118,21 @@
                                     style="background: linear-gradient(135deg, #1e1810 0%, #2e2418 50%, #1e1810 100%)">
                                     <span style="opacity:0.3;font-size:var(--text-sm)">marka-premium.jpg</span>
                                 </div>
-                                <span class="cs-card__tag">Brand & Web</span>
+                                <span class="cs-card__tag">Brand &amp; Web</span>
                             </div>
                             <div class="cs-card__body">
                                 <div class="cs-card__meta">
-                                    <span class="cs-card__category">Brand Identity & Web</span>
+                                    <span class="cs-card__category">Brand Identity &amp; Web</span>
                                     <span class="cs-card__year">2025</span>
                                 </div>
                                 <h2 class="cs-card__title">Marka premium</h2>
-                                <p class="cs-card__desc">Identyfikacja wizualna od podstaw i strona wizerunkowa. Projekt
-                                    dla marki z segmentu luxury.</p>
+                                <p class="cs-card__desc">Identyfikacja wizualna od podstaw i strona wizerunkowa, ktora
+                                    buduje bardziej premium odbior produktu.</p>
                                 <span class="cs-card__cta">Czytaj case study</span>
                             </div>
                         </a>
                     </div>
 
-                    <!-- Item 3 -->
                     <div class="portfolio-grid-item reveal" data-delay="160" data-category="ui">
                         <a href="/work/case-study-3.html" class="cs-card" aria-label="Case study: Produkt B2B">
                             <div class="cs-card__thumb">
@@ -155,21 +144,19 @@
                             </div>
                             <div class="cs-card__body">
                                 <div class="cs-card__meta">
-                                    <span class="cs-card__category">UI System & Frontend</span>
+                                    <span class="cs-card__category">UI System &amp; Frontend</span>
                                     <span class="cs-card__year">2024</span>
                                 </div>
                                 <h2 class="cs-card__title">Platforma B2B - SaaS</h2>
                                 <p class="cs-card__desc">Design system i implementacja frontendu dla platformy w
-                                    sektorze B2B. 150+ komponentow.</p>
+                                    sektorze B2B z naciskiem na spojnosc i skalowalnosc.</p>
                                 <span class="cs-card__cta">Czytaj case study</span>
                             </div>
                         </a>
                     </div>
 
-                    <!-- Locked placeholders - social proof -->
                     <div class="portfolio-grid-item reveal" data-delay="100" data-category="ecommerce">
-                        <div class="cs-card" style="opacity:0.5;cursor:default;"
-                            aria-label="Projekt niedostepny publicznie">
+                        <div class="cs-card cs-card--locked" aria-label="Projekt niedostepny publicznie">
                             <div class="cs-card__thumb">
                                 <div class="cs-thumb-placeholder"
                                     style="background: linear-gradient(135deg, #141820 0%, #1c2230 100%)">
@@ -183,15 +170,14 @@
                                     <span class="cs-card__year">2023</span>
                                 </div>
                                 <h2 class="cs-card__title">Sklep online - NDA</h2>
-                                <p class="cs-card__desc">Projekt objety umowa o poufnosci. Szczegoly dostepne po
-                                    kontakcie.</p>
+                                <p class="cs-card__desc">Projekt objety umowa o poufnosci. Zakres obejmowal nowa
+                                    strukture kategorii, prezentacje produktu i dopracowanie checkoutu.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="portfolio-grid-item reveal" data-delay="180" data-category="strona">
-                        <div class="cs-card" style="opacity:0.5;cursor:default;"
-                            aria-label="Projekt niedostepny publicznie">
+                        <div class="cs-card cs-card--locked" aria-label="Projekt niedostepny publicznie">
                             <div class="cs-card__thumb">
                                 <div class="cs-thumb-placeholder"
                                     style="background: linear-gradient(135deg, #181018 0%, #221828 100%)">
@@ -205,8 +191,8 @@
                                     <span class="cs-card__year">2023</span>
                                 </div>
                                 <h2 class="cs-card__title">Landing page - fintech - NDA</h2>
-                                <p class="cs-card__desc">Kampanijny landing z wysokim wskaznikiem konwersji. Szczegoly
-                                    dostepne po kontakcie.</p>
+                                <p class="cs-card__desc">Kampanijny landing z szybkim onboardingiem uzytkownika,
+                                    czytelniejszym flow i wyrazniejszym CTA.</p>
                             </div>
                         </div>
                     </div>
@@ -214,12 +200,44 @@
             </div>
         </section>
 
-        <!-- BOTTOM CTA -->
+        <section class="section section--accent-divider">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="section-head__label">Co znajdziesz na case study</p>
+                    <h2>Od kontekstu biznesowego po finalny ekran.</h2>
+                    <p class="section-head__sub">Ta podstrona ma pomagac szybko ocenic, czy dany styl i sposob pracy
+                        pasuje do Twojej marki. Dlatego kazdy projekt opisuje nie tylko warstwe wizualna, ale tez
+                        zakres, priorytety i rezultat.</p>
+                </div>
+                <div class="work-process">
+                    <article class="work-process__card reveal" data-delay="0">
+                        <span class="work-process__step">01</span>
+                        <h3>Punkt wyjscia</h3>
+                        <p>Brief, problem do rozwiazania, ograniczenia i realny cel strony. Bez tego nawet ladny
+                            layout nie bedzie trafiony.</p>
+                    </article>
+                    <article class="work-process__card reveal" data-delay="100">
+                        <span class="work-process__step">02</span>
+                        <h3>Kierunek wizualny</h3>
+                        <p>Dobor rytmu, typografii, kontrastu i akcentow tak, zeby strona od razu budowala odpowiedni
+                            poziom zaufania.</p>
+                    </article>
+                    <article class="work-process__card reveal" data-delay="200">
+                        <span class="work-process__step">03</span>
+                        <h3>Wdrozenie</h3>
+                        <p>Projekt zamieniony w szybki, czytelny serwis, ktory dobrze dziala na mobile i nie traci
+                            charakteru po implementacji.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section class="cta-closer">
             <div class="container">
                 <h2 class="cta-closer__title reveal">Twoj projekt moze byc nastepny.</h2>
                 <p class="cta-closer__sub reveal" data-delay="100">
-                    Porozmawiajmy o tym, co chcesz osiagnac.
+                    Jezeli chcesz pokazac oferte w mocniejszy, bardziej uporzadkowany sposob, przygotuje kierunek
+                    dopasowany do Twojej marki i odbiorcy.
                 </p>
                 <div class="cta-closer__actions reveal" data-delay="200">
                     <a href="/contact.html" class="btn btn--primary" data-track-cta="work_bottom">Umow rozmowe</a>
@@ -229,40 +247,40 @@
     </main>
 
     <footer class="site-footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <p class="footer__brand-name">Maciej Figiel</p>
-          <p class="footer__tagline">Brand & UI/UX Designer</p>
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <p class="footer__brand-name">Maciej Figiel</p>
+                    <p class="footer__tagline">Brand &amp; UI/UX Designer</p>
+                </div>
+                <div>
+                    <p class="footer__col-title">Nawigacja</p>
+                    <ul class="footer__links">
+                        <li><a href="/work/" class="footer__link" data-i18n="nav.work">Work</a></li>
+                        <li><a href="/#models" class="footer__link" data-i18n="nav.services">Services</a></li>
+                        <li><a href="/#about" class="footer__link" data-i18n="nav.about">About</a></li>
+                        <li><a href="/contact.html" class="footer__link" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer__col-title">Prywatnosc</p>
+                    <ul class="footer__links">
+                        <li><a href="/privacy.html" class="footer__link">Polityka prywatnosci</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer__col-title">Kontakt</p>
+                    <ul class="footer__links">
+                        <li><a href="mailto:mafi14@proton.me" class="footer__link">mafi14@proton.me</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; <span id="year">2026</span> Maciej Figiel. Wszelkie prawa zastrzezone.</p>
+                <p>Premium Web Experience</p>
+            </div>
         </div>
-        <div>
-          <p class="footer__col-title">Nawigacja</p>
-          <ul class="footer__links">
-            <li><a href="/#portfolio" class="footer__link" data-i18n="nav.work">Work</a></li>
-            <li><a href="/#models" class="footer__link" data-i18n="nav.services">Services</a></li>
-            <li><a href="/#about" class="footer__link" data-i18n="nav.about">About</a></li>
-            <li><a href="/contact.html" class="footer__link" data-i18n="nav.contact">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="footer__col-title">Prywatność</p>
-          <ul class="footer__links">
-            <li><a href="/privacy.html" class="footer__link">Polityka prywatności</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="footer__col-title">Kontakt</p>
-          <ul class="footer__links">
-            <li><a href="mailto:mafi14@proton.me" class="footer__link">mafi14@proton.me</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; <span id="year">2026</span> Maciej Figiel. Wszelkie prawa zastrzeżone.</p>
-        <p>Premium Web Experience</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
     <div class="consent-banner" role="dialog" aria-label="Zgoda na cookies">
         <p class="consent-banner__text">
@@ -280,12 +298,7 @@
     <script defer src="../assets/js/analytics.js"></script>
     <script defer src="../assets/js/consent.js"></script>
     <script defer src="../assets/js/main.js"></script>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     <script defer src="/assets/js/i18n.js"></script>
 </body>
 
 </html>
-
-
-
-

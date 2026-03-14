@@ -6,29 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maciej - Website Developer</title>
   <meta name="description"
-    content="Projektuję i koduję nowoczesne strony internetowe od zera. Otrzymaj estetyczny i dynamiczny layout dopasowany do Twojego biznesu.">
+    content="Projektuje i koduje nowoczesne strony internetowe od zera. Otrzymaj estetyczny i dynamiczny layout dopasowany do Twojego biznesu.">
   <link rel="stylesheet" href="assets/css/design-system.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/pages/home.css">
 </head>
 
 <body>
-  <!-- Custom Cursor -->
   <div class="cursor-dot" id="cursor-dot"></div>
   <div class="cursor-ring" id="cursor-ring"></div>
 
-  <!-- Header -->
   <header class="site-header" id="header">
     <div class="container">
       <a href="/" class="site-logo">Maciej<span>.</span>Figiel</a>
       <nav class="site-nav" role="navigation" aria-label="Main navigation" data-i18n-aria-label="nav.aria">
         <ul class="site-nav__list" id="main-nav">
-          <li><a href="/#portfolio" class="site-nav__link" data-i18n="nav.work">Work</a></li>
+          <li><a href="/work/" class="site-nav__link" data-i18n="nav.work">Work</a></li>
           <li><a href="/#models" class="site-nav__link" data-i18n="nav.services">Services</a></li>
           <li><a href="/#about" class="site-nav__link" data-i18n="nav.about">About</a></li>
           <li><a href="/contact.html" class="site-nav__link" data-i18n="nav.contact">Contact</a></li>
-          <li class="site-nav__lang" role="group" aria-label="Language switcher"
-            data-i18n-aria-label="nav.lang_aria">
+          <li class="site-nav__lang" role="group" aria-label="Language switcher" data-i18n-aria-label="nav.lang_aria">
             <button type="button" class="lang-switch" data-lang-switch="en" aria-pressed="false">EN</button>
             <button type="button" class="lang-switch" data-lang-switch="pl" aria-pressed="false">PL</button>
           </li>
@@ -42,10 +39,9 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
     <section class="hero-v2 container">
-      <div class="hero-panel reveal">
-        <img src="https://imgur.com/n13HalS.jpeg" alt="Portret Macieja Figla" class="hero-photo" />
+      <div class="hero-panel reveal" data-hero-flight>
+        <img src="https://imgur.com/n13HalS.jpeg" alt="Portret Macieja Figla" class="hero-photo">
 
         <div class="hero-top">
           <div class="hero-copy">
@@ -57,11 +53,10 @@
 
           <div class="hero-side">
             <p class="hero-sub">
-              Hi, I&apos;m Maciej - a UI/UX and web designer building seamless digital experiences that connect
-              and
-              convert.
+              Hi, I&apos;m Maciej. I design and build premium websites that help brands look sharper, feel more credible
+              and convert with less friction.
             </p>
-            <a href="#portfolio" class="btn hero-cta">See my works</a>
+            <a href="/work/" class="btn hero-cta btn--magnetic">See my works</a>
           </div>
         </div>
 
@@ -69,244 +64,239 @@
       </div>
     </section>
 
-    <!-- Glassmorphism Edge Section -->
     <section class="section container">
       <div class="section-head reveal">
         <p class="section-head__label">Precision Development</p>
         <h2>What you get with my work</h2>
       </div>
-      <div class="glass-grid reveal">
-        <div class="glass-card">
-          <div class="glass-card__icon">⌘</div>
+      <div class="glass-grid">
+        <div class="glass-card reveal" data-delay="0">
+          <div class="glass-card__icon">01</div>
           <h3>Fast, structured process</h3>
-          <p>Every project follows a clear structure - from concept and layout to design and final implementation.
-            This keeps the process efficient and avoids unnecessary revisions.</p>
+          <p>Every project follows a clear path from concept and content structure to final design and implementation.
+            That keeps the work focused and eliminates wasted rounds.</p>
         </div>
-        <div class="glass-card">
-          <div class="glass-card__icon">◈</div>
+        <div class="glass-card reveal" data-delay="90">
+          <div class="glass-card__icon">02</div>
           <h3>Clean and scalable architecture</h3>
-          <p>Websites are built with clean structure and modular components.
-            This makes them easy to maintain, extend and adapt as the business grows.</p>
+          <p>Websites are built with modular sections and clean frontend structure, so they stay easy to maintain,
+            extend and improve as the business grows.</p>
         </div>
-        <div class="glass-card">
-          <div class="glass-card__icon">⟡</div>
+        <div class="glass-card reveal" data-delay="180">
+          <div class="glass-card__icon">03</div>
           <h3>Design built for credibility</h3>
-          <p>The goal is not just aesthetics.
-            Every interface is designed to communicate professionalism, clarity and trust.</p>
+          <p>The goal is never just aesthetics. Each screen is designed to communicate clarity, premium quality and a
+            level of trust that supports conversion.</p>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="section container">
       <div class="section-head reveal">
         <p class="section-head__label">Kim jestem</p>
-        <h2>Strony internetowe projektowane z myślą o wyniku</h2>
+        <h2>Strony internetowe projektowane z mysla o wyniku</h2>
       </div>
       <div class="about-section reveal">
         <div class="about-image">
-          <!-- Placeholder for user's photo -->
-          <img src="https://imgur.com/6JPtMYd.jpeg" alt="Maciej Figiel" />
+          <img src="https://imgur.com/6JPtMYd.jpeg" alt="Maciej Figiel">
         </div>
         <div class="about-content">
           <h2>Maciej</h2>
-          <p>Projektuję i buduję nowoczesne strony internetowe dla firm, które chcą wyglądać profesjonalnie w sieci.
-            Łączę design, architekturę informacji i czysty kod,
-            tworząc serwisy szybkie,
-            czytelne i dopracowane w każdym detalu.</p>
-          <p>Każdy projekt powstaje indywidualnie - od koncepcji i struktury strony,
-            przez projekt wizualny, aż po wdrożenie.
-            Dzięki temu strony nie są szablonami,
-            lecz narzędziami dopasowanymi do konkretnego biznesu i jego odbiorców.</p>
+          <p>Projektuje i buduje nowoczesne strony internetowe dla firm, ktore chca wygladac profesjonalnie w sieci.
+            Lacze design, architekture informacji i czysty frontend, tworzac serwisy szybkie, czytelne i dopracowane
+            w kazdym detalu.</p>
+          <p>Kazdy projekt powstaje indywidualnie. Od pierwszej struktury i kierunku wizualnego po wdrozenie dbam o to,
+            zeby strona byla spojna z marka, czytelna dla odbiorcy i gotowa do realnej pracy sprzedazowej.</p>
 
           <div class="about-stats">
             <div>
               <h3 class="text-accent">Indywidualny projekt</h3>
-              <p class="text-muted">Każda strona tworzona od podstaw</p>
+              <p class="text-muted">Kazda strona tworzona od podstaw</p>
             </div>
             <div>
-              <h3 class="text-accent">Bezpośrednia współpraca</h3>
-              <p class="text-muted">Stały kontakt na każdym etapie projektu</p>
+              <h3 class="text-accent">Bezposrednia wspolpraca</h3>
+              <p class="text-muted">Staly kontakt na kazdym etapie projektu</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section container">
+    <section id="portfolio" class="section container section--accent-divider">
       <div class="section-head reveal">
         <p class="section-head__label">Wybrane Prace</p>
         <h2>Moje Realizacje</h2>
+        <p class="section-head__sub">Na stronie glownej pokazuje kilka wybranych kierunkow. Pelna podstrona realizacji
+          rozwija zakres prac, typ projektu i kontekst biznesowy kazdej realizacji.</p>
       </div>
 
-      <div class="portfolio-grid reveal">
-        <div class="portfolio-card">
-          <img src="https://imgur.com/xJwX5ul.jpeg" alt="Projekt 1" class="portfolio-card__img">
+      <div class="portfolio-grid">
+        <div class="portfolio-card reveal" data-delay="0">
+          <img src="https://imgur.com/xJwX5ul.jpeg" alt="Agencja marketingowa" class="portfolio-card__img">
           <div class="portfolio-card__content">
             <h3 class="portfolio-card__title">Agencja Marketingowa</h3>
-            <p class="portfolio-card__desc">Nowy kierunek wizualny UI/UX</p>
+            <p class="portfolio-card__desc">Nowy kierunek wizualny UI/UX i mocniejsza prezentacja oferty</p>
           </div>
         </div>
-        <div class="portfolio-card">
-          <img src="https://imgur.com/ttjKn8J.jpeg" alt="Projekt 2" class="portfolio-card__img">
+        <div class="portfolio-card reveal" data-delay="90">
+          <img src="https://imgur.com/ttjKn8J.jpeg" alt="Salon manicure" class="portfolio-card__img">
           <div class="portfolio-card__content">
             <h3 class="portfolio-card__title">Salon manicure</h3>
-            <p class="portfolio-card__desc">Płynne animacje i konwersja</p>
+            <p class="portfolio-card__desc">Lekki charakter marki, plynny odbior i lepsza czytelnosc uslug</p>
           </div>
         </div>
-        <div class="portfolio-card">
-          <img src="https://imgur.com/XNPEWgz.jpeg" alt="Projekt 3" class="portfolio-card__img">
+        <div class="portfolio-card reveal" data-delay="180">
+          <img src="https://imgur.com/XNPEWgz.jpeg" alt="Sklep e-commerce" class="portfolio-card__img">
           <div class="portfolio-card__content">
             <h3 class="portfolio-card__title">Sklep E-com</h3>
-            <p class="portfolio-card__desc">pełny sklep E-commerce</p>
+            <p class="portfolio-card__desc">Pelny sklep internetowy z mocniejszym eksponowaniem produktow</p>
           </div>
         </div>
-        <div class="portfolio-card">
-          <img src="https://imgur.com/tSlYTm6.jpeg" alt="Projekt 4" class="portfolio-card__img">
+        <div class="portfolio-card reveal" data-delay="270">
+          <img src="https://imgur.com/tSlYTm6.jpeg" alt="Agencja architektoniczna" class="portfolio-card__img">
           <div class="portfolio-card__content">
             <h3 class="portfolio-card__title">Agencja architektoniczna</h3>
-            <p class="portfolio-card__desc">Kompletnie nowa strona od zera</p>
+            <p class="portfolio-card__desc">Kompletnie nowa strona od zera z uporzadkowana struktura tresci</p>
           </div>
         </div>
+      </div>
+
+      <div class="portfolio-actions reveal" data-delay="120">
+        <p class="portfolio-actions__copy">Chcesz zobaczyc wiecej ekranow, zakresu prac i efektu koncowego? Przejdz do
+          rozbudowanej strony realizacji.</p>
+        <a href="/work/" class="btn btn--portfolio-more">Zobacz pelna strone realizacji</a>
       </div>
     </section>
 
-    <!-- Hosting & Maintenance Section -->
     <section id="models" class="section container">
       <div class="section-head reveal">
-        <p class="section-head__label">Podejście i modele</p>
-        <h2>Jak wygląda współpraca</h2>
+        <p class="section-head__label">Podejscie i modele</p>
+        <h2>Jak wyglada wspolpraca</h2>
       </div>
 
-      <div class="models-grid reveal">
-        <div class="model-card">
-          <div class="model-icon">◈</div>
-          <h3>Zarządzanie i hosting po mojej stronie</h3>
-          <p>Możesz powierzyć mi pełną opiekę nad stroną. Projekt wdrażam na mojej infrastrukturze i zajmuję się jego
-            utrzymaniem, bezpieczeństwem oraz aktualizacjami.
-
-            Dzięki temu Twoja strona działa szybko i stabilnie, a Ty nie musisz zajmować się sprawami technicznymi.</p>
+      <div class="models-grid">
+        <div class="model-card reveal" data-delay="0">
+          <div class="model-icon">01</div>
+          <h3>Zarzadzanie i hosting po mojej stronie</h3>
+          <p>Mozesz powierzyc mi pelna opieke nad strona. Projekt wdrazam na swojej infrastrukturze i zajmuje sie
+            utrzymaniem, bezpieczenstwem oraz aktualizacjami, zeby wszystko dzialalo stabilnie i bez przestojow.</p>
           <ul>
-            <li>Stała miesięczna opłata</li>
-            <li>Monitoring działania strony i kopie zapasowe</li>
-            <li>Wprowadzanie drobnych zmian na bieżąco</li>
+            <li>Stala miesieczna oplata</li>
+            <li>Monitoring dzialania strony i kopie zapasowe</li>
+            <li>Wprowadzanie drobnych zmian na biezaco</li>
           </ul>
         </div>
 
-        <div class="model-card">
-          <div class="model-icon">⟡</div>
-          <h3>Pełne przekazanie projektu</h3>
-          <p>Jeżeli wolisz zarządzać stroną samodzielnie, po zakończeniu prac przekazuję kompletny projekt wraz z kodem
-            źródłowym.
-
-            Strona zostaje wdrożona na Twoim hostingu i domenie, a Ty masz nad nią pełną kontrolę.</p>
+        <div class="model-card reveal" data-delay="120">
+          <div class="model-icon">02</div>
+          <h3>Pelne przekazanie projektu</h3>
+          <p>Jezeli wolisz zarzadzac strona samodzielnie, po zakonczeniu prac przekazuje kompletny projekt wraz z kodem
+            zrodlowym, wdrozeniem i technicznym uporzadkowaniem calego serwisu.</p>
           <ul>
-            <li>Jednorazowa opłata za realizację</li>
-            <li>Pełny dostęp do kodu projektu</li>
+            <li>Jednorazowa oplata za realizacje</li>
+            <li>Pelny dostep do kodu projektu</li>
             <li>Dokumentacja i przekazanie techniczne</li>
           </ul>
         </div>
       </div>
+
       <div class="models-more reveal" data-delay="120">
-        <a href="/oferta-pelna.html" class="btn btn--models-offer">Zobacz pełną ofertę</a>
+        <a href="/oferta-pelna.html" class="btn btn--models-offer">Zobacz pelna oferte</a>
       </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="section container">
+    <section id="testimonials" class="section container section--accent-divider">
       <div class="section-head reveal">
         <p class="section-head__label">Opinie</p>
-        <h2>Co mówią moi klienci</h2>
+        <h2>Co mowia moi klienci</h2>
       </div>
       <div class="testimonials-marquee-wrapper reveal">
         <div class="testimonials-marquee">
           <article class="testimonial-card">
             <p class="testimonial-card__quote">
-              „Po wdrożeniu nowego layoutu klienci dużo szybciej rozumieją naszą ofertę, a liczba zapytań wzrosła.”
+              "Po wdrozeniu nowego layoutu klienci duzo szybciej rozumieja nasza oferte, a liczba zapytan wzrosla."
             </p>
             <div class="testimonial-card__author">
               <div>
                 <strong>Adam Nowak</strong>
-                <span>Właściciel firmy usługowej</span>
+                <span>Wlasciciel firmy uslugowej</span>
               </div>
             </div>
           </article>
           <article class="testimonial-card">
             <p class="testimonial-card__quote">
-              „Największa różnica to spójność: design, kod i flow strony są dopracowane i bardzo nowoczesne.”
+              "Najwieksza roznica to spojnosc. Design, kod i flow strony sa dopracowane i bardzo nowoczesne."
             </p>
             <div class="testimonial-card__author">
               <div>
-                <strong>Marta Zielińska</strong>
+                <strong>Marta Zielinska</strong>
                 <span>Founder marki B2B</span>
               </div>
             </div>
           </article>
           <article class="testimonial-card">
             <p class="testimonial-card__quote">
-              „Szybkość i jakość wdrożenia przeszły nasze najśmielsze oczekiwania. Zdecydowanie polecam współpracę.”
+              "Szybkosc i jakosc wdrozenia przeszly nasze oczekiwania. Strona od razu zaczela pracowac na lepszy odbior marki."
             </p>
             <div class="testimonial-card__author">
               <div>
                 <strong>Tomasz Kruk</strong>
-                <span>Dyrektor E-commerce</span>
+                <span>Dyrektor e-commerce</span>
               </div>
             </div>
           </article>
           <article class="testimonial-card">
             <p class="testimonial-card__quote">
-              „Efekt wow, na który czekaliśmy. Klienci są zachwyceni estetyką i prostotą nawigacji na nowej stronie.”
+              "Efekt wow byl od pierwszego wejscia. Klienci chwala estetyke i prostote nowej nawigacji."
             </p>
             <div class="testimonial-card__author">
               <div>
-                <strong>Piotr Wiśniewski</strong>
-                <span>CEO Startup B2C</span>
+                <strong>Piotr Wisniewski</strong>
+                <span>CEO startupu B2C</span>
               </div>
             </div>
           </article>
-          <!-- Duplicate for seamless looping -->
           <article class="testimonial-card" aria-hidden="true">
             <p class="testimonial-card__quote">
-              „Po wdrożeniu nowego layoutu klienci dużo szybciej rozumieją naszą ofertę, a liczba zapytań wzrosła.”
+              "Po wdrozeniu nowego layoutu klienci duzo szybciej rozumieja nasza oferte, a liczba zapytan wzrosla."
             </p>
             <div class="testimonial-card__author">
               <div>
                 <strong>Adam Nowak</strong>
-                <span>Właściciel firmy usługowej</span>
+                <span>Wlasciciel firmy uslugowej</span>
               </div>
             </div>
           </article>
           <article class="testimonial-card" aria-hidden="true">
             <p class="testimonial-card__quote">
-              „Największa różnica to spójność: design, kod i flow strony są dopracowane i bardzo nowoczesne.”
+              "Najwieksza roznica to spojnosc. Design, kod i flow strony sa dopracowane i bardzo nowoczesne."
             </p>
             <div class="testimonial-card__author">
               <div>
-                <strong>Marta Zielińska</strong>
+                <strong>Marta Zielinska</strong>
                 <span>Founder marki B2B</span>
               </div>
             </div>
           </article>
           <article class="testimonial-card" aria-hidden="true">
             <p class="testimonial-card__quote">
-              „Szybkość i jakość wdrożenia przeszły nasze najśmielsze oczekiwania. Zdecydowanie polecam współpracę.”
+              "Szybkosc i jakosc wdrozenia przeszly nasze oczekiwania. Strona od razu zaczela pracowac na lepszy odbior marki."
             </p>
             <div class="testimonial-card__author">
               <div>
                 <strong>Tomasz Kruk</strong>
-                <span>Dyrektor E-commerce</span>
+                <span>Dyrektor e-commerce</span>
               </div>
             </div>
           </article>
           <article class="testimonial-card" aria-hidden="true">
             <p class="testimonial-card__quote">
-              „Efekt wow, na który czekaliśmy. Klienci są zachwyceni estetyką i prostotą nawigacji na nowej stronie.”
+              "Efekt wow byl od pierwszego wejscia. Klienci chwala estetyke i prostote nowej nawigacji."
             </p>
             <div class="testimonial-card__author">
               <div>
-                <strong>Piotr Wiśniewski</strong>
-                <span>CEO Startup B2C</span>
+                <strong>Piotr Wisniewski</strong>
+                <span>CEO startupu B2C</span>
               </div>
             </div>
           </article>
@@ -314,12 +304,40 @@
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section container reveal">
-      <div class="cta-box">
+    <section class="section container">
+      <div class="cta-box cta-box--showcase reveal">
+        <div class="cta-preview" aria-hidden="true">
+          <div class="cta-preview__frame">
+            <div class="cta-preview__screen">
+              <div class="cta-preview__nav">
+                <span>Market Beat</span>
+                <div class="cta-preview__chips">
+                  <span>E-commerce</span>
+                  <span>SaaS</span>
+                  <span>Analytics</span>
+                </div>
+              </div>
+              <div class="cta-preview__body">
+                <div class="cta-preview__badge">Paid Media</div>
+                <h3>We are CPA oriented<br>Performance Marketing Agency</h3>
+                <p>We partner with brands to deliver measurable, scaled results across the entire digital ecosystem.</p>
+                <div class="cta-preview__button">Contact us</div>
+                <div class="cta-preview__clients">
+                  <span>AURA</span>
+                  <span>VELO</span>
+                  <span>ZENITH</span>
+                  <span>NEXA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="cta-box__content">
-          <h2>Zbudujmy stronę, która realnie sprzedaje</h2>
-          <a href="mailto:mafi14@proton.me" class="btn btn--cta">Skontaktuj się już dziś &rarr;</a>
+          <p class="cta-box__label">Final CTA</p>
+          <h2>Let&apos;s build a website that actually sells.</h2>
+          <p class="cta-box__lead">Od strategii i struktury po finalny design i wdrozenie. Projektuje strony, ktore nie
+            tylko dobrze wygladaja, ale pomagaja marce sprzedawac i budowac zaufanie od pierwszego wejscia.</p>
+          <a href="mailto:mafi14@proton.me" class="btn btn--cta btn--magnetic">Contact us</a>
         </div>
       </div>
     </section>
@@ -330,21 +348,21 @@
       <div class="footer__grid">
         <div>
           <p class="footer__brand-name">Maciej</p>
-          <p class="footer__tagline">Brand & UI/UX Designer</p>
+          <p class="footer__tagline">Brand &amp; UI/UX Designer</p>
         </div>
         <div>
           <p class="footer__col-title">Nawigacja</p>
           <ul class="footer__links">
-            <li><a href="/#portfolio" class="footer__link" data-i18n="nav.work">Work</a></li>
+            <li><a href="/work/" class="footer__link" data-i18n="nav.work">Work</a></li>
             <li><a href="/#models" class="footer__link" data-i18n="nav.services">Services</a></li>
             <li><a href="/#about" class="footer__link" data-i18n="nav.about">About</a></li>
             <li><a href="/contact.html" class="footer__link" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         <div>
-          <p class="footer__col-title">Prywatność</p>
+          <p class="footer__col-title">Prywatnosc</p>
           <ul class="footer__links">
-            <li><a href="/privacy.html" class="footer__link">Polityka prywatności</a></li>
+            <li><a href="/privacy.html" class="footer__link">Polityka prywatnosci</a></li>
           </ul>
         </div>
         <div>
@@ -355,51 +373,13 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; <span id="year">2026</span> Maciej. Wszelkie prawa zastrzeżone.</p>
+        <p>&copy; <span id="year">2026</span> Maciej. Wszelkie prawa zastrzezone.</p>
         <p>Premium Web Experience</p>
       </div>
     </div>
   </footer>
 
-  <script>
-    // Reveal Animations on Scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Custom Cursor
-    const cursorDot = document.getElementById('cursor-dot');
-    const cursorRing = document.getElementById('cursor-ring');
-
-    document.addEventListener('mousemove', (e) => {
-      cursorDot.style.left = e.clientX + 'px';
-      cursorDot.style.top = e.clientY + 'px';
-
-      // Delay ring slightly
-      cursorRing.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
-    });
-
-    // Hover effect for <a> and <button>
-    document.querySelectorAll('a, button').forEach(el => {
-      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-    });
-
-    // Header Blur
-    window.addEventListener('scroll', () => {
-      const header = document.getElementById('header');
-      if (window.scrollY > 50) header.classList.add('is-scrolled');
-      else header.classList.remove('is-scrolled');
-    });
-
-    document.getElementById('year').innerText = new Date().getFullYear();
-  </script>
+  <script defer src="/assets/js/main.js"></script>
   <script defer src="/assets/js/i18n.js"></script>
 </body>
 

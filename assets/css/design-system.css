@@ -90,6 +90,9 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   position: relative;
+  background-image:
+    radial-gradient(circle at top, rgba(255, 111, 40, 0.08), transparent 30%),
+    radial-gradient(circle at 80% 18%, rgba(255, 111, 40, 0.04), transparent 22%);
 }
 
 body::before {
@@ -163,15 +166,71 @@ h6 {
   z-index: 1;
 }
 
+.section--accent-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(760px, calc(100% - 4rem));
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg,
+      rgba(255, 122, 52, 0) 0%,
+      rgba(255, 122, 52, 0.72) 50%,
+      rgba(255, 122, 52, 0) 100%);
+  filter: blur(0.8px);
+  opacity: 0.95;
+}
+
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  transform: translateY(42px) scale(0.985);
+  filter: blur(10px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow), filter var(--transition-slow);
 }
 
 .reveal.is-visible {
   opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.section-head__sub {
+  max-width: 58rem;
+  margin: 1rem auto 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.section-head.reveal .section-head__label,
+.section-head.reveal h2,
+.page-hero__title.reveal,
+.page-hero__sub.reveal {
+  transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 720ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 720ms cubic-bezier(0.16, 1, 0.3, 1),
+    letter-spacing 720ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-head.reveal .section-head__label,
+.section-head.reveal h2 {
+  transform: translateY(26px);
+  opacity: 0;
+  filter: blur(10px);
+}
+
+.section-head.reveal.is-visible .section-head__label,
+.section-head.reveal.is-visible h2 {
   transform: translateY(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
+.section-head.reveal.is-visible .section-head__label {
+  transition-delay: 40ms;
+}
+
+.section-head.reveal.is-visible h2 {
+  transition-delay: 140ms;
 }
 
 /* Custom Cursor */

@@ -98,14 +98,38 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     transition: color var(--transition-base);
+    position: relative;
+    display: inline-flex;
+    padding-bottom: 0.5rem;
 }
 
-.site-nav__link:hover {
-    color: #fff;
+.site-nav__link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: calc(100% + 0.9rem);
+    height: 1px;
+    opacity: 0;
+    transform: translateX(-50%) scaleX(0.2);
+    transform-origin: center;
+    background: linear-gradient(90deg,
+            rgba(255, 122, 52, 0) 0%,
+            rgba(255, 122, 52, 0.92) 50%,
+            rgba(255, 122, 52, 0) 100%);
+    filter: blur(0.55px);
+    transition: opacity var(--transition-base), transform var(--transition-slow);
 }
 
+.site-nav__link:hover,
 .site-nav__link.is-active {
     color: #fff;
+}
+
+.site-nav__link:hover::after,
+.site-nav__link.is-active::after {
+    opacity: 1;
+    transform: translateX(-50%) scaleX(1);
 }
 
 .site-nav__lang {
