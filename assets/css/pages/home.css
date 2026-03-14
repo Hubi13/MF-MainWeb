@@ -27,8 +27,8 @@
   padding-top: calc(var(--header-height) + 2rem);
   padding-bottom: 4rem;
   background:
-    radial-gradient(circle at 50% 100%, rgba(255, 90, 31, 0.2), transparent 42%),
-    linear-gradient(180deg, rgba(25, 12, 7, 0.72) 0%, rgba(16, 11, 9, 0.28) 46%, transparent 100%);
+    radial-gradient(circle at 50% 100%, rgba(255, 90, 31, 0.12), transparent 40%),
+    linear-gradient(180deg, rgba(6, 7, 9, 0.98) 0%, rgba(8, 9, 12, 0.94) 22%, rgba(12, 10, 9, 0.56) 62%, rgba(10, 9, 8, 0.08) 100%);
 }
 
 .hero-v2.container {
@@ -65,8 +65,8 @@
   pointer-events: none;
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(6, 7, 9, 0.84) 0%, rgba(9, 10, 13, 0.36) 36%, rgba(9, 10, 13, 0.62) 100%),
-    radial-gradient(circle at 42% 38%, transparent 0%, rgba(5, 6, 7, 0.42) 74%);
+    linear-gradient(90deg, rgba(5, 6, 8, 0.92) 0%, rgba(7, 8, 11, 0.48) 36%, rgba(8, 9, 12, 0.74) 100%),
+    radial-gradient(circle at 42% 38%, transparent 0%, rgba(5, 6, 7, 0.56) 74%);
 }
 
 .hero-panel::after {
