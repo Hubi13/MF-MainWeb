@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -29,7 +29,7 @@
         }
 
         .offer-hero p {
-            max-width: 68ch;
+            max-width: 66ch;
             color: var(--color-text-secondary);
         }
 
@@ -120,12 +120,12 @@
 </head>
 
 <body>
-    <header class="site-header" role="banner" id="header">
+    <header class="site-header" role="banner">
         <div class="container">
             <a href="/" class="site-logo">Maciej<span>.</span>Figiel</a>
             <nav class="site-nav" role="navigation" aria-label="Main navigation" data-i18n-aria-label="nav.aria">
                 <ul class="site-nav__list" id="main-nav">
-                    <li><a href="/work/" class="site-nav__link" data-i18n="nav.work">Work</a></li>
+                    <li><a href="/#portfolio" class="site-nav__link" data-i18n="nav.work">Work</a></li>
                     <li><a href="/#models" class="site-nav__link" data-i18n="nav.services">Services</a></li>
                     <li><a href="/#about" class="site-nav__link" data-i18n="nav.about">About</a></li>
                     <li><a href="/contact.html" class="site-nav__link" data-i18n="nav.contact">Contact</a></li>
@@ -151,10 +151,6 @@
                 <p>
                     Dwie najczesciej wybierane opcje realizacji: pelna strona WWW oraz landing page pod konkretny cel.
                     Ponizej masz czytelne benefity i plusy kazdej z nich.
-                </p>
-                <p style="margin-top: 1rem;">
-                    Jesli nie wiesz jeszcze, ktory model bedzie lepszy, potraktuj to jako szybkie porownanie zakresu,
-                    tempa pracy i efektu, jaki dana forma moze dac Twojej marce.
                 </p>
             </div>
         </section>
@@ -219,10 +215,6 @@
                         Nie wiesz, ktora opcja jest lepsza dla Twojego przypadku? Podczas krótkiej rozmowy dopasujemy
                         model realizacji do etapu Twojego biznesu.
                     </p>
-                    <p style="color: var(--color-text-secondary);">
-                        Jezeli potrzebujesz najpierw szybkiego startu, mozemy zaczac od landing page. Jezeli od razu chcesz
-                        zbudowac mocniejszy wizerunek i wiecej tresci, lepszym kierunkiem bedzie pelna strona WWW.
-                    </p>
                     <div>
                         <a href="/contact.html" class="btn btn--primary">Skontaktuj sie</a>
                     </div>
@@ -232,40 +224,40 @@
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div>
-                    <p class="footer__brand-name">Maciej Figiel</p>
-                    <p class="footer__tagline">Brand &amp; UI/UX Designer</p>
-                </div>
-                <div>
-                    <p class="footer__col-title">Nawigacja</p>
-                    <ul class="footer__links">
-                        <li><a href="/work/" class="footer__link" data-i18n="nav.work">Work</a></li>
-                        <li><a href="/#models" class="footer__link" data-i18n="nav.services">Services</a></li>
-                        <li><a href="/#about" class="footer__link" data-i18n="nav.about">About</a></li>
-                        <li><a href="/contact.html" class="footer__link" data-i18n="nav.contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <p class="footer__col-title">Prywatność</p>
-                    <ul class="footer__links">
-                        <li><a href="/privacy.html" class="footer__link">Polityka prywatności</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <p class="footer__col-title">Kontakt</p>
-                    <ul class="footer__links">
-                        <li><a href="mailto:mafi14@proton.me" class="footer__link">mafi14@proton.me</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; <span id="year">2026</span> Maciej Figiel. Wszelkie prawa zastrzeżone.</p>
-                <p>Premium Web Experience</p>
-            </div>
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">Maciej Figiel</p>
+          <p class="footer__tagline">Brand & UI/UX Designer</p>
         </div>
-    </footer>
+        <div>
+          <p class="footer__col-title">Nawigacja</p>
+          <ul class="footer__links">
+            <li><a href="/#portfolio" class="footer__link" data-i18n="nav.work">Work</a></li>
+            <li><a href="/#models" class="footer__link" data-i18n="nav.services">Services</a></li>
+            <li><a href="/#about" class="footer__link" data-i18n="nav.about">About</a></li>
+            <li><a href="/contact.html" class="footer__link" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Prywatność</p>
+          <ul class="footer__links">
+            <li><a href="/privacy.html" class="footer__link">Polityka prywatności</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Kontakt</p>
+          <ul class="footer__links">
+            <li><a href="mailto:mafi14@proton.me" class="footer__link">mafi14@proton.me</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="year">2026</span> Maciej Figiel. Wszelkie prawa zastrzeżone.</p>
+        <p>Premium Web Experience</p>
+      </div>
+    </div>
+  </footer>
 
     <script defer src="assets/js/analytics.js"></script>
     <script defer src="assets/js/consent.js"></script>

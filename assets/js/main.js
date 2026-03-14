@@ -75,87 +75,28 @@
     });
   }
 
-  function initMotionTargets() {
-    var cardSelector = [
-      '.glass-card',
-      '.portfolio-card',
-      '.model-card',
-      '.testimonial-card',
-      '.about-image',
-      '.work-project-card',
-      '.mini-info-card',
-      '.detail-panel',
-      '.process-card',
-      '.fit-card',
-      '.cs-card',
-      '.cs-sidebar-box',
-      '.cs-meta-item'
-    ].join(', ');
-
-    document.querySelectorAll(cardSelector).forEach(function (item, index) {
-      if (!item.classList.contains('reveal-card') && !item.classList.contains('reveal')) {
-        item.classList.add('reveal-card');
-      }
-
-      if (!item.dataset.delay) {
-        item.dataset.delay = String(Math.min((index % 4) * 90, 270));
-      }
-    });
-
-    var textSelector = [
-      'main h1',
-      'main h2',
-      'main h3',
-      'main p',
-      'main li',
-      'main .btn',
-      'main .breadcrumbs',
-      'main .filter-tabs'
-    ].join(', ');
-
-    document.querySelectorAll(textSelector).forEach(function (item, index) {
-      if (item.closest('.site-header, .site-footer, .site-nav')) return;
-      if (!item.classList.contains('reveal') && !item.classList.contains('reveal-card') && !item.classList.contains('reveal-text')) {
-        item.classList.add('reveal-text');
-      }
-
-      if (!item.dataset.delay) {
-        item.dataset.delay = String(Math.min((index % 6) * 45, 225));
-      }
-    });
-  }
-
   function initScrollReveal() {
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reducedMotion) {
-      document.querySelectorAll('.reveal, .reveal-card, .reveal-text').forEach(function (el) {
+      document.querySelectorAll('.reveal').forEach(function (el) {
         el.classList.add('is-visible');
-      });
-
-      document.querySelectorAll('main section, .page-hero, .cs-header, .cs-narrative, .cs-body, .cta-closer').forEach(function (section) {
-        section.classList.add('section-in-view');
       });
       return;
     }
 
-    var elements = document.querySelectorAll('.reveal, .reveal-card, .reveal-text, main section, .page-hero, .cs-header, .cs-narrative, .cs-body, .cta-closer');
+    var elements = document.querySelectorAll('.reveal');
     if (!elements.length) return;
 
     var observer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            if (entry.target.matches('main section, .page-hero, .cs-header, .cs-narrative, .cs-body, .cta-closer')) {
-              entry.target.classList.add('section-in-view');
-            } else {
-              entry.target.classList.add('is-visible');
-            }
-
+            entry.target.classList.add('is-visible');
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.12, rootMargin: '0px 0px -12% 0px' }
+      { threshold: 0.08, rootMargin: '0px 0px -50px 0px' }
     );
 
     elements.forEach(function (el, index) {
@@ -256,14 +197,14 @@
 
     document.addEventListener('mouseover', function (event) {
       var target = event.target;
-      if (target && target.closest('a, button, .btn, .glass-card, .portfolio-card, .model-card, .testimonial-card, .work-project-card, .fit-card, .process-card')) {
+      if (target && target.closest('a, button, .project-square, .btn')) {
         document.body.classList.add('cursor-hover');
       }
     });
 
     document.addEventListener('mouseout', function (event) {
       var target = event.target;
-      if (target && target.closest('a, button, .btn, .glass-card, .portfolio-card, .model-card, .testimonial-card, .work-project-card, .fit-card, .process-card')) {
+      if (target && target.closest('a, button, .project-square, .btn')) {
         document.body.classList.remove('cursor-hover');
       }
     });
@@ -297,7 +238,7 @@
   }
 
   function initHeroSpotlight() {
-    var hero = document.querySelector('.hero-panel');
+    var hero = document.querySelector('.hero-v3');
     if (!hero) return;
 
     var coarse = window.matchMedia('(pointer: coarse)').matches;
@@ -343,12 +284,11 @@
   }
 
   function initCardParallax() {
-    var cards = document.querySelectorAll('.glass-card, .portfolio-card, .model-card, .testimonial-card, .work-project-card, .fit-card, .process-card');
+    var cards = document.querySelectorAll('.project-square');
     if (!cards.length) return;
 
-    var coarse = window.matchMedia('(pointer: coarse)').matches;
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (coarse || reducedMotion) return;
+    if (reducedMotion) return;
 
     cards.forEach(function (card) {
       card.addEventListener('mousemove', function (event) {
@@ -357,7 +297,7 @@
         var y = event.clientY - rect.top;
         var mx = ((x / rect.width) - 0.5) * 6;
         var my = ((y / rect.height) - 0.5) * -6;
-        card.style.transform = 'perspective(760px) rotateX(' + my.toFixed(2) + 'deg) rotateY(' + mx.toFixed(2) + 'deg) translateY(-5px)';
+        card.style.transform = 'perspective(700px) rotateX(' + my + 'deg) rotateY(' + mx + 'deg) translateY(-4px)';
       });
 
       card.addEventListener('mouseleave', function () {
@@ -370,7 +310,6 @@
     initHeader();
     initMobileNav();
     initActiveNav();
-    initMotionTargets();
     initScrollReveal();
     initScrollProgress();
     initPortfolioFilters();
