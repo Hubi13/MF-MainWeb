@@ -165,16 +165,13 @@ h6 {
 
 .reveal {
   opacity: 0;
-  transform: translateY(30px) scale(0.985);
-  filter: blur(10px);
-  will-change: transform, opacity, filter;
-  transition: opacity var(--transition-slow), transform var(--transition-slow), filter var(--transition-slow);
+  transform: translateY(30px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
 }
 
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
-  filter: blur(0);
 }
 
 /* Custom Cursor */
@@ -213,25 +210,4 @@ body:hover .cursor-ring {
   height: 50px;
   background-color: var(--color-accent-subtle);
   border-color: transparent;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-
-  .reveal {
-    opacity: 1;
-    transform: none;
-    filter: none;
-  }
 }

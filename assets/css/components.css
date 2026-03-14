@@ -98,35 +98,14 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     transition: color var(--transition-base);
-    position: relative;
 }
 
 .site-nav__link:hover {
     color: #fff;
 }
 
-.site-nav__link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -0.45rem;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
-    opacity: 0;
-    transform: scaleX(0.4);
-    transition: opacity var(--transition-base), transform var(--transition-base);
-    transform-origin: center;
-}
-
 .site-nav__link.is-active {
     color: #fff;
-}
-
-.site-nav__link:hover::after,
-.site-nav__link.is-active::after {
-    opacity: 1;
-    transform: scaleX(1);
 }
 
 .site-nav__lang {

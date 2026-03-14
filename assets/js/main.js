@@ -238,7 +238,7 @@
   }
 
   function initHeroSpotlight() {
-    var hero = document.querySelector('.hero-panel');
+    var hero = document.querySelector('.hero-v3');
     if (!hero) return;
 
     var coarse = window.matchMedia('(pointer: coarse)').matches;
@@ -249,19 +249,13 @@
       var rect = hero.getBoundingClientRect();
       var x = ((event.clientX - rect.left) / rect.width) * 100;
       var y = ((event.clientY - rect.top) / rect.height) * 100;
-      var shiftX = ((x - 50) / 50) * 12;
-      var shiftY = ((y - 50) / 50) * 10;
       hero.style.setProperty('--spot-x', x.toFixed(2) + '%');
       hero.style.setProperty('--spot-y', y.toFixed(2) + '%');
-      hero.style.setProperty('--hero-shift-x', shiftX.toFixed(2) + 'px');
-      hero.style.setProperty('--hero-shift-y', shiftY.toFixed(2) + 'px');
     });
 
     hero.addEventListener('mouseleave', function () {
       hero.style.removeProperty('--spot-x');
       hero.style.removeProperty('--spot-y');
-      hero.style.removeProperty('--hero-shift-x');
-      hero.style.removeProperty('--hero-shift-y');
     });
   }
 
@@ -290,21 +284,20 @@
   }
 
   function initCardParallax() {
-    var cards = document.querySelectorAll('.glass-card, .model-card, .testimonial-card, .work-card');
+    var cards = document.querySelectorAll('.project-square');
     if (!cards.length) return;
 
-    var coarse = window.matchMedia('(pointer: coarse)').matches;
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (coarse || reducedMotion) return;
+    if (reducedMotion) return;
 
     cards.forEach(function (card) {
       card.addEventListener('mousemove', function (event) {
         var rect = card.getBoundingClientRect();
         var x = event.clientX - rect.left;
         var y = event.clientY - rect.top;
-        var mx = ((x / rect.width) - 0.5) * 7;
-        var my = ((y / rect.height) - 0.5) * -7;
-        card.style.transform = 'perspective(900px) rotateX(' + my.toFixed(2) + 'deg) rotateY(' + mx.toFixed(2) + 'deg) translateY(-6px)';
+        var mx = ((x / rect.width) - 0.5) * 6;
+        var my = ((y / rect.height) - 0.5) * -6;
+        card.style.transform = 'perspective(700px) rotateX(' + my + 'deg) rotateY(' + mx + 'deg) translateY(-4px)';
       });
 
       card.addEventListener('mouseleave', function () {
