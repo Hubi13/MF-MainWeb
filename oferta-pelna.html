@@ -6,25 +6,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pelna oferta | Maciej Figiel</title>
     <meta name="description"
-        content="Pelna oferta: pelna strona WWW i landing page. Zakres realizacji, roznice i to, co realnie wchodzi do wspolpracy.">
+        content="Pelna oferta: pelna strona WWW i landing page. Benefity, plusy i zakres realizacji.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://jankowalski.pl/oferta-pelna.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jankowalski.pl/oferta-pelna.html">
-    <meta property="og:title" content="Pelna oferta | Maciej Figiel">
-    <meta property="og:description" content="Pelna strona WWW i landing page - zakres, benefity i najlepszy model wspolpracy.">
+    <meta property="og:title" content="Pelna oferta - Maciej Figiel">
+    <meta property="og:description" content="Pelna strona WWW i landing page - benefity, plusy i zakres.">
     <meta property="og:image" content="https://jankowalski.pl/assets/img/og-image.jpg">
 
     <link rel="stylesheet" href="assets/css/design-system.css">
     <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/pages/offer.css">
+    <style>
+        .offer-hero {
+            padding-top: calc(var(--header-height) + 4rem);
+            padding-bottom: clamp(2.5rem, 5vw, 4rem);
+        }
+
+        .offer-hero h1 {
+            font-size: clamp(2.2rem, 6vw, 4.3rem);
+            margin-bottom: var(--space-sm);
+        }
+
+        .offer-hero p {
+            max-width: 68ch;
+            color: var(--color-text-secondary);
+        }
+
+        .offer-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 980px) {
+            .offer-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .offer-card {
+            background: linear-gradient(160deg, rgba(42, 47, 54, 0.6), rgba(11, 13, 17, 0.95));
+            border: 1px solid rgba(188, 197, 210, 0.25);
+            border-radius: var(--radius-md);
+            padding: clamp(1.3rem, 2.3vw, 2rem);
+            display: grid;
+            gap: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .offer-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(145deg, rgba(232, 236, 243, 0.15), rgba(194, 201, 212, 0.03) 50%, transparent 75%);
+            pointer-events: none;
+        }
+
+        .offer-card>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .offer-card h2 {
+            font-size: clamp(1.5rem, 2.3vw, 2rem);
+            margin-bottom: 0.25rem;
+        }
+
+        .offer-card p {
+            color: var(--color-text-secondary);
+        }
+
+        .offer-list,
+        .offer-plus {
+            display: grid;
+            gap: 0.55rem;
+        }
+
+        .offer-list li,
+        .offer-plus li {
+            color: var(--color-text-secondary);
+            display: flex;
+            gap: 0.55rem;
+            align-items: flex-start;
+            line-height: 1.5;
+        }
+
+        .offer-list li::before {
+            content: '\2713';
+            color: var(--color-accent);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .offer-plus li::before {
+            content: '+';
+            color: #d7dee8;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .offer-note {
+            margin-top: var(--space-lg);
+            padding: var(--space-md);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            background: var(--color-surface);
+            display: grid;
+            gap: 0.8rem;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="cursor-dot" id="cursor-dot"></div>
-    <div class="cursor-ring" id="cursor-ring"></div>
-
-    <header class="site-header" id="header">
+    <header class="site-header" role="banner" id="header">
         <div class="container">
             <a href="/" class="site-logo">Maciej<span>.</span>Figiel</a>
             <nav class="site-nav" role="navigation" aria-label="Main navigation" data-i18n-aria-label="nav.aria">
@@ -50,167 +146,86 @@
     <main>
         <section class="offer-hero">
             <div class="container">
-                <nav class="breadcrumbs reveal" aria-label="Sciezka nawigacji">
-                    <span class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Strona glowna</a></span>
-                    <span class="breadcrumbs__item"><span class="breadcrumbs__current">Pelna oferta</span></span>
-                </nav>
-
-                <div class="offer-hero__grid">
-                    <div class="offer-hero__copy">
-                        <p class="offer-eyebrow reveal" data-delay="30">Pelna oferta</p>
-                        <h1 class="reveal" data-delay="80">Dobierz format strony do etapu, celu i tego, jak ma pracowac na klienta.</h1>
-                        <p class="reveal" data-delay="140">
-                            Najczesciej pracuje w dwoch modelach: pelna strona WWW albo mocny landing page.
-                            Oba warianty maja inny rytm, zakres i zastosowanie, ale laczy je jedno: design ma wspierac decyzje.
-                        </p>
-                    </div>
-
-                    <article class="offer-hero__panel reveal-card">
-                        <p class="offer-eyebrow">Na start warto wiedziec</p>
-                        <h2>Nie sprzedaje samego layoutu, tylko caly sposob prezentacji marki.</h2>
-                        <ul class="offer-hero__list">
-                            <li>ustawienie hierarchii sekcji i CTA</li>
-                            <li>kierunek wizualny dopasowany do odbiorcy</li>
-                            <li>scroll i interakcje, ktore wzmacniaja premium feel</li>
-                            <li>wdrozenie lub przygotowanie do dalszej rozbudowy</li>
-                        </ul>
-                    </article>
-                </div>
+                <p class="label">Oferta</p>
+                <h1>Zobacz pelna oferte wspolpracy</h1>
+                <p>
+                    Dwie najczesciej wybierane opcje realizacji: pelna strona WWW oraz landing page pod konkretny cel.
+                    Ponizej masz czytelne benefity i plusy kazdej z nich.
+                </p>
+                <p style="margin-top: 1rem;">
+                    Jesli nie wiesz jeszcze, ktory model bedzie lepszy, potraktuj to jako szybkie porownanie zakresu,
+                    tempa pracy i efektu, jaki dana forma moze dac Twojej marce.
+                </p>
             </div>
         </section>
 
-        <section class="section container">
-            <div class="section-head reveal">
-                <p class="section-head__label">Dwa glowne modele</p>
-                <h2>Ktora opcja lepiej pasuje do Twojego celu</h2>
-            </div>
-
-            <div class="offer-grid">
-                <article class="offer-card">
-                    <div class="offer-card__head">
-                        <p class="offer-eyebrow">Opcja 01</p>
-                        <h2>Pelna strona WWW</h2>
-                        <p>Najlepsza, kiedy marka potrzebuje kilku sekcji lub podstron, chce budowac zaufanie i pokazywac wiecej niz jedna usluge.</p>
-                    </div>
-                    <div class="offer-card__body">
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="offer-grid">
+                    <article class="offer-card">
                         <div>
-                            <h3>Benefity</h3>
+                            <p class="label" style="margin-bottom: 0.45rem;">Opcja 01</p>
+                            <h2>Pelna strona WWW</h2>
+                            <p>Rozbudowana strona firmowa lub produktowa, ktora buduje wiarygodnosc i prowadzi klienta od
+                                pierwszego wejscia do kontaktu.</p>
+                        </div>
+                        <div>
+                            <h3 style="font-size: var(--text-md); margin-bottom: 0.6rem;">Benefity</h3>
                             <ul class="offer-list">
-                                <li>spojny przekaz marki na wielu ekranach</li>
-                                <li>lepsze SEO przez rozbudowana strukture tresci</li>
-                                <li>wieksza kontrola nad lejkiem konwersji</li>
-                                <li>gotowosc do rozwoju oferty w czasie</li>
+                                <li>Spójny przekaz marki na wielu podstronach.</li>
+                                <li>Lepsze SEO dzieki rozbudowanej strukturze tresci.</li>
+                                <li>Wieksza kontrola nad lejkiem konwersji.</li>
+                                <li>Gotowosc do rozwoju oferty w czasie.</li>
                             </ul>
                         </div>
                         <div>
-                            <h3>Plusy</h3>
+                            <h3 style="font-size: var(--text-md); margin-bottom: 0.6rem;">Plusy</h3>
                             <ul class="offer-plus">
-                                <li>mocniejszy efekt premium i wieksza wiarygodnosc</li>
-                                <li>dobry fundament pod reklame i lead generation</li>
-                                <li>latwiejsza rozbudowa o case studies i kolejne sekcje</li>
+                                <li>Idealna dla firm, ktore chca byc postrzegane premium.</li>
+                                <li>Dobry fundament pod reklamę i pozyskiwanie leadow.</li>
+                                <li>Skalowalna architektura na kolejne etapy biznesu.</li>
                             </ul>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="offer-card">
-                    <div class="offer-card__head">
-                        <p class="offer-eyebrow">Opcja 02</p>
-                        <h2>Landing page</h2>
-                        <p>Najlepszy, kiedy celem jest szybki launch oferty, kampanii lub jednego produktu i trzeba prowadzic odbiorce prosto do reakcji.</p>
-                    </div>
-                    <div class="offer-card__body">
+                    <article class="offer-card">
                         <div>
-                            <h3>Benefity</h3>
+                            <p class="label" style="margin-bottom: 0.45rem;">Opcja 02</p>
+                            <h2>Landing page</h2>
+                            <p>Jedna, mocno skupiona strona zaprojektowana pod konkretną kampanie, produkt lub usluge.</p>
+                        </div>
+                        <div>
+                            <h3 style="font-size: var(--text-md); margin-bottom: 0.6rem;">Benefity</h3>
                             <ul class="offer-list">
-                                <li>szybsze wdrozenie i prostszy zakres startowy</li>
-                                <li>jeden jasny cel: kontakt, zapis albo zakup</li>
-                                <li>latwiejsze testowanie przekazu i sekcji</li>
-                                <li>mocne wsparcie dla reklam performance</li>
+                                <li>Szybsze wdrozenie i start kampanii.</li>
+                                <li>Jeden jasny cel: zapis, kontakt lub zakup.</li>
+                                <li>Latwiejsze testowanie przekazu (A/B).</li>
+                                <li>Silne wsparcie dla reklam performance.</li>
                             </ul>
                         </div>
                         <div>
-                            <h3>Plusy</h3>
+                            <h3 style="font-size: var(--text-md); margin-bottom: 0.6rem;">Plusy</h3>
                             <ul class="offer-plus">
-                                <li>najlepsza opcja na szybki launch nowej oferty</li>
-                                <li>nizszy prog wejscia przy zachowaniu mocnego odbioru</li>
-                                <li>mozliwosc rozbudowy do pelnej strony w kolejnym kroku</li>
+                                <li>Najlepsza opcja na szybki launch nowej oferty.</li>
+                                <li>Niski próg wejscia przy wysokiej skutecznosci.</li>
+                                <li>Prosty model dalszej rozbudowy do pelnej strony.</li>
                             </ul>
                         </div>
+                    </article>
+                </div>
+
+                <div class="offer-note">
+                    <p style="color: var(--color-text-secondary);">
+                        Nie wiesz, ktora opcja jest lepsza dla Twojego przypadku? Podczas krótkiej rozmowy dopasujemy
+                        model realizacji do etapu Twojego biznesu.
+                    </p>
+                    <p style="color: var(--color-text-secondary);">
+                        Jezeli potrzebujesz najpierw szybkiego startu, mozemy zaczac od landing page. Jezeli od razu chcesz
+                        zbudowac mocniejszy wizerunek i wiecej tresci, lepszym kierunkiem bedzie pelna strona WWW.
+                    </p>
+                    <div>
+                        <a href="/contact.html" class="btn btn--primary">Skontaktuj sie</a>
                     </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="section container">
-            <div class="section-head reveal">
-                <p class="section-head__label">Co zwykle zawiera wspolpraca</p>
-                <h2>Poza samym designem dochodzi jeszcze kilka kluczowych warstw</h2>
-            </div>
-
-            <div class="offer-fit-grid">
-                <article class="offer-fit-card">
-                    <h3>Strategia sekcji</h3>
-                    <p>Uklad i kolejnosc tresci sa ustawiane pod to, co klient ma zobaczyc najpierw i co ma zrobic dalej.</p>
-                </article>
-                <article class="offer-fit-card">
-                    <h3>Kierunek wizualny</h3>
-                    <p>Kolor, typografia, oddech i styl kart nie sa przypadkiem, tylko narzedziem odbioru marki.</p>
-                </article>
-                <article class="offer-fit-card">
-                    <h3>Scroll i interakcje</h3>
-                    <p>Ruch dopinany jest tak, aby strona zyskala dynamike, ale nie zamienila sie w przesadzony pokaz efektow.</p>
-                </article>
-                <article class="offer-fit-card">
-                    <h3>Wdrozenie lub setup</h3>
-                    <p>Finalny projekt jest skladany tak, aby zachowac klimat premium i zostawic baze pod dalszy rozwoj.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="section container">
-            <div class="offer-process">
-                <div class="offer-process__intro reveal">
-                    <p class="offer-eyebrow">Proces</p>
-                    <h2>Jak przebiega wspolpraca</h2>
-                    <p>Najpierw ustawiamy cel i zakres, potem budujemy kierunek wizualny i porzadkujemy strukture, a na koncu dopinamy ruch oraz finalne wdrozenie.</p>
-                </div>
-
-                <div class="offer-process__grid">
-                    <article class="offer-process-card">
-                        <span class="offer-process-card__step">01</span>
-                        <h3>Brief i cel</h3>
-                        <p>Okreslamy, co ma sprzedawac strona i jakiego odbioru potrzebujesz.</p>
-                    </article>
-                    <article class="offer-process-card">
-                        <span class="offer-process-card__step">02</span>
-                        <h3>Struktura</h3>
-                        <p>Ukladam rytm sekcji, hierarchie i logike CTA, zanim przejde do detalu.</p>
-                    </article>
-                    <article class="offer-process-card">
-                        <span class="offer-process-card__step">03</span>
-                        <h3>Design i motion</h3>
-                        <p>Dopinam klimat, proporcje, karty oraz scroll, zeby strona miala charakter.</p>
-                    </article>
-                    <article class="offer-process-card">
-                        <span class="offer-process-card__step">04</span>
-                        <h3>Wdrozenie</h3>
-                        <p>Składam finalny efekt tak, aby nie zgubic tego, co bylo najmocniejsze w projekcie.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section container">
-            <div class="offer-note">
-                <div class="offer-note__copy">
-                    <p class="offer-eyebrow">Nie wiesz, co wybrac?</p>
-                    <h2>Podczas krotkiej rozmowy dobierzemy model realizacji do etapu Twojego biznesu.</h2>
-                    <p>Jesli chcesz, moge od razu powiedziec, czy lepiej zaczac od jednej mocnej strony, czy od pelnego serwisu.</p>
-                </div>
-                <div class="offer-note__actions">
-                    <a href="/contact.html" class="btn btn--primary">Skontaktuj sie</a>
-                    <a href="/work/" class="btn btn--outline">Zobacz realizacje</a>
                 </div>
             </div>
         </section>
@@ -233,9 +248,9 @@
                     </ul>
                 </div>
                 <div>
-                    <p class="footer__col-title">Prywatnosc</p>
+                    <p class="footer__col-title">Prywatność</p>
                     <ul class="footer__links">
-                        <li><a href="/privacy.html" class="footer__link">Polityka prywatnosci</a></li>
+                        <li><a href="/privacy.html" class="footer__link">Polityka prywatności</a></li>
                     </ul>
                 </div>
                 <div>
@@ -246,7 +261,7 @@
                 </div>
             </div>
             <div class="footer__bottom">
-                <p>&copy; <span id="year">2026</span> Maciej Figiel. Wszelkie prawa zastrzezone.</p>
+                <p>&copy; <span id="year">2026</span> Maciej Figiel. Wszelkie prawa zastrzeżone.</p>
                 <p>Premium Web Experience</p>
             </div>
         </div>

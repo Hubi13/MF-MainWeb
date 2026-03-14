@@ -82,24 +82,14 @@
       '.model-card',
       '.testimonial-card',
       '.about-image',
-      '.cta-card',
       '.work-project-card',
       '.mini-info-card',
       '.detail-panel',
       '.process-card',
       '.fit-card',
-      '.work-story-card',
-      '.work-signal-card',
-      '.work-showcase',
-      '.scope-card',
-      '.faq-card',
       '.cs-card',
       '.cs-sidebar-box',
-      '.cs-meta-item',
-      '.offer-card',
-      '.offer-note',
-      '.offer-process-card',
-      '.offer-fit-card'
+      '.cs-meta-item'
     ].join(', ');
 
     document.querySelectorAll(cardSelector).forEach(function (item, index) {
@@ -108,7 +98,7 @@
       }
 
       if (!item.dataset.delay) {
-        item.dataset.delay = String(Math.min((index % 4) * 110, 330));
+        item.dataset.delay = String(Math.min((index % 4) * 90, 270));
       }
     });
 
@@ -130,7 +120,7 @@
       }
 
       if (!item.dataset.delay) {
-        item.dataset.delay = String(Math.min((index % 6) * 60, 300));
+        item.dataset.delay = String(Math.min((index % 6) * 45, 225));
       }
     });
   }
@@ -165,7 +155,7 @@
           }
         });
       },
-      { threshold: 0.18, rootMargin: '0px 0px -6% 0px' }
+      { threshold: 0.12, rootMargin: '0px 0px -12% 0px' }
     );
 
     elements.forEach(function (el, index) {
@@ -353,7 +343,7 @@
   }
 
   function initCardParallax() {
-    var cards = document.querySelectorAll('.glass-card, .portfolio-card, .model-card, .testimonial-card, .cta-card, .work-project-card, .fit-card, .process-card, .scope-card, .offer-card');
+    var cards = document.querySelectorAll('.glass-card, .portfolio-card, .model-card, .testimonial-card, .work-project-card, .fit-card, .process-card');
     if (!cards.length) return;
 
     var coarse = window.matchMedia('(pointer: coarse)').matches;
