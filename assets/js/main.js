@@ -75,28 +75,81 @@
     });
   }
 
+  function initMotionTargets() {
+    var cardGroups = document.querySelectorAll('.about-section, .about-stats, .glass-grid, .portfolio-grid, .models-grid');
+    cardGroups.forEach(function (group) {
+      Array.prototype.forEach.call(group.children, function (child, index) {
+        if (!child.classList.contains('reveal') && !child.classList.contains('reveal-card')) {
+          child.classList.add('reveal-card');
+        }
+
+        if (!child.dataset.delay) {
+          child.dataset.delay = String(Math.min(index * 90, 360));
+        }
+      });
+    });
+
+    var textSelector = [
+      '.hero-title',
+      '.hero-sub',
+      '.section-head__label',
+      '.section-head h2',
+      '.about-content h2',
+      '.about-content p',
+      '.portfolio-card__title',
+      '.portfolio-card__desc',
+      '.model-card h3',
+      '.model-card p',
+      '.testimonial-card__quote',
+      '.cta-box h2'
+    ].join(', ');
+
+    var scopes = document.querySelectorAll('.hero-v2, .section, .cta-box');
+    scopes.forEach(function (scope) {
+      var items = scope.querySelectorAll(textSelector);
+      items.forEach(function (item, index) {
+        if (!item.classList.contains('reveal-text')) {
+          item.classList.add('reveal-text');
+        }
+
+        if (!item.dataset.delay) {
+          item.dataset.delay = String(Math.min(index * 60, 320));
+        }
+      });
+    });
+  }
+
   function initScrollReveal() {
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reducedMotion) {
-      document.querySelectorAll('.reveal').forEach(function (el) {
+      document.querySelectorAll('.reveal, .reveal-card, .reveal-text').forEach(function (el) {
         el.classList.add('is-visible');
+      });
+
+      document.querySelectorAll('.section').forEach(function (section) {
+        section.classList.add('section-in-view');
       });
       return;
     }
 
-    var elements = document.querySelectorAll('.reveal');
+    var elements = document.querySelectorAll('.reveal, .reveal-card, .reveal-text, .section');
     if (!elements.length) return;
 
     var observer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
+            if (entry.target.classList.contains('section')) {
+              entry.target.classList.add('section-in-view');
+            } else {
+              entry.target.classList.add('is-visible');
+            }
+
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.08, rootMargin: '0px 0px -50px 0px' }
+      { threshold: 0.12, rootMargin: '0px 0px -12% 0px' }
     );
 
     elements.forEach(function (el, index) {
@@ -310,6 +363,7 @@
     initHeader();
     initMobileNav();
     initActiveNav();
+    initMotionTargets();
     initScrollReveal();
     initScrollProgress();
     initPortfolioFilters();
