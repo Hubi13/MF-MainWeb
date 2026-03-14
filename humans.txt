@@ -3,7 +3,7 @@
   |  HUMANS.TXT         |
   |_____________________|
 
-  Site: jankowalski.pl
+  Site: maciejf.vercel.app
   Zaprojektowane i zbudowane przez: Maciej Figiel
 
   TEAM
@@ -13,9 +13,7 @@
 
   STACK
   HTML, CSS, JS
-  Bez frameworkow. Bez zbednych zaleznosci.
   Fonty: Inter + Playfair Display (Google Fonts)
-  Hosting: Netlify / Vercel
 
   STANDARDS
   Respects prefers-reduced-motion
