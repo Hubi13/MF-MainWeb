@@ -27,8 +27,8 @@
   padding-top: calc(var(--header-height) + 2rem);
   padding-bottom: 4rem;
   background:
-    radial-gradient(circle at 50% 102%, rgba(255, 90, 31, 0.08), transparent 34%),
-    linear-gradient(180deg, rgba(4, 5, 7, 0.99) 0%, rgba(6, 7, 9, 0.97) 24%, rgba(9, 10, 12, 0.9) 58%, rgba(10, 10, 11, 0.18) 100%);
+    radial-gradient(circle at 50% 112%, rgba(255, 90, 31, 0.025), transparent 24%),
+    linear-gradient(180deg, rgba(4, 5, 7, 0.99) 0%, rgba(6, 7, 9, 0.97) 24%, rgba(9, 10, 12, 0.95) 58%, rgba(10, 10, 11, 0.92) 100%);
 }
 
 .hero-v2.container {
