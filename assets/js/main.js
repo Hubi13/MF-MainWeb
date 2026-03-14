@@ -76,46 +76,52 @@
   }
 
   function initMotionTargets() {
-    var cardGroups = document.querySelectorAll('.about-section, .about-stats, .glass-grid, .portfolio-grid, .models-grid');
-    cardGroups.forEach(function (group) {
-      Array.prototype.forEach.call(group.children, function (child, index) {
-        if (!child.classList.contains('reveal') && !child.classList.contains('reveal-card')) {
-          child.classList.add('reveal-card');
-        }
+    var cardSelector = [
+      '.glass-card',
+      '.portfolio-card',
+      '.model-card',
+      '.testimonial-card',
+      '.about-image',
+      '.work-project-card',
+      '.mini-info-card',
+      '.detail-panel',
+      '.process-card',
+      '.fit-card',
+      '.cs-card',
+      '.cs-sidebar-box',
+      '.cs-meta-item'
+    ].join(', ');
 
-        if (!child.dataset.delay) {
-          child.dataset.delay = String(Math.min(index * 90, 360));
-        }
-      });
+    document.querySelectorAll(cardSelector).forEach(function (item, index) {
+      if (!item.classList.contains('reveal-card') && !item.classList.contains('reveal')) {
+        item.classList.add('reveal-card');
+      }
+
+      if (!item.dataset.delay) {
+        item.dataset.delay = String(Math.min((index % 4) * 90, 270));
+      }
     });
 
     var textSelector = [
-      '.hero-title',
-      '.hero-sub',
-      '.section-head__label',
-      '.section-head h2',
-      '.about-content h2',
-      '.about-content p',
-      '.portfolio-card__title',
-      '.portfolio-card__desc',
-      '.model-card h3',
-      '.model-card p',
-      '.testimonial-card__quote',
-      '.cta-box h2'
+      'main h1',
+      'main h2',
+      'main h3',
+      'main p',
+      'main li',
+      'main .btn',
+      'main .breadcrumbs',
+      'main .filter-tabs'
     ].join(', ');
 
-    var scopes = document.querySelectorAll('.hero-v2, .section, .cta-box');
-    scopes.forEach(function (scope) {
-      var items = scope.querySelectorAll(textSelector);
-      items.forEach(function (item, index) {
-        if (!item.classList.contains('reveal-text')) {
-          item.classList.add('reveal-text');
-        }
+    document.querySelectorAll(textSelector).forEach(function (item, index) {
+      if (item.closest('.site-header, .site-footer, .site-nav')) return;
+      if (!item.classList.contains('reveal') && !item.classList.contains('reveal-card') && !item.classList.contains('reveal-text')) {
+        item.classList.add('reveal-text');
+      }
 
-        if (!item.dataset.delay) {
-          item.dataset.delay = String(Math.min(index * 60, 320));
-        }
-      });
+      if (!item.dataset.delay) {
+        item.dataset.delay = String(Math.min((index % 6) * 45, 225));
+      }
     });
   }
 
@@ -126,20 +132,20 @@
         el.classList.add('is-visible');
       });
 
-      document.querySelectorAll('.section').forEach(function (section) {
+      document.querySelectorAll('main section, .page-hero, .cs-header, .cs-narrative, .cs-body, .cta-closer').forEach(function (section) {
         section.classList.add('section-in-view');
       });
       return;
     }
 
-    var elements = document.querySelectorAll('.reveal, .reveal-card, .reveal-text, .section');
+    var elements = document.querySelectorAll('.reveal, .reveal-card, .reveal-text, main section, .page-hero, .cs-header, .cs-narrative, .cs-body, .cta-closer');
     if (!elements.length) return;
 
     var observer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            if (entry.target.classList.contains('section')) {
+            if (entry.target.matches('main section, .page-hero, .cs-header, .cs-narrative, .cs-body, .cta-closer')) {
               entry.target.classList.add('section-in-view');
             } else {
               entry.target.classList.add('is-visible');
@@ -250,14 +256,14 @@
 
     document.addEventListener('mouseover', function (event) {
       var target = event.target;
-      if (target && target.closest('a, button, .project-square, .btn')) {
+      if (target && target.closest('a, button, .btn, .glass-card, .portfolio-card, .model-card, .testimonial-card, .work-project-card, .fit-card, .process-card')) {
         document.body.classList.add('cursor-hover');
       }
     });
 
     document.addEventListener('mouseout', function (event) {
       var target = event.target;
-      if (target && target.closest('a, button, .project-square, .btn')) {
+      if (target && target.closest('a, button, .btn, .glass-card, .portfolio-card, .model-card, .testimonial-card, .work-project-card, .fit-card, .process-card')) {
         document.body.classList.remove('cursor-hover');
       }
     });
@@ -291,7 +297,7 @@
   }
 
   function initHeroSpotlight() {
-    var hero = document.querySelector('.hero-v3');
+    var hero = document.querySelector('.hero-panel');
     if (!hero) return;
 
     var coarse = window.matchMedia('(pointer: coarse)').matches;
@@ -337,11 +343,12 @@
   }
 
   function initCardParallax() {
-    var cards = document.querySelectorAll('.project-square');
+    var cards = document.querySelectorAll('.glass-card, .portfolio-card, .model-card, .testimonial-card, .work-project-card, .fit-card, .process-card');
     if (!cards.length) return;
 
+    var coarse = window.matchMedia('(pointer: coarse)').matches;
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reducedMotion) return;
+    if (coarse || reducedMotion) return;
 
     cards.forEach(function (card) {
       card.addEventListener('mousemove', function (event) {
@@ -350,7 +357,7 @@
         var y = event.clientY - rect.top;
         var mx = ((x / rect.width) - 0.5) * 6;
         var my = ((y / rect.height) - 0.5) * -6;
-        card.style.transform = 'perspective(700px) rotateX(' + my + 'deg) rotateY(' + mx + 'deg) translateY(-4px)';
+        card.style.transform = 'perspective(760px) rotateX(' + my.toFixed(2) + 'deg) rotateY(' + mx.toFixed(2) + 'deg) translateY(-5px)';
       });
 
       card.addEventListener('mouseleave', function () {

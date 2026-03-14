@@ -1,66 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realizacje - Maciej Figiel Website Designer</title>
+    <title>Realizacje | Maciej Figiel</title>
     <meta name="description"
-        content="Portfolio realizacji - strony www, systemy UI, e-commerce, redesign. Sprawdz case studies z konkretnymi wynikami.">
+        content="Wybrane realizacje: strony firmowe, e-commerce i interfejsy projektowane od podstaw z naciskiem na estetyke i skutecznosc.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://jankowalski.pl/work/">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jankowalski.pl/work/">
-    <meta property="og:title" content="Realizacje - Maciej Figiel Website Designer">
-    <meta property="og:description" content="Portfolio realizacji - strony www, systemy UI, e-commerce, redesign.">
-    <meta property="og:image" content="https://jankowalski.pl/assets/img/og-image.jpg">
+    <meta property="og:title" content="Realizacje | Maciej Figiel">
+    <meta property="og:description" content="Wybrane realizacje stron internetowych i interfejsow projektowanych od podstaw.">
+    <meta property="og:image" content="https://imgur.com/xJwX5ul.jpeg">
     <meta name="twitter:card" content="summary_large_image">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="manifest" href="/manifest.webmanifest">
-    <meta name="theme-color" content="#f3f4f6">
 
     <link rel="stylesheet" href="../assets/css/design-system.css">
     <link rel="stylesheet" href="../assets/css/components.css">
     <link rel="stylesheet" href="../assets/css/pages/work.css">
-
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": "https://jankowalski.pl/work/",
-    "name": "Realizacje - Maciej Figiel",
-    "url": "https://jankowalski.pl/work/",
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Strona glowna", "item": "https://jankowalski.pl/" },
-        { "@type": "ListItem", "position": 2, "name": "Realizacje", "item": "https://jankowalski.pl/work/" }
-      ]
-    }
-  }
-  </script>
 </head>
 
 <body>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
 
-    <header class="site-header" role="banner">
+    <header class="site-header" id="header">
         <div class="container">
             <a href="/" class="site-logo">Maciej<span>.</span>Figiel</a>
             <nav class="site-nav" role="navigation" aria-label="Main navigation" data-i18n-aria-label="nav.aria">
                 <ul class="site-nav__list" id="main-nav">
-                    <li><a href="/#portfolio" class="site-nav__link" data-i18n="nav.work">Work</a></li>
+                    <li><a href="/work/" class="site-nav__link" data-i18n="nav.work">Work</a></li>
                     <li><a href="/#models" class="site-nav__link" data-i18n="nav.services">Services</a></li>
                     <li><a href="/#about" class="site-nav__link" data-i18n="nav.about">About</a></li>
                     <li><a href="/contact.html" class="site-nav__link" data-i18n="nav.contact">Contact</a></li>
-                    <li class="site-nav__lang" role="group" aria-label="Language switcher" data-i18n-aria-label="nav.lang_aria">
+                    <li class="site-nav__lang" role="group" aria-label="Language switcher"
+                        data-i18n-aria-label="nav.lang_aria">
                         <button type="button" class="lang-switch" data-lang-switch="en" aria-pressed="false">EN</button>
                         <button type="button" class="lang-switch" data-lang-switch="pl" aria-pressed="false">PL</button>
                     </li>
                 </ul>
-                <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" data-i18n-aria-label="nav.menu_open">
+                <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu"
+                    data-i18n-aria-label="nav.menu_open">
                     <span></span><span></span><span></span>
                 </button>
             </nav>
@@ -68,224 +50,217 @@
     </header>
 
     <main>
-        <!-- PAGE HERO -->
-        <section class="page-hero">
+        <section class="work-hero">
             <div class="container">
-                <nav class="breadcrumbs" aria-label="Sciezka nawigacji">
+                <nav class="breadcrumbs reveal" aria-label="Sciezka nawigacji">
                     <span class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Strona glowna</a></span>
                     <span class="breadcrumbs__item"><span class="breadcrumbs__current">Realizacje</span></span>
                 </nav>
-                <p class="label page-hero__label">Portfolio</p>
-                <h1 class="page-hero__title reveal">Wybrane realizacje</h1>
-                <p class="page-hero__sub reveal" data-delay="100">
-                    Projekty, ktore mialy cel i go osiagnely.
-                    Kazdy z jasnym briefem, procesem i mierzalnym rezultatem.
+                <p class="work-hero__eyebrow reveal" data-delay="40">Wybrane realizacje</p>
+                <h1 class="work-hero__title reveal" data-delay="80">Projekty, ktore maja charakter i konkretna funkcje.</h1>
+                <p class="work-hero__lead reveal" data-delay="140">
+                    Zebrane projekty z roznych branz: od stron wizerunkowych po sklepy i interfejsy, gdzie liczy sie
+                    nie tylko wyglad, ale tez rytm, czytelnosc i odczucie premium.
                 </p>
-            </div>
-        </section>
 
-        <!-- PORTFOLIO FILTERS + GRID -->
-        <section class="section">
-            <div class="container">
-                <div class="filter-tabs reveal" role="group" aria-label="Filtruj realizacje">
-                    <button class="filter-tab is-active" data-filter="all">Wszystkie</button>
-                    <button class="filter-tab" data-filter="strona">Strony www</button>
-                    <button class="filter-tab" data-filter="ui">Systemy UI</button>
-                    <button class="filter-tab" data-filter="ecommerce">E-commerce</button>
-                    <button class="filter-tab" data-filter="redesign">Redesign</button>
-                </div>
-
-                <div class="portfolio-grid">
-                    <!-- Item 1 -->
-                    <div class="portfolio-grid-item reveal" data-category="redesign">
-                        <a href="/work/case-study-1.html" class="cs-card"
-                            aria-label="Case study: Firma uslugowa w Warszawie">
-                            <div class="cs-card__thumb">
-                                <div class="cs-thumb-placeholder"
-                                    style="background: linear-gradient(135deg, #1a1a22 0%, #2c2c3a 50%, #1a1a22 100%)">
-                                    <span style="opacity:0.3;font-size:var(--text-sm)">firma-uslugowa.jpg</span>
-                                </div>
-                                <span class="cs-card__tag">Redesign</span>
-                            </div>
-                            <div class="cs-card__body">
-                                <div class="cs-card__meta">
-                                    <span class="cs-card__category">Redesign & Optymalizacja</span>
-                                    <span class="cs-card__year">2024</span>
-                                </div>
-                                <h2 class="cs-card__title">Firma uslugowa w Warszawie</h2>
-                                <p class="cs-card__desc">Redesign strony z naciskiem na konwersje. Nowa IA, system UI i
-                                    integracja z CRM. Wynik: +39% leadow.</p>
-                                <span class="cs-card__cta">Czytaj case study</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Item 2 -->
-                    <div class="portfolio-grid-item reveal" data-delay="80" data-category="strona">
-                        <a href="/work/case-study-2.html" class="cs-card" aria-label="Case study: Marka premium">
-                            <div class="cs-card__thumb">
-                                <div class="cs-thumb-placeholder"
-                                    style="background: linear-gradient(135deg, #1e1810 0%, #2e2418 50%, #1e1810 100%)">
-                                    <span style="opacity:0.3;font-size:var(--text-sm)">marka-premium.jpg</span>
-                                </div>
-                                <span class="cs-card__tag">Brand & Web</span>
-                            </div>
-                            <div class="cs-card__body">
-                                <div class="cs-card__meta">
-                                    <span class="cs-card__category">Brand Identity & Web</span>
-                                    <span class="cs-card__year">2025</span>
-                                </div>
-                                <h2 class="cs-card__title">Marka premium</h2>
-                                <p class="cs-card__desc">Identyfikacja wizualna od podstaw i strona wizerunkowa. Projekt
-                                    dla marki z segmentu luxury.</p>
-                                <span class="cs-card__cta">Czytaj case study</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="portfolio-grid-item reveal" data-delay="160" data-category="ui">
-                        <a href="/work/case-study-3.html" class="cs-card" aria-label="Case study: Produkt B2B">
-                            <div class="cs-card__thumb">
-                                <div class="cs-thumb-placeholder"
-                                    style="background: linear-gradient(135deg, #0e1520 0%, #1e2535 50%, #0e1520 100%)">
-                                    <span style="opacity:0.3;font-size:var(--text-sm)">produkt-b2b.jpg</span>
-                                </div>
-                                <span class="cs-card__tag">UI System</span>
-                            </div>
-                            <div class="cs-card__body">
-                                <div class="cs-card__meta">
-                                    <span class="cs-card__category">UI System & Frontend</span>
-                                    <span class="cs-card__year">2024</span>
-                                </div>
-                                <h2 class="cs-card__title">Platforma B2B - SaaS</h2>
-                                <p class="cs-card__desc">Design system i implementacja frontendu dla platformy w
-                                    sektorze B2B. 150+ komponentow.</p>
-                                <span class="cs-card__cta">Czytaj case study</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Locked placeholders - social proof -->
-                    <div class="portfolio-grid-item reveal" data-delay="100" data-category="ecommerce">
-                        <div class="cs-card" style="opacity:0.5;cursor:default;"
-                            aria-label="Projekt niedostepny publicznie">
-                            <div class="cs-card__thumb">
-                                <div class="cs-thumb-placeholder"
-                                    style="background: linear-gradient(135deg, #141820 0%, #1c2230 100%)">
-                                    <span style="opacity:0.4;font-size:var(--text-sm)">NDA</span>
-                                </div>
-                                <span class="cs-card__tag">E-commerce</span>
-                            </div>
-                            <div class="cs-card__body">
-                                <div class="cs-card__meta">
-                                    <span class="cs-card__category">E-commerce</span>
-                                    <span class="cs-card__year">2023</span>
-                                </div>
-                                <h2 class="cs-card__title">Sklep online - NDA</h2>
-                                <p class="cs-card__desc">Projekt objety umowa o poufnosci. Szczegoly dostepne po
-                                    kontakcie.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-grid-item reveal" data-delay="180" data-category="strona">
-                        <div class="cs-card" style="opacity:0.5;cursor:default;"
-                            aria-label="Projekt niedostepny publicznie">
-                            <div class="cs-card__thumb">
-                                <div class="cs-thumb-placeholder"
-                                    style="background: linear-gradient(135deg, #181018 0%, #221828 100%)">
-                                    <span style="opacity:0.4;font-size:var(--text-sm)">NDA</span>
-                                </div>
-                                <span class="cs-card__tag">Landing page</span>
-                            </div>
-                            <div class="cs-card__body">
-                                <div class="cs-card__meta">
-                                    <span class="cs-card__category">Landing Page</span>
-                                    <span class="cs-card__year">2023</span>
-                                </div>
-                                <h2 class="cs-card__title">Landing page - fintech - NDA</h2>
-                                <p class="cs-card__desc">Kampanijny landing z wysokim wskaznikiem konwersji. Szczegoly
-                                    dostepne po kontakcie.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="work-kpis">
+                    <article class="mini-info-card">
+                        <span class="mini-info-card__value">4</span>
+                        <span class="mini-info-card__label">projekty pokazane publicznie</span>
+                    </article>
+                    <article class="mini-info-card">
+                        <span class="mini-info-card__value">UI/UX</span>
+                        <span class="mini-info-card__label">estetyka polaczona z funkcja</span>
+                    </article>
+                    <article class="mini-info-card">
+                        <span class="mini-info-card__value">od 0</span>
+                        <span class="mini-info-card__label">projekt i wdrozenie od podstaw</span>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- BOTTOM CTA -->
-        <section class="cta-closer">
-            <div class="container">
-                <h2 class="cta-closer__title reveal">Twoj projekt moze byc nastepny.</h2>
-                <p class="cta-closer__sub reveal" data-delay="100">
-                    Porozmawiajmy o tym, co chcesz osiagnac.
-                </p>
-                <div class="cta-closer__actions reveal" data-delay="200">
-                    <a href="/contact.html" class="btn btn--primary" data-track-cta="work_bottom">Umow rozmowe</a>
+        <section class="section container">
+            <div class="section-head reveal">
+                <p class="section-head__label">Portfolio</p>
+                <h2>Moje projekty</h2>
+            </div>
+
+            <div class="work-projects">
+                <article class="work-project-card">
+                    <img src="https://imgur.com/xJwX5ul.jpeg" alt="Projekt dla agencji marketingowej"
+                        class="work-project-card__img">
+                    <div class="work-project-card__content">
+                        <div class="work-project-card__meta">
+                            <span>Brand Direction</span>
+                            <span>UI/UX</span>
+                        </div>
+                        <h3 class="work-project-card__title">Agencja marketingowa</h3>
+                        <p class="work-project-card__desc">
+                            Nowy kierunek wizualny oparty o wyrazista siatke, prosty przeplyw i mocniejszy premium feel.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="work-project-card">
+                    <img src="https://imgur.com/ttjKn8J.jpeg" alt="Projekt dla salonu manicure"
+                        class="work-project-card__img">
+                    <div class="work-project-card__content">
+                        <div class="work-project-card__meta">
+                            <span>Motion</span>
+                            <span>Conversion</span>
+                        </div>
+                        <h3 class="work-project-card__title">Salon manicure</h3>
+                        <p class="work-project-card__desc">
+                            Delikatniejszy charakter marki z plynniejszym ruchem, wyraznym CTA i bardziej kobiecym flow.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="work-project-card">
+                    <img src="https://imgur.com/XNPEWgz.jpeg" alt="Projekt sklepu internetowego"
+                        class="work-project-card__img">
+                    <div class="work-project-card__content">
+                        <div class="work-project-card__meta">
+                            <span>E-commerce</span>
+                            <span>Full Build</span>
+                        </div>
+                        <h3 class="work-project-card__title">Sklep e-commerce</h3>
+                        <p class="work-project-card__desc">
+                            Kompletny sklep z naciskiem na czytelne karty produktowe, mocny hierarchy i szybki zakup.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="work-project-card">
+                    <img src="https://imgur.com/tSlYTm6.jpeg" alt="Projekt dla agencji architektonicznej"
+                        class="work-project-card__img">
+                    <div class="work-project-card__content">
+                        <div class="work-project-card__meta">
+                            <span>Website</span>
+                            <span>From Scratch</span>
+                        </div>
+                        <h3 class="work-project-card__title">Agencja architektoniczna</h3>
+                        <p class="work-project-card__desc">
+                            Strona od zera z naciskiem na przestrzen, rytm i prezentacje realizacji w bardziej gallery way.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container">
+            <div class="work-detail-grid">
+                <article class="detail-panel">
+                    <p class="detail-panel__eyebrow">Mniejsze informacje</p>
+                    <h2>Co zwykle dostaje projekt poza samym layoutem</h2>
+                    <ul class="detail-list">
+                        <li>dobrany kierunek wizualny dopasowany do branzy</li>
+                        <li>jasna hierarchia sekcji i wezwan do dzialania</li>
+                        <li>spojny system odstepow, typografii i rytmu</li>
+                        <li>wdrozenie z naciskiem na plynne odczucie strony</li>
+                    </ul>
+                </article>
+
+                <article class="detail-panel">
+                    <p class="detail-panel__eyebrow">Jak pracuje</p>
+                    <div class="process-stack">
+                        <div class="process-card">
+                            <span class="process-card__step">01</span>
+                            <h3>Rozpoznanie celu</h3>
+                            <p>Najpierw ustalam, co strona ma komunikowac i co ma uruchomic po stronie odbiorcy.</p>
+                        </div>
+                        <div class="process-card">
+                            <span class="process-card__step">02</span>
+                            <h3>Struktura i klimat</h3>
+                            <p>Uklad, proporcje, tempo i akcenty wizualne ustawiaja caly odbior projektu.</p>
+                        </div>
+                        <div class="process-card">
+                            <span class="process-card__step">03</span>
+                            <h3>Dopracowanie ruchu</h3>
+                            <p>Na koncu dopinam mikrointerakcje i scroll, zeby strona nie byla statyczna.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container">
+            <div class="section-head reveal">
+                <p class="section-head__label">Dla kogo</p>
+                <h2>Najlepiej dziala to dla marek, ktore chca wygladac pewnie i nowoczesnie.</h2>
+            </div>
+
+            <div class="fit-grid">
+                <article class="fit-card">
+                    <h3>Firmy uslugowe</h3>
+                    <p>Potrzebuja szybkiego zaufania i klarownej prezentacji oferty bez chaosu.</p>
+                </article>
+                <article class="fit-card">
+                    <h3>Marki premium</h3>
+                    <p>Liczy sie atmosfera, detal i sposob prowadzenia odbiorcy przez tresc.</p>
+                </article>
+                <article class="fit-card">
+                    <h3>Sprzedaz online</h3>
+                    <p>Istotna jest czytelnosc, rytm sekcji i dobrze ustawione sciezki decyzji.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container">
+            <div class="work-cta">
+                <div class="work-cta__copy">
+                    <p class="work-cta__eyebrow">Masz podobny kierunek?</p>
+                    <h2>Jesli chcesz strone z mocniejszym charakterem, mozemy to rozpisac na Twoj projekt.</h2>
+                    <p>Opiszesz cel, branze i etap, a ja zaproponuje najlepszy kierunek.</p>
+                </div>
+                <div class="work-cta__actions">
+                    <a href="/contact.html" class="btn btn--primary">Napisz o projekcie</a>
+                    <a href="/#models" class="btn btn--outline">Zobacz model wspolpracy</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <p class="footer__brand-name">Maciej Figiel</p>
-          <p class="footer__tagline">Brand & UI/UX Designer</p>
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <p class="footer__brand-name">Maciej Figiel</p>
+                    <p class="footer__tagline">Brand &amp; UI/UX Designer</p>
+                </div>
+                <div>
+                    <p class="footer__col-title">Nawigacja</p>
+                    <ul class="footer__links">
+                        <li><a href="/work/" class="footer__link" data-i18n="nav.work">Work</a></li>
+                        <li><a href="/#models" class="footer__link" data-i18n="nav.services">Services</a></li>
+                        <li><a href="/#about" class="footer__link" data-i18n="nav.about">About</a></li>
+                        <li><a href="/contact.html" class="footer__link" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer__col-title">Prywatnosc</p>
+                    <ul class="footer__links">
+                        <li><a href="/privacy.html" class="footer__link">Polityka prywatnosci</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer__col-title">Kontakt</p>
+                    <ul class="footer__links">
+                        <li><a href="mailto:mafi14@proton.me" class="footer__link">mafi14@proton.me</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; <span id="year">2026</span> Maciej Figiel. Wszelkie prawa zastrzezone.</p>
+                <p>Premium Web Experience</p>
+            </div>
         </div>
-        <div>
-          <p class="footer__col-title">Nawigacja</p>
-          <ul class="footer__links">
-            <li><a href="/#portfolio" class="footer__link" data-i18n="nav.work">Work</a></li>
-            <li><a href="/#models" class="footer__link" data-i18n="nav.services">Services</a></li>
-            <li><a href="/#about" class="footer__link" data-i18n="nav.about">About</a></li>
-            <li><a href="/contact.html" class="footer__link" data-i18n="nav.contact">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="footer__col-title">Prywatność</p>
-          <ul class="footer__links">
-            <li><a href="/privacy.html" class="footer__link">Polityka prywatności</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="footer__col-title">Kontakt</p>
-          <ul class="footer__links">
-            <li><a href="mailto:mafi14@proton.me" class="footer__link">mafi14@proton.me</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; <span id="year">2026</span> Maciej Figiel. Wszelkie prawa zastrzeżone.</p>
-        <p>Premium Web Experience</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-    <div class="consent-banner" role="dialog" aria-label="Zgoda na cookies">
-        <p class="consent-banner__text">
-            Ta strona korzysta z analityki wylacznie po Twojej zgodzie.
-            <a href="/privacy.html">Polityka prywatnosci</a>.
-        </p>
-        <div class="consent-banner__actions">
-            <button class="btn btn--primary" style="font-size:var(--text-xs);padding:0.5rem 1.25rem"
-                data-consent="accept">Akceptuje</button>
-            <button class="btn btn--outline" style="font-size:var(--text-xs);padding:0.5rem 1.25rem"
-                data-consent="deny">Odrzucam</button>
-        </div>
-    </div>
-
-    <script defer src="../assets/js/analytics.js"></script>
-    <script defer src="../assets/js/consent.js"></script>
     <script defer src="../assets/js/main.js"></script>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     <script defer src="/assets/js/i18n.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 
 </html>
-
-
-
-

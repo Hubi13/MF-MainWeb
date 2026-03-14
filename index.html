@@ -23,7 +23,7 @@
       <a href="/" class="site-logo">Maciej<span>.
           <nav class="site-nav" role="navigation" aria-label="Main navigation" data-i18n-aria-label="nav.aria">
             <ul class="site-nav__list" id="main-nav">
-              <li><a href="/#portfolio" class="site-nav__link" data-i18n="nav.work">Work</a></li>
+              <li><a href="/work/" class="site-nav__link" data-i18n="nav.work">Work</a></li>
               <li><a href="/#models" class="site-nav__link" data-i18n="nav.services">Services</a></li>
               <li><a href="/#about" class="site-nav__link" data-i18n="nav.about">About</a></li>
               <li><a href="/contact.html" class="site-nav__link" data-i18n="nav.contact">Contact</a></li>
@@ -61,7 +61,7 @@
               and
               convert.
             </p>
-            <a href="#portfolio" class="btn hero-cta">See my works</a>
+            <a href="/work/" class="btn hero-cta">See my works</a>
           </div>
         </div>
 
@@ -134,7 +134,7 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="section container">
+    <template id="portfolio">
       <div class="section-head reveal">
         <p class="section-head__label">Wybrane Prace</p>
         <h2>Moje Realizacje</h2>
@@ -170,7 +170,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </template>
 
     <!-- Hosting & Maintenance Section -->
     <section id="models" class="section container">
@@ -315,11 +315,54 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="section container reveal">
+    <section class="section container reveal cta-section">
       <div class="cta-box">
         <div class="cta-box__content">
           <h2>Zbudujmy stronę, która realnie sprzedaje</h2>
+          <p class="cta-box__lead">Pokaz swoja oferte na wyrazistej stronie, ktora od pierwszego scrolla buduje zaufanie i prowadzi do kontaktu.</p>
           <a href="mailto:mafi14@proton.me" class="btn btn--cta">Skontaktuj się już dziś &rarr;</a>
+        </div>
+      </div>
+      <div class="cta-tablet" aria-hidden="true">
+        <div class="cta-tablet__frame">
+          <div class="cta-tablet__camera"></div>
+          <div class="cta-tablet__screen">
+            <div class="tablet-ui">
+              <div class="tablet-ui__topbar">
+                <div class="tablet-ui__logo">MARKET<br>BEAT</div>
+                <div class="tablet-ui__nav">
+                  <span>E-commerce</span>
+                  <span>SaaS</span>
+                  <span>Real Estate</span>
+                </div>
+                <div class="tablet-ui__chip">Contact us</div>
+              </div>
+
+              <div class="tablet-ui__hero">
+                <div class="tablet-ui__tag tablet-ui__tag--left">Paid Media</div>
+                <div class="tablet-ui__tag tablet-ui__tag--right">Data &amp; Analytics</div>
+                <div class="tablet-ui__tag tablet-ui__tag--bottom">Strategy</div>
+                <h3>We are CPA oriented<br>Performance Marketing Agency</h3>
+                <p>
+                  We partner with brands to deliver measurable, scaled results across the entire digital ecosystem.
+                </p>
+                <div class="tablet-ui__button">
+                  <span>Contact us</span>
+                  <span class="tablet-ui__button-arrow">↗</span>
+                </div>
+              </div>
+
+              <div class="tablet-ui__clients">
+                <span>Our Clients</span>
+                <div class="tablet-ui__client-row">
+                  <strong>AURA</strong>
+                  <strong>VELO</strong>
+                  <strong>ZENITH</strong>
+                  <strong>NEXA</strong>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -335,7 +378,7 @@
         <div>
           <p class="footer__col-title">Nawigacja</p>
           <ul class="footer__links">
-            <li><a href="/#portfolio" class="footer__link" data-i18n="nav.work">Work</a></li>
+            <li><a href="/work/" class="footer__link" data-i18n="nav.work">Work</a></li>
             <li><a href="/#models" class="footer__link" data-i18n="nav.services">Services</a></li>
             <li><a href="/#about" class="footer__link" data-i18n="nav.about">About</a></li>
             <li><a href="/contact.html" class="footer__link" data-i18n="nav.contact">Contact</a></li>
