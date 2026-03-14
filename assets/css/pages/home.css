@@ -27,8 +27,8 @@
   padding-top: calc(var(--header-height) + 2rem);
   padding-bottom: 4rem;
   background:
-    radial-gradient(circle at 50% 100%, rgba(255, 90, 31, 0.12), transparent 40%),
-    linear-gradient(180deg, rgba(6, 7, 9, 0.98) 0%, rgba(8, 9, 12, 0.94) 22%, rgba(12, 10, 9, 0.56) 62%, rgba(10, 9, 8, 0.08) 100%);
+    radial-gradient(circle at 50% 102%, rgba(255, 90, 31, 0.08), transparent 34%),
+    linear-gradient(180deg, rgba(4, 5, 7, 0.99) 0%, rgba(6, 7, 9, 0.97) 24%, rgba(9, 10, 12, 0.9) 58%, rgba(10, 10, 11, 0.18) 100%);
 }
 
 .hero-v2.container {
@@ -44,8 +44,8 @@
   text-align: left;
   padding: clamp(1.2rem, 3.2vw, 2.2rem);
   border-radius: 34px;
-  border: 1px solid rgba(180, 187, 198, 0.28);
-  background: #0b0d10;
+  border: 1px solid rgba(160, 168, 180, 0.2);
+  background: #090b0d;
   box-shadow: 0 28px 60px rgba(0, 0, 0, 0.62);
   overflow: hidden;
   display: flex;
@@ -65,8 +65,8 @@
   pointer-events: none;
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(5, 6, 8, 0.92) 0%, rgba(7, 8, 11, 0.48) 36%, rgba(8, 9, 12, 0.74) 100%),
-    radial-gradient(circle at 42% 38%, transparent 0%, rgba(5, 6, 7, 0.56) 74%);
+    linear-gradient(90deg, rgba(4, 5, 7, 0.94) 0%, rgba(6, 7, 9, 0.54) 34%, rgba(7, 8, 10, 0.8) 100%),
+    radial-gradient(circle at 42% 38%, transparent 0%, rgba(4, 5, 7, 0.62) 74%);
 }
 
 .hero-panel::after {
@@ -75,7 +75,7 @@
   inset: 0;
   pointer-events: none;
   z-index: -1;
-  background: linear-gradient(to top, rgba(5, 6, 7, 0.92) 0%, rgba(5, 6, 7, 0.4) 34%, rgba(5, 6, 7, 0.08) 64%);
+  background: linear-gradient(to top, rgba(4, 5, 6, 0.94) 0%, rgba(4, 5, 6, 0.46) 32%, rgba(4, 5, 6, 0.08) 62%);
 }
 
 .hero-top {
@@ -225,14 +225,16 @@
 }
 
 .glass-card {
-  background: linear-gradient(155deg, rgba(45, 49, 56, 0.72) 0%, rgba(19, 22, 27, 0.92) 48%, rgba(8, 10, 12, 0.98) 100%);
+  background:
+    radial-gradient(circle at top left, rgba(255, 90, 31, 0.05), transparent 28%),
+    linear-gradient(155deg, rgba(28, 31, 36, 0.82) 0%, rgba(14, 16, 20, 0.94) 48%, rgba(8, 10, 12, 0.99) 100%);
   border-radius: var(--radius-lg);
   padding: 3rem 2.5rem;
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(20px);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
-  border: 1px solid rgba(185, 193, 204, 0.25);
+  border: 1px solid rgba(170, 178, 190, 0.18);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.66);
 }
 
@@ -242,7 +244,7 @@
   inset: 0;
   border-radius: var(--radius-lg);
   padding: 1px;
-  background: linear-gradient(135deg, rgba(235, 240, 247, 0.56) 0%, rgba(225, 230, 238, 0.06) 100%);
+  background: linear-gradient(135deg, rgba(225, 231, 240, 0.28) 0%, rgba(225, 230, 238, 0.04) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -255,7 +257,7 @@
   inset: 0;
   border-radius: var(--radius-lg);
   pointer-events: none;
-  background: linear-gradient(140deg, rgba(231, 236, 243, 0.16), rgba(191, 199, 210, 0.05) 42%, transparent 74%);
+  background: linear-gradient(140deg, rgba(231, 236, 243, 0.08), rgba(191, 199, 210, 0.03) 42%, transparent 74%);
 }
 
 .glass-card:hover {
@@ -273,8 +275,8 @@
   margin-bottom: 2rem;
   font-size: 1.5rem;
   color: #fff;
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(18, 20, 24, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-card h3 {
