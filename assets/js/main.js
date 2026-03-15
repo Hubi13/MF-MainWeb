@@ -2,6 +2,43 @@
  * main.js - Core UI behavior: nav, reveal, cursor, filters, scroll motion
  */
 
+function initMobileNav(rootDocument) {
+  var doc = rootDocument || (typeof document !== 'undefined' ? document : null);
+  if (!doc) return;
+
+  var toggle = doc.querySelector('.nav-toggle');
+  var navList = doc.querySelector('.site-nav__list');
+  if (!toggle || !navList) return;
+  if (toggle.dataset.mobileNavInitialized === 'true') return;
+
+  toggle.dataset.mobileNavInitialized = 'true';
+
+  function closeMenu() {
+    navList.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    doc.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', function () {
+    var isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    navList.classList.toggle('is-open', !isOpen);
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+    doc.body.style.overflow = isOpen ? '' : 'hidden';
+  });
+
+  navList.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', closeMenu);
+  });
+
+  doc.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') closeMenu();
+  });
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { initMobileNav: initMobileNav };
+}
+
 (function () {
   'use strict';
 
@@ -19,33 +56,6 @@
 
     window.addEventListener('scroll', updateHeader, { passive: true });
     updateHeader();
-  }
-
-  function initMobileNav() {
-    var toggle = document.querySelector('.nav-toggle');
-    var navList = document.querySelector('.site-nav__list');
-    if (!toggle || !navList) return;
-
-    function closeMenu() {
-      navList.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-
-    toggle.addEventListener('click', function () {
-      var isOpen = toggle.getAttribute('aria-expanded') === 'true';
-      navList.classList.toggle('is-open', !isOpen);
-      toggle.setAttribute('aria-expanded', String(!isOpen));
-      document.body.style.overflow = isOpen ? '' : 'hidden';
-    });
-
-    navList.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', closeMenu);
-    });
-
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') closeMenu();
-    });
   }
 
   function normalizePath(path) {
@@ -261,17 +271,19 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    initHeader();
-    initMobileNav();
-    initActiveNav();
-    initScrollReveal();
-    initHeroFlight();
-    initPortfolioFilters();
-    initCustomCursor();
-    initMagneticButtons();
-    initCardParallax();
-    initScrollProgress();
-    initYear();
-  });
+  if (typeof document !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', function () {
+      initHeader();
+      initMobileNav();
+      initActiveNav();
+      initScrollReveal();
+      initHeroFlight();
+      initPortfolioFilters();
+      initCustomCursor();
+      initMagneticButtons();
+      initCardParallax();
+      initScrollProgress();
+      initYear();
+    });
+  }
 })();
