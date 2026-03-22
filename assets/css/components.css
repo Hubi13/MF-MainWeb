@@ -8,8 +8,9 @@
     justify-content: center;
     gap: var(--space-xs);
     padding: 0.8rem 2rem;
+    font-family: var(--font-display);
     font-size: var(--text-sm);
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     border-radius: var(--radius-sm);
@@ -93,7 +94,9 @@
 }
 
 .site-nav__link {
+    font-family: var(--font-display);
     font-size: var(--text-sm);
+    font-weight: 400;
     color: var(--color-text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -278,11 +281,13 @@
 
 .footer__link {
     color: var(--color-text-muted);
-    transition: 0.2s;
+    transition: color var(--transition-base), transform var(--transition-base);
+    display: inline-block;
 }
 
 .footer__link:hover {
     color: var(--color-accent);
+    transform: translateX(4px);
 }
 
 .footer__bottom {

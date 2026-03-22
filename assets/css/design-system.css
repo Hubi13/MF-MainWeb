@@ -25,8 +25,8 @@
   --color-glow: rgba(255, 90, 31, 0.4);
 
   /* Typography */
-  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
-  --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', sans-serif;
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'Crimson Pro', Georgia, serif;
 
   /* Typography — Scale */
   --text-xs: clamp(0.75rem, 0.70rem + 0.25vw, 0.8rem);
@@ -82,7 +82,7 @@ html {
 }
 
 body {
-  background-color: var(--color-bg);
+  background-color: #080a0d;
   color: var(--color-text-secondary);
   font-family: var(--font-body);
   font-size: var(--text-base);
@@ -91,9 +91,8 @@ body {
   overflow-x: hidden;
   position: relative;
   background-image:
-    radial-gradient(circle at top, rgba(255, 111, 40, 0.035), transparent 26%),
-    radial-gradient(circle at 78% 16%, rgba(255, 111, 40, 0.02), transparent 20%),
-    linear-gradient(180deg, rgba(11, 12, 14, 1) 0%, rgba(10, 10, 10, 1) 100%);
+    radial-gradient(ellipse at 50% 0%, rgba(255, 111, 40, 0.025), transparent 38%),
+    linear-gradient(180deg, #080a0d 0%, #090b0e 100%);
 }
 
 body::before {
