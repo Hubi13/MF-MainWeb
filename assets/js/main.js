@@ -105,7 +105,7 @@ if (typeof module !== 'undefined' && module.exports) {
           observer.unobserve(entry.target);
         });
       },
-      { threshold: 0.14, rootMargin: '0px 0px -64px 0px' }
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
     );
 
     elements.forEach(function (element, index) {
@@ -234,6 +234,10 @@ if (typeof module !== 'undefined' && module.exports) {
     document.querySelectorAll('.portfolio-card, .cs-card, .glass-card, .model-card').forEach(function (card) {
       if (card.classList.contains('cs-card--locked')) return;
 
+      card.addEventListener('mouseenter', function () {
+        card.style.transition = 'transform 0.15s ease-out, border-color 0.3s ease, box-shadow 0.3s ease';
+      });
+
       card.addEventListener('mousemove', function (event) {
         var rect = card.getBoundingClientRect();
         var x = event.clientX - rect.left;
@@ -244,6 +248,7 @@ if (typeof module !== 'undefined' && module.exports) {
       });
 
       card.addEventListener('mouseleave', function () {
+        card.style.transition = '';
         card.style.transform = '';
       });
     });

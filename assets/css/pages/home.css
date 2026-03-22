@@ -548,7 +548,7 @@
   gap: 0;
   border: 1px solid rgba(181, 190, 204, 0.12);
   border-radius: var(--radius-lg);
-  overflow: hidden;
+  overflow: clip;
   background: linear-gradient(155deg, rgba(14, 16, 20, 0.95), rgba(8, 10, 13, 0.99));
 }
 
@@ -641,19 +641,13 @@
 .portfolio-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-items: stretch;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .portfolio-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1024px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -677,13 +671,13 @@
 
 .portfolio-card {
   display: block;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 9 / 14;
   border-radius: var(--radius-md);
   border: 1px solid rgba(178, 186, 198, 0.18);
   overflow: hidden;
   position: relative;
   background: linear-gradient(150deg, rgba(43, 47, 54, 0.72), rgba(15, 17, 21, 0.94));
-  transition: transform var(--transition-slow), border-color var(--transition-base), box-shadow var(--transition-slow);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color var(--transition-base), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .portfolio-card::before,
